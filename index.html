@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="storiesApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="libs/angular/angular.min.js"></script>
+        <script src="libs/angular/angular-ui-router.min.js"></script>
+        <script src="js/directives/directives.js"></script>
+        <script src="js/controllers/common/welcomeController.js"></script>
+        <script src="js/storiesForKidsApp.js"></script>
+        <!--styles
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/base.css">
+        <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    </head>
+    <body>
+    <div class="wrapper">
+        <div class="header">
+            <span ui-view="header"></span>
+        </div>
+        <div ui-view></div>
+        <div class="footer">
+            <span ui-view="footer"></span>
+        </div>
+    </div>
+    </body>
+</html>
