@@ -2,6 +2,18 @@
     'use strict';
 
     angular.module('directiveModule',[])
+    .directive('signUpPage',function(){
+        return {
+              restrict:'AEC',
+                templateUrl:'partials/common/signup.html'
+            };
+    })
+    .directive('signInPage',function(){
+        return {
+              restrict:'AEC',
+                templateUrl:'partials/common/signin.html'
+            };
+    })
         .directive('singleTile',function(){
             return {
               restrict:'AEC',
