@@ -1,7 +1,7 @@
 (function(angular){
    'use strict';
 
-    angular.module('authModule',['filtersModule','directiveModule'])
+    angular.module('authModule',['filtersModule','directiveModule','AuthenticationService'])
         .controller('authController',function($scope,$timeout){
         
         $scope.$on('showLoginFormEvent', function (event, data) {

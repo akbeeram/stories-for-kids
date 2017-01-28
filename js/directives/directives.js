@@ -6,11 +6,12 @@
             return {
               restrict:'AEC',
                 scope:{
-                    storyTitle:'='
+                    storyTitle:'=',
+                    imgLoc:'='
                 },
                 templateUrl:'partials/common/single-tile.html',
                 controller:function($scope){
-                    
+                    console.log('0');
                 },
                 link:function(scope,ele,attrs){
                 }
