@@ -6,8 +6,9 @@ Here you can find a large collection of children stories.
 </div>
 <div class="container">
     <div class="row" style="text-align:center;">
+        <span login-light-box ng-show="showLoginForm" show-login-form="showLoginForm"></span>
         <div ng-repeat ="item in storyCategory" class="col-md-4 col-sm-6 col-xs-12">
-        <single-tile story-title="item">
+        <single-tile story-title="item" ng-click="openLoginLightBox()">
         </single-tile>
         </div>
     </div>
