@@ -1,0 +1,81 @@
+<div style="position:fixed;z-index:99;top:0;left:0;display:block;overflow:hidden;height:100%;width:100%;color:black;background-color:rgba(0,0,0,0.8);">
+    <div class="row" style="background-color:white;width:30%;margin:20% auto;vertical-align:middle;padding:1.5em 1.5em;border-radius: 0.5em;" ng-controller="authController">
+        <div class="col-xs-12"> 
+            <div style="text-align:right;" ng-click="close()">
+                <i class="loginBoxClose fa fa-times-circle fa-2x" aria-hidden="true"></i>
+            </div>
+            <div>
+                <span style="font-size:2.2em;color:darkcyan;cursor:pointer;" ng-click="openLoginForm()" ng-style="loginStyle">Login</span>
+                <span class="loginOR">or</span>
+                <span style="font-size:2.2em;color:darkgray;cursor:pointer;" ng-click="openRegisterForm()" ng-style="regStyle">Signup</span>
+            </div>
+            <div style="padding-bottom:2em;font-size:1.2em;font-family:Slabo;color:darkgray;">New User ? Click Singup to register.</div>
+            <!--login form starts-->
+            <form name="loginForm" style="font-size:1.2em;text-align:left;" ng-show="loginForm"> 
+                <div class="form-group"> 
+                    <div class="input-group margin-bottom-sm">
+                      <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+                      <input class="form-control" type="text" placeholder="Email address">
+                    </div>
+                    <!--
+                    <label for="username">Username</label> 
+                    <input type="text" name="username" ng-model="username" required="required" class="form-control"/> 
+                    -->
+                </div> 
+                <div class="form-group"> 
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+                      <input class="form-control" type="password" placeholder="Password">
+                    </div>
+                    <!--
+                    <label for="password">Password</label> 
+                    <input type="password" name="password" ng-model="password" required="required" class="form-control"/> 
+                    -->
+                </div> 
+                <button type="submit" ng-disabled="!loginForm.$valid" ng-click="" class="buttonLightBox">Login</button> 
+                <div ng-show="loginError && !loginForm.$valid" class="label label-danger"> 
+                    <b>Error With Login.</b> Please try again. 
+                </div>
+            </form> 
+            <!--login form ends-->
+            <!--register form starts-->
+            <form name="loginForm" style="font-size:1.2em;text-align:left;" ng-show="registerForm">
+                <div class="form-group"> 
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user-o fa-fw" aria-hidden="true"></i></span>
+                      <input class="form-control" type="text" placeholder="Your Name">
+                    </div>
+                    <!--
+                    <label for="password">Password</label> 
+                    <input type="password" name="password" ng-model="password" required="required" class="form-control"/> 
+                    -->
+                </div> 
+                <div class="form-group"> 
+                    <div class="input-group margin-bottom-sm">
+                      <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+                      <input class="form-control" type="text" placeholder="Email address">
+                    </div>
+                    <!--
+                    <label for="username">Username</label> 
+                    <input type="text" name="username" ng-model="username" required="required" class="form-control"/> 
+                    -->
+                </div> 
+                <div class="form-group"> 
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+                      <input class="form-control" type="password" placeholder="Password">
+                    </div>
+                    <!--
+                    <label for="password">Password</label> 
+                    <input type="password" name="password" ng-model="password" required="required" class="form-control"/> 
+                    -->
+                </div> 
+                <button type="submit" ng-disabled="!loginForm.$valid"ng-click="" class="">Login</button> 
+                <div ng-show="loginError && !loginForm.$valid" class="label label-danger"> 
+                    <b>Error With Login.</b> Please try again. 
+                </div>
+            </form> 
+            <!--register form ends-->
+        </div> 
+    </div>
+</div>

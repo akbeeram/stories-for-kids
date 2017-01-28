@@ -1,7 +1,7 @@
 (function(angular){
     'use strict';
 
-    angular.module('storiesApp',['ui.router','welcomeModule'])
+    angular.module('storiesApp',['ui.router','welcomeModule','footerModule','headerModule','directiveModule','authModule'])
         .controller('LandingCtrlr',function($scope){
             $scope.msg="hi";
         })
