@@ -2,7 +2,7 @@
    'use strict';
 
     angular.module('headerModule',['filtersModule','directiveModule'])
-        .controller('headerController',function($scope,$timeout){
+        .controller('headerController',function($scope,$timeout,$window){
             $scope.openLoginLightBox=function(){
                 $scope.showLoginForm = true;
                 $scope.$broadcast('showLoginFormEvent', {
