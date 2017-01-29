@@ -2,8 +2,9 @@
    'use strict';
 
     angular.module('authModule',['filtersModule','directiveModule','AuthenticationService'])
-        .controller('authController',function($scope,$timeout,authService){
+        .controller('authController',function($scope,$timeout,authService,$state){
         
+                $scope.showSignIn = true;
             $scope.$on('showLoginFormEvent', function (event, data) {
               if(data.showLoginForm){
                 $scope.openLoginForm();
@@ -28,9 +29,21 @@
                 $scope.showLoginForm = true;
             }
             $scope.userLogin = function(){
-                console.log($scope.userlogin);
-                authService.authenticateUser($scope.userlogin).then(function(data){
-                    console.log(data);
+                $scope.showSignIn = false;
+                $scope.showSigningIn = true;
+                $scope.showSignedIn = false;
+                authService.loginUser($scope.userlogin).then(function(data){
+                //$timeout(function(){
+                    if(data){
+                        $scope.showSigningIn = false;
+                        $scope.showSignIn = false;
+                        $scope.showSignedIn = true;
+                        if(data.loginSuccess){
+                            $state.go('dashboard');
+                        }
+                        
+                    }
+                //},3000);
                 });
             }
         });

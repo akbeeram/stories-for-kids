@@ -16,9 +16,13 @@
                         'footer':{templateUrl:'partials/common/footer.html'}
                     }
                 })
-                .state('welcome.about',{
-                    url:'/about',
-                    template:'Thanks.'
+                .state('dashboard',{
+                    url:'/dashboard',
+                    views:{
+                        '':{templateUrl:'partials/dashboard/dashboard.html'},
+                        'header':{templateUrl:'partials/common/header.html'},
+                        'footer':{templateUrl:'partials/common/footer.html'}
+                    }
                 })
         });
 

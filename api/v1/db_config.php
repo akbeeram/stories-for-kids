@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @author admin
- * @copyright 2015
+ * @author Anil Kumar Beeram
+ * @copyright 2017
  */
 
 define('DB_USERNAME','root');

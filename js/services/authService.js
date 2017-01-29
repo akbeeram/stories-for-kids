@@ -1,13 +1,17 @@
 angular.module('AuthenticationService',[])
 .factory('authService',function ($q,$http) {
 	return {
-		authenticateUser:function(userInfo){
+		loginUser:function(userInfo){
 			var deferred=$q.defer();
+            console.log(userInfo);
 			return $http({
-				url:'api/v1/authenticate.php',
+				url:'api/v1/login.php',
 				method:'POST',
 				headers: {'Content-Type': 'application/json'},
-				data:userInfo
+				data:{
+                    email:userInfo.email,
+                    password:userInfo.trickyWord
+                }                
 			})
 			.then(function(response){
 				deferred.resolve(response.data);
@@ -17,7 +21,7 @@ angular.module('AuthenticationService',[])
 				return deferred.promise;
 			});
 		},
-		loginUser:function(userInfo){
+		authenticateUser:function(userInfo){
 			var deferred=$q.defer();
 			return $http({
 				url:'api/v1/login.php',

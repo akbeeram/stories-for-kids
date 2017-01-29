@@ -20,7 +20,11 @@
         <input type="password" name="password" ng-model="password" required="required" class="form-control"/> 
         -->
     </div> 
-    <button class="login-button" ng-click="userLogin()">Login&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i></button> 
+    <button class="login-button" ng-click="userLogin()">Login&nbsp;
+        <i class="fa fa-sign-in" aria-hidden="true" ng-show="showSignIn"></i>
+        <i class="fa fa-spin fa-spinner fa-pulse fa-fw" aria-hidden="true" ng-show="showSigningIn"></i>
+        <i class="fa fa-check leftMar1" aria-hidden="true" ng-show="showSignedIn"></i>
+    </button> 
     <div ng-show="loginError && !loginForm.$valid" class="label label-danger"> 
         <b>Error With Login.</b> Please try again. 
     </div>
