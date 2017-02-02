@@ -18,12 +18,10 @@
             return {
               restrict:'AEC',
                 scope:{
-                    storyTitle:'=',
-                    imgLoc:'='
+                    storyDetails:'='
                 },
                 templateUrl:'partials/common/single-tile.html',
                 controller:function($scope){
-                    console.log('0');
                 },
                 link:function(scope,ele,attrs){
                 }

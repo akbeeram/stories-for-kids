@@ -3,6 +3,8 @@
 
     angular.module('headerModule',['filtersModule','directiveModule'])
         .controller('headerController',function($scope,$timeout,$window){
+        if(localStorage.getItem('userInfo')){
+        }
             $scope.openLoginLightBox=function(){
                 $scope.showLoginForm = true;
                 $scope.$broadcast('showLoginFormEvent', {

@@ -35,6 +35,7 @@
                 authService.loginUser($scope.userlogin).then(function(data){
                 //$timeout(function(){
                     if(data){
+                        localStorage.setItem('userInfo',JSON.stringify(data));
                         $scope.showSigningIn = false;
                         $scope.showSignIn = false;
                         $scope.showSignedIn = true;
