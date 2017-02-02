@@ -1,3 +1,30 @@
-<div>
-    <span class="header-title">Stories for Kids</span>
+<div ng-controller="headerController">
+    <div class="row">
+    <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Stories for Kids</div>
+    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
+    <div class="headerSearch col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center;position:relative;">
+        <a href="#" class="headerAnchor" ng-click="showSearchBox=!showSearchBox"><div>
+            <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+        </div>
+        Search a Story</a>
+        <div class="header-search-results" ng-show="showSearchBox">
+            <div class="arrow-up"></div>
+            <input type="text" ng-model="storySearch" placeholder="Search for a story"/>
+            <div>
+                Type something to see results
+            </div>
+        </div>
+    </div>
+    <div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">
+        <span  ng-click="openLoginLightBox()">
+            <a href="#" class="headerAnchor"><div>
+                <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
+            </div>
+            Login / Sing Up</a>
+        </span>
+        <span login-light-box ng-show="showLoginForm" show-login-form="showLoginForm"></span>
+    </div>
+</div>
+
+
 </div>

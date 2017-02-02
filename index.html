@@ -6,13 +6,21 @@
         <script src="libs/angular/angular.min.js"></script>
         <script src="libs/angular/angular-ui-router.min.js"></script>
         <script src="js/directives/directives.js"></script>
+        <script src="js/filters/filters.js"></script>
+        <script src="js/controllers/common/headerController.js"></script>
+        <script src="js/controllers/common/authController.js"></script>
+        <script src="js/controllers/common/footerController.js"></script>
         <script src="js/controllers/common/welcomeController.js"></script>
+        <script src="js/services/authService.js"></script>
+        <script src="js/services/categoryService.js"></script>
         <script src="js/storiesForKidsApp.js"></script>
-        <!--styles
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <!--styles-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="styles/base.css">
         <link rel="stylesheet" type="text/css" href="styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="styles/header.css">
+        <link rel="stylesheet" type="text/css" href="styles/dashboard/dboard.css">
     </head>
     <body>
     <div class="wrapper">
@@ -23,6 +31,7 @@
         <div class="footer">
             <span ui-view="footer"></span>
         </div>
+        <a href="#" class="totop"><i class="fa fa-arrow-circle-up fa-3x"></i></a>
     </div>
     </body>
 </html>

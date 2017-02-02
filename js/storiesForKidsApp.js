@@ -1,7 +1,7 @@
 (function(angular){
     'use strict';
 
-    angular.module('storiesApp',['ui.router','welcomeModule'])
+    angular.module('storiesApp',['ui.router','welcomeModule','footerModule','headerModule','directiveModule','authModule','AuthenticationService'])
         .controller('LandingCtrlr',function($scope){
             $scope.msg="hi";
         })
@@ -16,9 +16,13 @@
                         'footer':{templateUrl:'partials/common/footer.html'}
                     }
                 })
-                .state('welcome.about',{
-                    url:'/about',
-                    template:'Thanks.'
+                .state('dashboard',{
+                    url:'/dashboard',
+                    views:{
+                        '':{templateUrl:'partials/dashboard/dashboard.html'},
+                        'header':{templateUrl:'partials/common/header.html'},
+                        'footer':{templateUrl:'partials/common/footer.html'}
+                    }
                 })
         });
 

@@ -1,27 +1,15 @@
 <div ng-controller="welcomeController">
-<div>
-<p class="welcome-message">Welcome to Stories for Kids.<br>
-Here you can find a large collection of children stories.
-</p>
-</div>
-<div class="container">
-    <div class="row" style="text-align:center;">
-        <div ng-repeat ="item in storyCategory" class="col-md-4 col-sm-6 col-xs-12">
-        <single-tile story-title="item">
-        </single-tile>
+    <div>
+        <p class="welcome-message">Welcome to Stories for Kids.<br>
+            Here you can find a large collection of children stories.
+        </p>
+    </div>
+    <div class="container">
+        <div class="row" style="text-align:center;">
+            <span login-light-box ng-show="showLoginForm" show-login-form="showLoginForm"></span>
+            <div ng-repeat ="item in storyCategory" class="col-md-4 col-sm-6 col-xs-12">
+                <single-tile story-details="item" ng-click="openLoginLightBox()"></single-tile>
+            </div>
         </div>
     </div>
-</div>
-
-<!--
-    
-<div class="container">
-    <div class="row">
-        <div ng-repeat ="item in storyCategory" class="col-md-12 col-sm-12 col-xs-12">
-            <div single-tile story-title="item"></div>
-        </div>
-    </div>
-</div>
-<a ui-sref=".about">About Us</a>
-<div ui-view></div>-->
 </div>

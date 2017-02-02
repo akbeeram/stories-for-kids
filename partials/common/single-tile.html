@@ -1,13 +1,16 @@
 <div class="single-tile-welcome">
     <div class="story-box">
         <div class="tile-story-fig">
-            <img src="images/story-tiles/panchatantra.jpg"/>
+            <img ng-src="{{storyDetails.categoryImgLoc}}"/>
         </div>
         <div class="tile-story-title">
-            {{storyTitle}}
+            {{storyDetails.categoryName}}
         </div>
         <div class="tile-story-desc">
-            sample descsample descsample descsample descsample descsample descsample descsample descsample descsample descsample descsample descsample desc
+            {{storyDetails.categoryDesc}}
+        </div>
+        <div style="text-align:right;">
+        No. of Stories : {{storyDetails.noOfStories}}
         </div>
     </div>
 </div>

@@ -1,0 +1,17 @@
+.myDiv{
+  border:1px solid black;
+  color:black;
+  transition:background-color 0.15s ease-in;
+}
+.myDiv1{
+  border:1px solid black;
+  background-color:black;
+  color:white;
+  transition:background-color 0.2s ease-in;
+}
+.mode-on{
+  display:inline-block;
+}
+.mode-off{
+  display:none;
+}
