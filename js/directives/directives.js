@@ -14,19 +14,15 @@
                 templateUrl:'partials/common/signin.html'
             };
     })
-        .directive('singleTile',function(){
-            return {
-              restrict:'AEC',
-                scope:{
-                    storyDetails:'='
-                },
-                templateUrl:'partials/common/single-tile.html',
-                controller:function($scope){
-                },
-                link:function(scope,ele,attrs){
-                }
-            };
-        })
+    .component('singleTile',{
+          restrict:'AE',
+            bindings:{
+                storyDetails:'<'
+            },
+            templateUrl:'partials/common/single-tile.html',
+            controller:function(){
+            }
+    })
     .directive('loginLightBox',function(){
         return {
               restrict:'AEC',
