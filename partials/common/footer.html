@@ -1,21 +1,23 @@
-<div class="row" ng-controller="footerController as theMan">
-    <div class="col-md-6 col-sm-6 col-xs-12">
-        <div style=font-size:1.8em;>Stay Connected</div>
-        <div style="color:darkgray;font-size:1em;">Get regular notifications when new story has been added.</div>
-        <input type="text" class="emailFooterInput" style=""/>
-        <button class="button" ng-click="theMan.submitA()">Submit<i ng-class="{'fa fa-envelope leftMar1':!theMan.submitted,'fa fa-spin fa-spinner fa-pulse fa-fw':theMan.isSubmittin,'fa fa-check leftMar1':theMan.submitted}" aria-hidden="true"></i></button>
-    </div>
-    <div class="col-md-3 col-sm-3 col-xs-12">
-        <div style=font-size:1.8em;margin-bottom:0.5em;>Recently Added</div>
-        <ul>
-            <li ng-repeat="news in theMan.recentlyAdded" style="color:darkgray;line-height:1.2em;">{{news|limitTo:30}}</li>
-        </ul>
-    </div>
-    <div class="col-md-3 col-sm-3 col-xs-12 boringStuff" style="color:darkgray;margin-top:1em;line-height:1.2em;">
-        Privacy Policy<br>
-        License Terms<br>
-        About Us<br><br>
-        Contact Us<br>
-        help@abc.com
+<div class="footer">
+    <div class="row" ng-controller="footerController as theMan">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div style=font-size:1.8em;>Stay Connected</div>
+            <div style="color:darkgray;font-size:1em;">Get regular notifications when new story has been added.</div>
+            <input type="text" class="emailFooterInput" style=""/>
+            <button class="button" ng-click="theMan.submitA()">Submit<i ng-class="{'fa fa-envelope leftMar1':!theMan.submitted,'fa fa-spin fa-spinner fa-pulse fa-fw':theMan.isSubmittin,'fa fa-check leftMar1':theMan.submitted}" aria-hidden="true"></i></button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+            <div style=font-size:1.8em;margin-bottom:0.5em;>Recently Added</div>
+            <ul>
+                <li ng-repeat="news in theMan.recentlyAdded" style="color:darkgray;line-height:1.2em;">{{news|limitTo:30}}</li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 boringStuff" style="color:darkgray;margin-top:1em;line-height:1.2em;">
+            Privacy Policy<br>
+            License Terms<br>
+            About Us<br><br>
+            Contact Us<br>
+            help@abc.com
+        </div>
     </div>
 </div>
