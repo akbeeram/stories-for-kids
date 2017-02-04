@@ -40,7 +40,7 @@
                         $scope.showSignIn = false;
                         $scope.showSignedIn = true;
                         if(data.loginSuccess){
-                            $state.go('dashboard');
+                            $state.go('app.dash');
                         }
                         
                     }

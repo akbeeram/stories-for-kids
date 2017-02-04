@@ -14,15 +14,7 @@
                 templateUrl:'partials/common/signin.html'
             };
     })
-    .component('singleTile',{
-          restrict:'AE',
-            bindings:{
-                storyDetails:'<'
-            },
-            templateUrl:'partials/common/single-tile.html',
-            controller:function(){
-            }
-    })
+    
     .directive('loginLightBox',function(){
         return {
               restrict:'AEC',
