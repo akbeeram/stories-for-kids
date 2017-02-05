@@ -11,9 +11,7 @@
                 .state('welcome',{
                     url:'/welcome',
                     requireLogin:false,
-                    views:{
-                        '':{templateUrl:"js/welcomePage/welcome.html"}
-                    }
+                    templateUrl:'js/welcomePage/welcome.html'
                 })
                 .state('app',{
                     url:'',
@@ -22,20 +20,16 @@
                     resolve: {
                         isUserAlreadyLoggedIn : isUserValid
                     },
-                    views:{
-                        '':{
-                            templateUrl:'partials/common/main.html',
-                            controller: function($scope,isUserAlreadyLoggedIn){
-                                var vm = this;
-                                //alert(isUserAlreadyLoggedIn);
-                                console.log(vm.isUserAlreadyLoggedIn);
-                            }
-                        }
+                    templateUrl:'partials/common/main.html',
+                    controller: function($scope,isUserAlreadyLoggedIn){
+                        var vm = this;
+                        alert(isUserAlreadyLoggedIn);
+                        console.log(vm.isUserAlreadyLoggedIn);
                     }
                 })
                 .state('app.dash',{
                     url:'/dashboard',
-                    templateUrl:"partials/dashboard/dashboard.html",
+                    templateUrl:"js/dashboard/dashboard.html",
                     controller:function($scope,$state){
                         $scope.click=function(){
                             $state.go('app.read');

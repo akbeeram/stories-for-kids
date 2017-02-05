@@ -2,20 +2,7 @@
     'use strict';
 
     angular.module('directiveModule',[])
-    .directive('signUpPage',function(){
-        return {
-              restrict:'AEC',
-                templateUrl:'partials/common/signup.html'
-            };
-    })
-    .directive('signInPage',function(){
-        return {
-              restrict:'AEC',
-                templateUrl:'partials/common/signin.html'
-            };
-    })
-    
-    .directive('loginLightBox',function(){
+   .directive('loginLightBox',function(){
         return {
               restrict:'AEC',
                 scope: {
