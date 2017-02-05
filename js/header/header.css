@@ -19,18 +19,6 @@
 
     text-align: right;
 }
-.loginOR{
-    border: 1px solid chocolate;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    display: inline-block;
-    box-sizing: border-box;
-    padding-top: 0.4em;
-    margin: -1em 1em 1em 1em;
-    background-color: chocolate;
-    color: white;
-}
 .headerSearch a.headerAnchor, 
 .headerLogin a.headerAnchor{
     text-decoration: none;
@@ -42,14 +30,6 @@
     top: -0.2em;
     color:orange;
     transition: all 0.1s ease;
-}
-.loginBoxClose{
-    margin-top: -1em;
-    margin-right: -0.8em;
-    color: darkgray;
-}
-.loginBoxClose:hover{
-    color: darkcyan;
 }
 .header-search-results{
     padding: 1em;
@@ -81,39 +61,4 @@
     top: -0.6em;
     position: absolute;
     right: 1em;
-}
-.light-box-body{
-    font-family: Slabo;
-    background-color:white;
-    width:30%;
-    margin:20% auto;
-    vertical-align:middle;
-    padding:1.5em 1.5em;
-    border-radius: 0.5em;
-    transition: all 200ms ease-in;
-    -webkit-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in;
-}
-.login-button {
-  padding: 0.3em 0.7em;
-  font-size: 1em;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #3498DB;
-  border: none;
-  border-radius: 0.2em;
-  box-shadow: 0 5px #2980B9;
-    margin-left: 0.3em;
-}
-
-.login-button:hover {
-    background-color: #52a7e0;
-}
-
-.login-button:active {
-  background-color: #52a7e0;
-  box-shadow: 0 2px #2980B9;
-  transform: translateY(3px);
 }

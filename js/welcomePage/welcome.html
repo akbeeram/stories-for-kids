@@ -1,5 +1,5 @@
 <header-block></header-block>
-<div ng-controller="welcomeController">
+<div>
     <div>
         <p>
             <div class="row">
@@ -14,11 +14,12 @@
     </div>
     <div class="container">
         <div class="row" style="text-align:center;">
-            <span login-light-box ng-show="showLoginForm" show-login-form="showLoginForm"></span>
-            <div ng-repeat ="item in storyCategory" class="col-md-4 col-sm-6 col-xs-12">
-                <single-tile story-details="item" ng-click="click()"></single-tile>
+            <span login-light-box ng-show="$ctrl.showLoginForm" show-login-form="$ctrl.showLoginForm"></span>
+            <div ng-repeat ="item in $ctrl.storyCategory" class="col-md-4 col-sm-6 col-xs-12">
+                <single-tile story-details="item" ng-click="$ctrl.onTileClick()"></single-tile>
             </div>
         </div>
     </div>
 </div>
 <footer-block></footer-block>
+<login-light-box ng-show="$ctrl.showLoginForm" show-login-form="$ctrl.showLoginForm"></login-light-box>

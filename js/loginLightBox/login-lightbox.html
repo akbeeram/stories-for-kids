@@ -1,0 +1,17 @@
+<div style="position:fixed;z-index:99;top:0;left:0;display:block;overflow:hidden;height:100%;width:100%;color:black;background-color:rgba(0,0,0,0.8);">
+    <div class="row light-box-body">
+        <div class="col-xs-12"> 
+            <div style="text-align:right;" ng-click="$ctrl.close()">
+                <i class="loginBoxClose fa fa-times-circle fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="login-or-signup">
+                <span style="font-size:2.2em;color:darkcyan;cursor:pointer;" ng-click="$ctrl.openLoginForm()" ng-style="$ctrl.loginStyle">Login</span>
+                <span class="loginOR">or</span>
+                <span style="font-size:2.2em;color:darkgray;cursor:pointer;" ng-click="$ctrl.openRegisterForm()" ng-style="$ctrl.regStyle">Signup</span>
+            </div>
+            <div class="login-or-signup-tag">New User ? Click Singup to register.</div>
+            <sign-in-page ng-show="$ctrl.loginForm"></sign-in-page>
+            <sign-up-page ng-show="$ctrl.registerForm"></sign-up-page>
+        </div> 
+    </div>
+</div>

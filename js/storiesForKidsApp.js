@@ -1,7 +1,7 @@
 (function(angular){
     'use strict';
 
-    angular.module('storiesApp',['ui.router','welcomeModule','CategoriesService','directiveModule','authModule','AuthenticationService'])
+    angular.module('storiesApp',['ui.router','CategoriesService','AuthenticationService'])
         .controller('LandingCtrlr',function($scope){
             $scope.msg="hi";
         })
@@ -11,7 +11,7 @@
                 .state('welcome',{
                     url:'/welcome',
                     requireLogin:false,
-                    templateUrl:'js/welcomePage/welcome.html'
+                    template:'<welcome-page />'
                 })
                 .state('app',{
                     url:'',
