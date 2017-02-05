@@ -1,7 +1,7 @@
 (function(angular){
     'use strict';
 
-    angular.module('storiesApp',['ui.router','welcomeModule','CategoriesService','headerModule','directiveModule','authModule','AuthenticationService'])
+    angular.module('storiesApp',['ui.router','welcomeModule','CategoriesService','directiveModule','authModule','AuthenticationService'])
         .controller('LandingCtrlr',function($scope){
             $scope.msg="hi";
         })
@@ -12,10 +12,7 @@
                     url:'/welcome',
                     requireLogin:false,
                     views:{
-                        '':{templateUrl:"js/welcomePage/welcome.html"},
-                        'header@welcome':{
-                            templateUrl:"partials/common/header.html"
-                        }
+                        '':{templateUrl:"js/welcomePage/welcome.html"}
                     }
                 })
                 .state('app',{
@@ -30,11 +27,10 @@
                             templateUrl:'partials/common/main.html',
                             controller: function($scope,isUserAlreadyLoggedIn){
                                 var vm = this;
-                                alert(isUserAlreadyLoggedIn);
+                                //alert(isUserAlreadyLoggedIn);
                                 console.log(vm.isUserAlreadyLoggedIn);
                             }
-                        },
-                        'header@app':{templateUrl:"partials/common/header.html"}
+                        }
                     }
                 })
                 .state('app.dash',{
