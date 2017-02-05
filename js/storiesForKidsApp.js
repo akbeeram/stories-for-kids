@@ -22,9 +22,9 @@
                     },
                     templateUrl:'partials/common/main.html',
                     controller: function($scope,isUserAlreadyLoggedIn){
-                        var vm = this;
-                        alert(isUserAlreadyLoggedIn);
-                        console.log(vm.isUserAlreadyLoggedIn);
+                        //var vm = this;
+                        //alert(isUserAlreadyLoggedIn);
+                        console.log($scope.isUserAlreadyLoggedIn);
                     }
                 })
                 .state('app.dash',{
