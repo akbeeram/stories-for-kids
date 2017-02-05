@@ -27,12 +27,31 @@
         </span>
         <span>
             <div class="user-info-circle" ng-click="$ctrl.showUserInfoBox = !$ctrl.showUserInfoBox">
-                <div>{{$ctrl.displayShortName}}</div>
-                <div class="header-search-results" ng-show="$ctrl.showUserInfoBox">
-                    <div class="arrow-up"></div>
-                    <div>
-                        Type something to see results
-                    </div>
+                <div>{{$ctrl.displayShortName | uppercase}}</div>
+            </div>
+            <div class="header-search-results" ng-show="$ctrl.showUserInfoBox">
+                <div class="arrow-up"></div>
+                <div style="color: #101010;text-align: left;text-shadow: none;">
+                    <table width="100%">
+                        <tr>
+                            <td width="25%" align="center" style="display: table-cell;vertical-align: middle;">
+                                <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                            </td>
+                            <td style="display: table-cell;vertical-align: middle;">
+                                <span style="font-size: 1.5em;">{{::$ctrl.name}}</span><br>
+                                <span>{{::$ctrl.email}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 3em 2em 0 2em;line-height: 1.4em;">
+                                <div><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;Profile</div>
+                                <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
+                                <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
+                                <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>
+                                <div><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </span>

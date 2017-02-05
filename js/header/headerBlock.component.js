@@ -30,4 +30,6 @@ function headerCtrl($state, $timeout){
     vm.openLoginLightBox = openLoginLightBox;
     vm.isAuthentiactedUser = isAuthentiactedUser;
     vm.displayShortName = displayShortName;
+    vm.email = userInfo.email;
+    vm.name = userInfo.username;
 }
