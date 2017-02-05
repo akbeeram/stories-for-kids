@@ -3,7 +3,6 @@ angular.module('AuthenticationService',[])
 	return {
 		loginUser:function(userInfo){
 			var deferred=$q.defer();
-            console.log(userInfo);
 			return $http({
 				url:'api/v1/login.php',
 				method:'POST',
@@ -21,13 +20,16 @@ angular.module('AuthenticationService',[])
 				return deferred.promise;
 			});
 		},
-		authenticateUser:function(userInfo){
+		authenticateUser:function(email, accessToken){
 			var deferred=$q.defer();
 			return $http({
-				url:'api/v1/login.php',
+				url:'api/v1/authenticate.php',
 				method:'POST',
 				headers: {'Content-Type': 'application/json'},
-				data:userInfo
+				data:{
+                    email:email,
+                    accessToken:accessToken
+                }
 			})
 			.then(function(response){
 				deferred.resolve(response.data);

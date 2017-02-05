@@ -47,5 +47,17 @@
                 //},3000);
                 });
             }
+            $scope.authenticateUser = function(email, accessToken){
+                authService.authenticateUser(email, accessToken).then(function(data){
+                //$timeout(function(){
+                    if(data){
+                        if(data.isAuthentiactedUser){
+                            $state.go('app.dash');
+                        }
+                        
+                    }
+                //},3000);
+                });
+            }
         });
 }(angular));
