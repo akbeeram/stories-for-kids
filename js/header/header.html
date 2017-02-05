@@ -11,7 +11,7 @@
         Search a Story</a>
         <div class="header-search-results" ng-show="$ctrl.showSearchBox">
             <div class="arrow-up"></div>
-            <input type="text" ng-model="$ctrl.storySearch" placeholder="Search for a story"/>
+            <input type="text" ng-model="$ctrl.storySearch" placeholder="Search for a story, person or a place"/>
             <div>
                 Type something to see results
             </div>
@@ -31,7 +31,7 @@
             </div>
             <div class="header-search-results" ng-show="$ctrl.showUserInfoBox">
                 <div class="arrow-up"></div>
-                <div style="color: #101010;text-align: left;text-shadow: none;">
+                <div style="color: #5e5e5e;text-align: left;text-shadow: none;">
                     <table width="100%">
                         <tr>
                             <td width="25%" align="center" style="display: table-cell;vertical-align: middle;">
@@ -39,11 +39,11 @@
                             </td>
                             <td style="display: table-cell;vertical-align: middle;">
                                 <span style="font-size: 1.5em;">{{::$ctrl.name}}</span><br>
-                                <span>{{::$ctrl.email}}</span>
+                                <span style="font-size: 0.8em;">{{::$ctrl.email}}</span>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="padding: 3em 2em 0 2em;line-height: 1.4em;">
+                            <td colspan="2" style="padding: 2em 2em 0 2em;line-height: 1.6em;">
                                 <div><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;Profile</div>
                                 <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
                                 <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
