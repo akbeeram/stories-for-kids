@@ -19,14 +19,16 @@
 
     text-align: right;
 }
-.headerSearch a.headerAnchor, 
+.headerSearch .headerSearchAnchor, 
 .headerLogin a.headerAnchor{
     text-decoration: none;
     color: white;
 }
-.headerSearch a.headerAnchor:hover, 
-.headerLogin a.headerAnchor:hover{
+.headerSearch .headerSearchAnchor:hover, 
+.headerLogin .headerAnchor:hover,
+.headerUserAnchor{
     color:orange;
+    cursor: pointer;
     transition: all 0.15s ease;
 }
 .header-search-results{

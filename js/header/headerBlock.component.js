@@ -5,8 +5,8 @@ angular.module('storiesApp')
         controller: headerCtrl
 });
 
-headerCtrl.$inject = ['$state','$timeout'];
-function headerCtrl($state, $timeout){
+headerCtrl.$inject = ['$scope','$state','$timeout'];
+function headerCtrl($scope,$state, $timeout){
     var vm = this;
     var isAuthentiactedUser = false;
     var displayShortName = '';
@@ -25,8 +25,48 @@ function headerCtrl($state, $timeout){
     openLoginLightBox = function(){
         vm.showLoginForm = true;
     }
-    
-    
+    //registering clicks to hide dropdowns
+    var everywhere = angular.element(window.document);
+    var isSearchAreaClicked,isSearchIconClicked;
+    everywhere.bind('click', function(event) {
+        //for search area
+        isSearchAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('header-search-input') >= 0;
+        isSearchIconClicked = event.target.className == 'headerSearchAnchor' || event.target.className.indexOf('fa-search') >= 0;
+        //if search area open and clicked elsewhere
+        console.log(isSearchAreaClicked,isSearchIconClicked);
+        /*if(vm.showSearchBox && !isSearchAreaClicked){
+            vm.showSearchBox = false;
+        }
+        if(vm.showSearchBox && isSearchIconClicked){
+            vm.showSearchBox = false;
+        }
+        if(!vm.showSearchBox && isSearchIconClicked){
+            vm.showSearchBox = true;
+        }*/
+        if(isSearchIconClicked){
+            if(vm.showSearchBox){
+                $scope.$apply(function(){
+                    vm.showSearchBox = false;
+                });
+            }else{
+                $scope.$apply(function(){
+                    vm.showSearchBox = true;
+                });
+            }
+        }else{
+            if(isSearchAreaClicked){
+                if(vm.showSearchBox){
+                    $scope.$apply(function(){
+                        vm.showSearchBox = true;
+                    });
+                }
+            }else{
+                $scope.$apply(function(){
+                    vm.showSearchBox = false;
+                });
+            }
+        }
+    });
     vm.openLoginLightBox = openLoginLightBox;
     vm.isAuthentiactedUser = isAuthentiactedUser;
     vm.displayShortName = displayShortName;

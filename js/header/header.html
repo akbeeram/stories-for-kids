@@ -5,13 +5,13 @@
     <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Stories for Kids</div>
     <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
     <div class="headerSearch col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center;position:relative;">
-        <a href="#" class="headerAnchor" ng-click="$ctrl.showSearchBox=!$ctrl.showSearchBox"><div>
+        <span class="headerSearchAnchor"><div>
             <i class="fa fa-search fa-2x" aria-hidden="true"></i>
         </div>
-        Search a Story</a>
+        Search a Story</span>
         <div class="header-search-results" ng-show="$ctrl.showSearchBox">
             <div class="arrow-up"></div>
-            <input type="text" ng-model="$ctrl.storySearch" placeholder="Search for a story, person or a place"/>
+            <input type="text" ng-model="$ctrl.storySearch" placeholder="Search for a story, person or a place" class="header-search-input"/>
             <div>
                 Type something to see results
             </div>
@@ -20,13 +20,13 @@
     <div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">
         <!-- If user is not authenticated, display login-->
         <span ng-click="$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthentiactedUser">
-            <a href="#" class="headerAnchor"><div>
+            <span href="#" class="headerUserAnchor"><div>
                 <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
             </div>
-            Login / Sing Up</a>
+            Login / Sing Up</span>
         </span>
         <span>
-            <div class="user-info-circle" ng-click="$ctrl.showUserInfoBox = !$ctrl.showUserInfoBox">
+            <div class="user-info-circle" ng-click="$ctrl.showUserInfoBox = !$ctrl.showUserInfoBox" ng-show="$ctrl.isAuthentiactedUser">
                 <div>{{$ctrl.displayShortName | uppercase}}</div>
             </div>
             <div class="header-search-results" ng-show="$ctrl.showUserInfoBox">
