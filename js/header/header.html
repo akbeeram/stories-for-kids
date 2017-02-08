@@ -2,7 +2,10 @@
     <div>
     <div class="row">
     <!-- <div class="header-title col-lg-1 col-md-1 col-sm-1 hidden-xs"></div> -->
-    <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Stories for Kids</div>
+    <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <i class="fa fa-book" aria-hidden="true"></i>
+        &nbsp;Stories for Kids
+    </div>
     <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
     <div class="headerSearch col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center;position:relative;">
         <span class="headerSearchAnchor"><div>
@@ -19,14 +22,14 @@
     </div>
     <div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">
         <!-- If user is not authenticated, display login-->
-        <span ng-click="$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthentiactedUser">
-            <span href="#" class="headerUserAnchor"><div>
+        <span ng-click="$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthenticatedUser">
+            <span href="#" class="headerLoginAnchor"><div>
                 <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
             </div>
             Login / Sing Up</span>
         </span>
         <span>
-            <div class="user-info-circle" ng-click="$ctrl.showUserInfoBox = !$ctrl.showUserInfoBox" ng-show="$ctrl.isAuthentiactedUser">
+            <div class="user-info-circle" ng-click="$ctrl.showUserInfoBox = !$ctrl.showUserInfoBox" ng-show="$ctrl.isAuthenticatedUser">
                 <div>{{$ctrl.displayShortName | uppercase}}</div>
             </div>
             <div class="header-search-results" ng-show="$ctrl.showUserInfoBox">
