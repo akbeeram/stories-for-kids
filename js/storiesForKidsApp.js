@@ -1,7 +1,7 @@
 (function(angular){
     'use strict';
 
-    angular.module('storiesApp',['ui.router','CategoriesService','AuthenticationService'])
+    angular.module('storiesApp',['ui.router','CategoriesService','AuthenticationService','StoryService'])
         .controller('LandingCtrlr',function($scope){
             $scope.msg="hi";
         })
@@ -29,7 +29,7 @@
                 })
                 .state('app.dash',{
                     url:'/dashboard',
-                    templateUrl:"js/dashboard/dashboard.html",
+                    template:'<dash-board-main />',
                     controller:function($scope,$state){
                         $scope.click=function(){
                             $state.go('app.read');
