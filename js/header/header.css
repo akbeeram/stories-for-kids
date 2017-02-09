@@ -20,13 +20,12 @@
     text-align: right;
 }
 .headerSearch .headerSearchAnchor, 
-.headerLogin a.headerAnchor{
+.headerLoginAnchor a.headerAnchor{
     text-decoration: none;
     color: white;
 }
 .headerSearch .headerSearchAnchor:hover, 
-.headerLogin .headerAnchor:hover,
-.headerUserAnchor{
+.headerLoginAnchor:hover {
     color:orange;
     cursor: pointer;
     transition: all 0.15s ease;

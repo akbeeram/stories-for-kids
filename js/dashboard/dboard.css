@@ -16,14 +16,24 @@
   display:none;
 }
 .right-panel-item {
-    height: 6em;
+    height: 9em;
     min-height: 6em;
     font-size: 0.6em;
     color: gray;
     vertical-align: middle;
     text-align: center;
     padding: 1em 0 0 0;
+    background: white;
+    margin: 0.9em 0 1.8em 0;
+    display: block;
+    box-shadow: 1px 1px 3px gray;
 }
 .right-panel-item-header {
-    margin:left:0.5em;
+    margin-left:0.5em;
+}
+.dash-container {
+    padding: 1em;
+    background: white;
+    margin: 1em auto;
+    box-shadow: 1px 1px 3px gray;
 }
