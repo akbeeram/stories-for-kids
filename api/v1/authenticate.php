@@ -28,13 +28,13 @@ if(!$conn){
             echo json_encode(setUserToJson($row));
         }
     } else {
-        echo json_encode(array('isAuthentiactedUser'=>false));
+        echo json_encode(array('isAuthenticatedUser'=>false));
     } 
 }
 mysql_close($conn);
 
 function setUserToJson($tableRow){
-    return array('username'=>$tableRow['USERNAME'],'email'=>$tableRow['EMAIL'],'accountLocked'=>$tableRow['ACCLOCKED'],'accessToken'=>$tableRow['SESSION_ID'],'userRole'=>$tableRow['USER_ROLE'],'lastLoginDate'=>$tableRow['LAST_LOGIN_DATE'],'secQsSet'=>$tableRow['SEC_QS_SET'],'isAuthentiactedUser'=>true);
+    return array('username'=>$tableRow['USERNAME'],'email'=>$tableRow['EMAIL'],'accountLocked'=>$tableRow['ACCLOCKED'],'accessToken'=>$tableRow['SESSION_ID'],'userRole'=>$tableRow['USER_ROLE'],'lastLoginDate'=>$tableRow['LAST_LOGIN_DATE'],'secQsSet'=>$tableRow['SEC_QS_SET'],'isAuthenticatedUser'=>true);
     //return $data;
 }
 ?>

@@ -8,12 +8,12 @@ angular.module('storiesApp')
 headerCtrl.$inject = ['$scope','$state','$timeout'];
 function headerCtrl($scope,$state, $timeout){
     var vm = this;
-    var isAuthentiactedUser = false;
+    var isAuthenticatedUser = false;
     var displayShortName = '';
     var userInfo;
     if(localStorage.getItem('userInfo')){
         userInfo = JSON.parse(localStorage.getItem('userInfo'));
-        isAuthentiactedUser = userInfo.isAuthentiactedUser ? true : false;
+        isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
         if(userInfo.username.indexOf(' ') >= 0){
             var temp = userInfo.username.split(' ');
@@ -21,7 +21,6 @@ function headerCtrl($scope,$state, $timeout){
         } else {
             displayShortName = userInfo.username.slice(0,2);
         } 
-        vm.isAuthentiactedUser = isAuthentiactedUser;
         vm.displayShortName = displayShortName;
         vm.email = userInfo.email || '';
         vm.name = userInfo.username || '';
@@ -61,5 +60,6 @@ function headerCtrl($scope,$state, $timeout){
             }
         }
     });
+    vm.isAuthenticatedUser = isAuthenticatedUser;
     vm.openLoginLightBox = openLoginLightBox;
 }
