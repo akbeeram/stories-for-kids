@@ -9,9 +9,14 @@
                 <span class="loginOR">or</span>
                 <span style="font-size:2.2em;color:darkgray;cursor:pointer;" ng-click="$ctrl.openRegisterForm()" ng-style="$ctrl.regStyle">Signup</span>
             </div>
-            <div class="login-or-signup-tag">New User ? Click Singup to register.</div>
-            <sign-in-page ng-show="$ctrl.loginForm"></sign-in-page>
-            <sign-up-page ng-show="$ctrl.registerForm"></sign-up-page>
+            <div ng-show="$ctrl.loginForm">
+                <div class="login-or-signup-tag">New User ? Click Singup to register.</div>
+                <sign-in-page></sign-in-page>
+            </div>
+            <div ng-show="$ctrl.registerForm">
+                <div class="login-or-signup-tag">Already registered ? Click Login.</div>
+                <sign-up-page ng-show="$ctrl.registerForm"></sign-up-page>
+            </div>
         </div> 
     </div>
 </div>

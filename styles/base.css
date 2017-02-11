@@ -20,32 +20,6 @@ body{
 .footer .row div:first{
     padding-left: 2em;
 }
-.welcome-message{
-    font-size:2.3em;
-    text-align: center;
-    font-family: Slabo;
-    margin: 1.5em 0 0.5em 0;
-}
-
-.single-tile-welcome{
-    font-family: Slabo;
-    text-align: center;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 1s;
-}
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    0%   {transform: scale(0);}
-    100%   {transform: scale(1.0);}
-}
-
-/* Standard syntax */
-@keyframes example {
-    0%   {transform: scale(0);}
-    100%   {transform: scale(1.0);}
-}
 
 
 .totop{
@@ -55,29 +29,6 @@ body{
   display:none;
 }
 
-.story-box{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
-    padding: 1em;
-    margin-top: 1.5em;
-    display: inline-block;
-    width: 80%;
-    position: relative;
-    text-align: center;
-}
-.story-box:hover
-{
-    box-shadow: 0px 0px 25px #000000;
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.01);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.01);   
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.01);
-    transition: all 200ms ease-in;
-    transform: scale(1.01);
-}
 
 .emailFooterInput{
     width:12em;
@@ -90,19 +41,6 @@ body{
     outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-.tile-story-title{
-    font-size: 1.5em;
-    margin: 0.5em 0 0.5em 0;
-}
-.tile-story-desc{
-    font-family: Slabo;
-    font-size:1em;
-    text-align: justify;
-}
-.tile-story-fig img{
-    height: 100%;
-    width: 100%;
 }
 .leftMar1{
     margin-left: 0.3em;

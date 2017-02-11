@@ -19,17 +19,16 @@
 
     text-align: right;
 }
-.headerSearch a.headerAnchor, 
-.headerLogin a.headerAnchor{
+.headerSearch .headerSearchAnchor, 
+.headerLoginAnchor a.headerAnchor{
     text-decoration: none;
     color: white;
 }
-.headerSearch a.headerAnchor:hover, 
-.headerLogin a.headerAnchor:hover{
-    position: relative;
-    top: -0.2em;
+.headerSearch .headerSearchAnchor:hover, 
+.headerLoginAnchor:hover {
     color:orange;
-    transition: all 0.1s ease;
+    cursor: pointer;
+    transition: all 0.15s ease;
 }
 .header-search-results{
     padding: 1em;
@@ -61,4 +60,24 @@
     top: -0.6em;
     position: absolute;
     right: 1em;
+}
+.user-info-circle {
+    background: cadetblue;
+    border-radius: 50%;
+    height: 3em;
+    display: table-cell;
+    width: 3em;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 1em;
+    margin: 0 auto;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+.user-info-circle:hover {
+    background: chocolate;
+    
 }
