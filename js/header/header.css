@@ -1,7 +1,7 @@
 .header{
     padding:1em 1.3em;
     color:white;
-    background-color:#262626;
+    background-color:#1b242d;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -14,6 +14,19 @@
     font-size: 40px;
     box-sizing: border-box;
     padding-top: 0.2em;
+    font-family: 'Courgette';
+}
+.header-tagline{
+    font-size: 0.3em;
+}
+.title-kids {
+    color: yellowgreen;
+    transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+.title-kids:hover {
+    color: crimson;
 }
 .header-nav{
 

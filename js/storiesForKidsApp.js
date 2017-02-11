@@ -22,23 +22,22 @@
                     },
                     templateUrl:'partials/common/main.html',
                     controller: function($scope,isUserAlreadyLoggedIn){
-                        //var vm = this;
-                        //alert(isUserAlreadyLoggedIn);
-                        console.log($scope.isUserAlreadyLoggedIn);
+                        //not running
                     }
                 })
                 .state('app.dash',{
                     url:'/dashboard',
                     template:'<dash-board-main />',
                     controller:function($scope,$state){
-                        $scope.click=function(){
-                            $state.go('app.read');
-                        }
+                        
                     }
                 })
                 .state('app.read',{
-                    url:'/read',
-                    template:"This is read"
+                    url:'/read/:htmlPage',
+                    template:'<reader-pane />',
+                    controller:function($scope,$state,$stateParams){
+                        //console.log($stateParams);
+                    }
                 });
         
             function isUserValid(authService){

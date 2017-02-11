@@ -2,6 +2,12 @@
     font-family: Slabo;
     src: url(fonts/Slabo_27px/Slabo27px-Regular.ttf);
 }
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/Courgette/Courgette-Regular.ttf');
+}
 body{
     font-family: Slabo;
     background-color: #f2f2f2;

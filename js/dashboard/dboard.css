@@ -15,6 +15,9 @@
 .mode-off{
   display:none;
 }
+.dash-body {
+    font-family:Slabo;display:inline-block;width:100%
+}
 .right-panel-item {
     height: 9em;
     min-height: 6em;
@@ -33,10 +36,16 @@
 }
 .dash-container {
     padding: 1em;
-    background: white;
     margin: 2em auto;
-    box-shadow: 1px 1px 3px gray;
+    font-family: 'Courgette'
+    /*background: white;
+    box-shadow: 1px 1px 3px gray;*/
 }
 .category-select {
-    
+    border: yellowgreen;
+    padding: 0.4em 1em;
+}
+.category-select option {
+    border: yellowgreen;
+    padding: 0.4em 1em;
 }
