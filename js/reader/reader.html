@@ -3,7 +3,8 @@
         <div class="reader-story-title">
             Title : {{$ctrl.config.story_name}}
         </div>
-        <div  class="reader-story-controls">
+        <div class="reader-story-controls">
+            <span class="reader-go-back" ng-click="$ctrl.goBackToDash()"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
             <span class="night-mode-control">
                 Night Mode :
                 <div ng-class="{'mode-on':asdf,'mode-off':!asdf}" ng-click="asdf=false">   

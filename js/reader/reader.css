@@ -1,5 +1,5 @@
 .reader-pane {
-    padding: 2em 0 2em 2.5em;
+    padding: 2em 0 0 2em;
     display:block;
     width:100%;
     font-family: 'Courgette';
@@ -37,4 +37,12 @@
 }
 .mode-off{
   display:none;
+}
+.reader-go-back {
+    text-align:left;float:left;margin-left:0 !important;
+    transition: all 0.15s ease-in;
+}
+.reader-go-back:hover {
+    color: crimson;
+    cursor: pointer;
 }

@@ -1,7 +1,6 @@
 <!-- folowing style is required -->
 <div style="dash-body row">
-    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
-    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
     <div class="col-lg-11 col-md-11 col-sm-11 col-xs-12" >
         <div class="dash-container">
             Hi there ! Select your favorite story to start reading.<br><br>
@@ -13,9 +12,16 @@
             <br><br>
             <div class="col-lg-8 col-md-8 col-sm-8">
                 <div ng-repeat="(k,v) in $ctrl.storyData.story_list">
-                    <span ng-if="k.length>0">Part {{$index+1}}</span>
+                    <div class="story-part-title" ng-if="k.length>0">Part {{$index+1}}</div>
                     <div ng-repeat="(a,b) in v">
-                        <div ng-click="$ctrl.openStory(b)" class="story-line-item">{{b.story_name}}</div>
+                        <div ng-click="$ctrl.openStory(b)" class="story-line-item">
+                            <div class="story-list-name">
+                                {{b.story_name}}
+                            </div>
+                            <!--<div style="width:10%;">
+                                asdf
+                            </div>-->
+                        </div>
                     </div>
                 </div>
             </div>

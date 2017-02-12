@@ -18,7 +18,7 @@
     margin-left:0.5em;
 }
 .dash-container {
-    padding: 1em;
+    padding: 1em 0;
     margin: 2em auto;
     font-family: 'Courgette'
     /*background: white;
@@ -41,4 +41,14 @@
     background: crimson;
     color: white;
     cursor: pointer;
+}
+.story-part-title {
+    border-bottom: 1px dotted crimson;
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+}
+.story-list-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

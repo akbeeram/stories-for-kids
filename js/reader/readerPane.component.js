@@ -12,5 +12,12 @@ function readerPaneCtrl($scope, $state, $stateParams, storyService){
     if(localStorage.getItem('currStory')){
         currStory = JSON.parse(localStorage.getItem('currStory'));
     }
+    goBackToDash = function(){
+        $state.go('app.dash');
+    }
+    
+    
+    
+    vm.goBackToDash = goBackToDash;
     vm.config = currStory;
 }
