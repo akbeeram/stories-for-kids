@@ -1,20 +1,23 @@
-<div class="reader-controls" style="display:block;width:100%;border:1px solid black;">
-    Night Mode :
-    <div ng-class="{'mode-on':asdf,'mode-off':!asdf}" ng-click="asdf=false">   
-        <i class="fa fa-toggle-on" aria-hidden="true" ></i>
+<div class="reader-pane">
+    <div class="reader-controls">
+        <div class="reader-story-title">
+            Title : {{$ctrl.config.story_name}}
+        </div>
+        <div  class="reader-story-controls">
+            <span class="night-mode-control">
+                Night Mode :
+                <div ng-class="{'mode-on':asdf,'mode-off':!asdf}" ng-click="asdf=false">   
+                    <i class="fa fa-toggle-on" aria-hidden="true" ></i>
+                </div>
+                <div ng-class="{'mode-on':!asdf,'mode-off':asdf}" ng-click="asdf=true">
+                   <i class="fa fa-toggle-off" aria-hidden="true" ></i>
+                </div>
+            </span>
+            <span>Love it&nbsp;<i class="fa fa-heart-o" aria-hidden="true" style="color:crimson;"></i></span>
+            <span>Read Later&nbsp;<i class="fa fa-bookmark-o" aria-hidden="true" style="color:blue;"></i></span>
+        </div>
     </div>
-    <div ng-class="{'mode-on':!asdf,'mode-off':asdf}" ng-click="asdf=true">
-       <i class="fa fa-toggle-off" aria-hidden="true" ></i>
-    </div>
-    <div ng-class="{'myDiv1':asdf,'myDiv':!asdf}">
-      Don't mess with files locally or in production. You'll get all of Font Awesome's 675 icons plus CSS toolkit - all optimized for speed and no hassle.
-
-Super-simple upgrades
-
-Since each site gets a unique embed code, you can easily upgrade to the latest version of Font Awesome, all without pushing any code. Easy peasy.
-
-Auto accessibility support
-
-Font Awesome CDN helps you automate accessibility support more easily so your icons work for the most people possible. Read up on ou
+    <div ng-class="{'nightMode':asdf,'dayMode':!asdf}">
+      <story-component config="$ctrl.config"></story-component>
     </div>
 </div>

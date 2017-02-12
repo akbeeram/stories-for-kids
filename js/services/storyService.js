@@ -1,5 +1,6 @@
 angular.module('StoryService',[])
 .factory('storyService',function ($q,$http) {
+    var story;
 	return {
 		getStoriesList:function(category){
 			var deferred=$q.defer();
@@ -20,6 +21,12 @@ angular.module('StoryService',[])
 				deferred.reject(response);
 				return deferred.promise;
 			});
-		}
+		},
+        setCurrentStory:function(story){
+           this.story = story;
+        },
+        getCurrentStory:function(){
+           return this.story;
+        }
     };
 });

@@ -21,6 +21,15 @@
                 vm.storyData=data;
             });
         }
+        var openStory = function(story){
+            localStorage.setItem('currStory',JSON.stringify(story));
+//            storyService.setCurrentStory(story);
+            $state.go('app.read',{
+                htmlPage: story.story_html_name
+            });
+        }
+        
+        vm.openStory = openStory;
         vm.categorySelected = categorySelected;
         vm.changeCategory = changeCategory;
         vm.getStories = getStories;

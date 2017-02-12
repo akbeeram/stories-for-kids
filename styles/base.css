@@ -11,13 +11,14 @@
 body{
     font-family: Slabo;
     background-color: #f2f2f2;
+    overflow-x: hidden;
 }
 
 .footer{
     margin-top: 5em;
     padding:2em;
     color:white;
-    background-color:#262626;
+    background-color:#1B242D;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;

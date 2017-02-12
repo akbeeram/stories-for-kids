@@ -1,20 +1,3 @@
-.myDiv{
-  border:1px solid black;
-  color:black;
-  transition:background-color 0.15s ease-in;
-}
-.myDiv1{
-  border:1px solid black;
-  background-color:black;
-  color:white;
-  transition:background-color 0.2s ease-in;
-}
-.mode-on{
-  display:inline-block;
-}
-.mode-off{
-  display:none;
-}
 .dash-body {
     font-family:Slabo;display:inline-block;width:100%
 }
@@ -48,4 +31,14 @@
 .category-select option {
     border: yellowgreen;
     padding: 0.4em 1em;
+}
+.story-line-item {
+    display: block;
+    padding: 0.6em;
+    transition: all 0.2s ease-in;
+}
+.story-line-item:hover {
+    background: crimson;
+    color: white;
+    cursor: pointer;
 }

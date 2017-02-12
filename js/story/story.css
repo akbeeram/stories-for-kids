@@ -1,0 +1,14 @@
+.story {
+    font-family: 'Slabo';
+    font-size: 1em;
+    text-indent: 2.2em;
+    padding: 1.2em 2em 1em 1.2em;
+    line-height: 1.4em;
+}
+.story:first-child:first-letter {
+    font-size: 2em;
+}
+div.story p {
+    text-align: justify;
+    margin-bottom: 1.2em;
+}

@@ -11,10 +11,16 @@
                 <option value="CG004">Akbar and Birbal Tales</option>
             </select>
             <br><br>
-            <div ng-repeat="(k,v) in $ctrl.storyData.story_list">
-                <div ng-repeat="(a,b) in v">
-                    <span ui-sref="app.read({htmlPage:b.story_html_name})">{{b.story_name}}</span>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                <div ng-repeat="(k,v) in $ctrl.storyData.story_list">
+                    <span ng-if="k.length>0">Part {{$index+1}}</span>
+                    <div ng-repeat="(a,b) in v">
+                        <div ng-click="$ctrl.openStory(b)" class="story-line-item">{{b.story_name}}</div>
+                    </div>
                 </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                iamge
             </div>
         </div>
     </div>

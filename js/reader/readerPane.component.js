@@ -5,8 +5,12 @@ angular.module('storiesApp')
         controller: readerPaneCtrl
 });
 
-readerPaneCtrl.$inject = ['$scope','$state','$stateParams'];
-function readerPaneCtrl($state, $stateParams){
+readerPaneCtrl.$inject = ['$scope','$state','$stateParams','storyService'];
+function readerPaneCtrl($scope, $state, $stateParams, storyService){
     var vm = this;
-    console.log($stateParams);
+    var currStory = null;
+    if(localStorage.getItem('currStory')){
+        currStory = JSON.parse(localStorage.getItem('currStory'));
+    }
+    vm.config = currStory;
 }
