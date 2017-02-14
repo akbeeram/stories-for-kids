@@ -21,7 +21,7 @@ function signinCtrl($state,authService){
         vm.showSignedIn = false;
         authService.loginUser(vm.userLoginInput).then(function(data){
             if(data){
-                localStorage.setItem('userInfo',JSON.stringify(data));
+                localStorage.setItem('sfkUserInfo',JSON.stringify(data));
                 vm.showSigningIn = false;
                 vm.showSignIn = false;
                 vm.showSignedIn = true;

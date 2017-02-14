@@ -41,14 +41,14 @@
                 });
         
             function isUserValid(authService){
-                if(localStorage.getItem('userInfo')){
-                    var userData = JSON.parse(localStorage.getItem('userInfo'));
+                if(localStorage.getItem('sfkUserInfo')){
+                    var userData = JSON.parse(localStorage.getItem('sfkUserInfo'));
                     if(userData.username && userData.accessToken){
                         //check wiht DB for auth token & username
                         authService.authenticateUser(userData.email, userData.accessToken)
                         .then(function(data){
                             //set local storage data every time
-                            localStorage.setItem('userInfo',JSON.stringify(data));
+                            localStorage.setItem('sfkUserInfo',JSON.stringify(data));
                             return true;
                         });
                     }else{

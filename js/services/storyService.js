@@ -21,12 +21,6 @@ angular.module('StoryService',[])
 				deferred.reject(response);
 				return deferred.promise;
 			});
-		},
-        setCurrentStory:function(story){
-           this.story = story;
-        },
-        getCurrentStory:function(){
-           return this.story;
-        }
+		}
     };
 });

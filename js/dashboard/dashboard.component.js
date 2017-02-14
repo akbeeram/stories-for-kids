@@ -7,8 +7,8 @@
         controller: dashMainCtrl
     });
     
-    dashMainCtrl.$inject = ['$scope','$state','storyService'];
-    function dashMainCtrl($scope,$state,storyService){
+    dashMainCtrl.$inject = ['$scope','$state','storyService','categoryService'];
+    function dashMainCtrl($scope, $state, storyService, categoryService){
         var vm = this;
         var categorySelected;
         //if user is navigating from reader page back to dashboard
@@ -25,13 +25,18 @@
         //called when user selects or changes the category dropdown
         var changeCategory = function(){
             if(vm.categorySelected){
-                vm.getStories(vm.categorySelected);
+                vm.getStoriesList(vm.categorySelected);
             }
         }
+        //called first time when controller loads to get data
         //to get all the sotires for a category
-        var getStories = function(catCode){
-            storyService.getStoriesList(catCode).then(function(data){
-                vm.storyData=data;
+        var getStoriesList = function(catCode){
+            storyService.getStoriesList(catCode).then(function(stories_data){
+                vm.dash= vm.dash || {};               
+                categoryService.getCategoryInfo(catCode).then(function(cat_data){
+                    vm.dash.storyData=stories_data;
+                    vm.dash.categoryData=cat_data; 
+                });
             });
         }
         //when user selects astory,story is persisted in localstorage
@@ -42,15 +47,23 @@
                 htmlPage: story.story_html_name
             });
         }
-        
+        var getCategoryList = function (){
+            categoryService.getCategories().then(function(catListdata){
+                vm.dash= vm.dash || {};
+                vm.dash.categoryList=catListdata;
+            });
+        }
         
         //set controller level variable to acces in view
         vm.categorySelected = categorySelected;
         vm.openStory = openStory;
         vm.categorySelected = categorySelected;
         vm.changeCategory = changeCategory;
-        vm.getStories = getStories;
-        vm.getStories(vm.categorySelected);
+        vm.getStoriesList = getStoriesList;
+        vm.getCategoryList = getCategoryList;
+        
+        vm.getCategoryList();
+        vm.getStoriesList(vm.categorySelected);
     }
     
     

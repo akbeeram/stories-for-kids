@@ -5,8 +5,11 @@ angular.module('CategoriesService',[])
 			var deferred=$q.defer();
 			return $http({
 				url:'api/v1/categories.php',
-				method:'GET',
-				headers: {'Content-Type': 'application/json'}             
+				method:'POST',
+				headers: {'Content-Type': 'application/json'},
+                data: {
+                    call: 'getCategories'
+                }
 			})
 			.then(function(response){
 				deferred.resolve(response.data);
@@ -16,14 +19,15 @@ angular.module('CategoriesService',[])
 				return deferred.promise;
 			});
 		},
-		getStoriesList:function(){
+		getCategoryInfo:function(catCode){
 			var deferred=$q.defer();
 			return $http({
 				url:'api/v1/categories.php',
 				method:'POST',
 				headers: {'Content-Type': 'application/json'},
                 data: {
-                    call: 'getStoriesList'
+                    call: 'getCategoryInfo',
+                    cat_code: catCode
                 }
 			})
 			.then(function(response){

@@ -2,8 +2,9 @@
     font-family: 'Slabo';
     font-size: 1em;
     text-indent: 2.2em;
-    padding: 1.2em 2em 1em 1.2em;
+    padding: 1.2em 1.5em 1em 1.2em;
     line-height: 1.4em;
+    margin-bottom: 1em;
 }
 .story:first-child:first-letter {
     font-size: 2em;

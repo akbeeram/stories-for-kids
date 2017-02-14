@@ -10,9 +10,9 @@ function headerCtrl($scope,$state, $timeout){
     var vm = this;
     var isAuthenticatedUser = false;
     var displayShortName = '';
-    var userInfo;
-    if(localStorage.getItem('userInfo')){
-        userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    var sfkUserInfo;
+    if(localStorage.getItem('sfkUserInfo')){
+        userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
         isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
         if(userInfo.username.indexOf(' ') >= 0){
