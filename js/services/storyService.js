@@ -1,14 +1,17 @@
 angular.module('StoryService',[])
 .factory('storyService',function ($q,$http) {
+    var story;
 	return {
-		getStoriesList:function(){
+		getStoriesList:function(category){
 			var deferred=$q.defer();
 			return $http({
 				url:'api/v1/stories.php',
 				method:'POST',
 				headers: {'Content-Type': 'application/json'},
                 data: {
-                    call: 'getStoriesList'
+                    call: 'getStoriesList',
+                    category: category
+
                 }
 			})
 			.then(function(response){

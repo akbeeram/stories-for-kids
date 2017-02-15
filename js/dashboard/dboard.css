@@ -1,19 +1,5 @@
-.myDiv{
-  border:1px solid black;
-  color:black;
-  transition:background-color 0.15s ease-in;
-}
-.myDiv1{
-  border:1px solid black;
-  background-color:black;
-  color:white;
-  transition:background-color 0.2s ease-in;
-}
-.mode-on{
-  display:inline-block;
-}
-.mode-off{
-  display:none;
+.dash-body {
+    font-family:Slabo;display:inline-block;width:100%
 }
 .right-panel-item {
     height: 9em;
@@ -32,8 +18,50 @@
     margin-left:0.5em;
 }
 .dash-container {
-    padding: 1em;
-    background: white;
-    margin: 1em auto;
-    box-shadow: 1px 1px 3px gray;
+    padding: 1em 0;
+    margin: 2em auto;
+    font-family: 'Courgette'
+    /*background: white;
+    box-shadow: 1px 1px 3px gray;*/
+}
+.category-select {
+    border: yellowgreen;
+    padding: 0.4em 1em;
+}
+.category-select option {
+    border: yellowgreen;
+    padding: 0.4em 1em;
+}
+.story-line-item {
+    display: block;
+    padding: 0.6em;
+    transition: all 0.2s ease-in;
+}
+.story-line-item:hover {
+    background: crimson;
+    color: white;
+    cursor: pointer;
+}
+.story-part-title {
+    border-bottom: 1px dotted crimson;
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+}
+.story-list-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dash-story-desc {
+    font-family: 'Slabo';
+    line-height: 1.2em;
+    font-size: 1.2em;
+    text-align: justify;
+}
+.dash-story-fig {
+    margin: 2em auto;
+}
+.dash-story-fig img{
+    height: 100%;
+    width: 100%;
 }

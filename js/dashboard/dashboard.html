@@ -1,37 +1,34 @@
 <!-- folowing style is required -->
-<div style="font-family:Slabo;display:inline-block;width:100%">
-    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
-    </div>
-    <div class="col-lg-8 col-md-8 col-sm-8 hidden-xs" >
+<div style="dash-body row">
+    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" >
         <div class="dash-container">
-            Hi there ! To start reading your favorite story, select it from below.
-            {{$ctrl.stories}}
-        </div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs" style="border-left:1px dotted darkgray;padding: 1em 1em;font-family:Slabo;font-size:1.5em;">
-        <div>
-            <i class="fa fa-heart" aria-hidden="true" style="color:crimson;"></i>
-            <span class="right-panel-item-header">Your Favorites</span>
-            <div class="right-panel-item">
-                No Favorites yet.
-            </div>
-        </div>
-        <div>
-            <i class="fa fa-bookmark" aria-hidden="true" style="color:blue;"></i>
-            <span class="right-panel-item-header">Your Bookmarks</span>
-            <div class="right-panel-item">
-                No Bookmarks yet.
-            </div>
-        </div>
-        <div>
-            <i class="fa fa-trophy" aria-hidden="true" style="color:darkorchid;"></i>
-            <span class="right-panel-item-header">Your Badges</span>
-            <div class="right-panel-item">
-                No Badges yet.
+            Hi there ! Select your favorite story to start reading.<br><br>
+            Select a Category :
+            <select class="category-select" ng-change="$ctrl.changeCategory()" ng-model="$ctrl.categorySelected">
+                <option ng-repeat="ctgry in $ctrl.dash.categoryList" value="{{ctgry.categoryId}}">
+                    {{ctgry.categoryName}}
+                </option>
+            </select>
+            <br><br>
+            <div>
+                <div ng-repeat="(k,v) in $ctrl.dash.storyData.story_list">
+                    <div class="story-part-title" ng-if="k.length>0">Part {{$index+1}}</div>
+                    <div ng-repeat="(a,b) in v">
+                        <div ng-click="$ctrl.openStory(b)" class="story-line-item">
+                            <div class="story-list-name">
+                                {{$index + 1}}.&nbsp;&nbsp;{{b.story_name}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
-
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="dash-story-fig">
+            <img ng-src="{{$ctrl.dash.categoryData.categoryImgLoc}}" />
+        </div>
+        <div class="dash-story-desc">{{$ctrl.dash.categoryData.categoryDesc}}</div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 .header{
     padding:1em 1.3em;
     color:white;
-    background-color:#262626;
+    background-color:#1b242d;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -10,10 +10,32 @@
     -moz-box-shadow: 0px 3px 5px 0px rgba(130,126,130,1);
     box-shadow: 0px 3px 5px 0px rgba(130,126,130,1);
 }
+.header-brand-name {
+    display:inline-block;
+    line-height: 0.9em;
+    margin-left: 0.2em;
+}
+.header-brand-image {
+    font-size: 1.7em;
+}
 .header-title {
-    font-size: 40px;
+    font-size: 2em;
     box-sizing: border-box;
     padding-top: 0.2em;
+    font-family: 'Courgette';
+}
+.header-tagline{
+    font-size: 0.5em;
+    font-family: 'Slabo';
+}
+.title-kids {
+    color: yellowgreen;
+    transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+.title-kids:hover {
+    color: crimson;
 }
 .header-nav{
 
@@ -39,7 +61,7 @@
     position:absolute;
     background-color:white;
     top: 4em;
-    right: 3em;
+    right: 5em;
     border-radius: 0em 0em 0.4em 0.4em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 200ms ease-in;
