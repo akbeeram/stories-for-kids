@@ -1,9 +1,75 @@
+.boringStuff{
+    text-align: right;
+    padding-right: 3em;
+}
+.disclaimer,
+.terms-of-use,
+.privacy-policy,
+.site-map {
+    font-family: 'Slabo';
+    font-size: 1.3em;
+    text-align: justify;
+    padding-top: 2em;
+    line-height:1.3em;
+}
+.disclaimer p,
+.privacy-policy p,
+.terms-of-use p {
+    margin-bottom: 1.5em;
+}
+.disclaimer p:first-letter,
+.privacy-policy p:first-letter,
+.terms-of-use p:first-letter {
+    padding-left: 1.5em;
+}
+.boring-header {
+    font-size:1.6em;
+    padding-bottom: 0.6em;
+}
+.boringStuff a {
+    text-decoration: none;
+    color:darkgray;
+}
+.boringStuff a:hover {
+    cursor: pointer;
+    color: yellowgreen;
+}
 .footer-license{
     text-align: center;
-    background: #122b40;
+    background: #1e2730;
     font-family: 'Slabo';
     color: gray;
     padding:0.3em;
     font-size: 1em;
     vertical-align: text-top;
+}
+.privacy-policy ul,
+.terms-of-use ul {
+
+    padding-left: 2em;
+}
+.privacy-policy li,
+.terms-of-use li{
+    list-style-type: disc;
+
+}
+.footer-license a {
+    text-decoration:none;
+    color: gray;
+}
+.footer-license a:hover {
+    cursor: pointer;
+    color: yellowgreen;
+}
+.sub-header {
+    margin-bottom:0.8em;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .boringStuff{
+        text-align: left;
+        padding-right: 3em;
+    }
 }
