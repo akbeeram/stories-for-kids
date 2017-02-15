@@ -1,5 +1,5 @@
-<div class="reader-pane">
-    <div class="reader-controls">
+<div class="reader-pane row">
+    <div class="reader-controls col-lg-9 col-md-9 col-sm-10 col-xs-12">
         <div class="reader-story-title">
             Title : {{$ctrl.config.story_name}}
         </div>
@@ -17,9 +17,12 @@
             <span>Love it&nbsp;<i class="fa fa-heart-o" aria-hidden="true" style="color:crimson;"></i></span>
             <span>Read Later&nbsp;<i class="fa fa-bookmark-o" aria-hidden="true" style="color:blue;"></i></span>
         </div>
+        <div ng-class="{'nightMode':asdf,'dayMode':!asdf}">
+          <story-component config="$ctrl.config"></story-component>
+        </div>
+        <span class="reader-go-back" ng-click="$ctrl.goBackToDash()"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
     </div>
-    <div ng-class="{'nightMode':asdf,'dayMode':!asdf}">
-      <story-component config="$ctrl.config"></story-component>
+    <div class="col-lg-3 col-md-3 col-sm-2 hidden-xs">
+        <right-panel></right-panel>
     </div>
-    <span class="reader-go-back" ng-click="$ctrl.goBackToDash()"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
 </div>

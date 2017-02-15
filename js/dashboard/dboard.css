@@ -14,9 +14,6 @@
     display: block;
     box-shadow: 1px 1px 3px gray;
 }
-.right-panel-item-header {
-    margin-left:0.5em;
-}
 .dash-container {
     padding: 1em 0;
     margin: 2em auto;
