@@ -1,7 +1,7 @@
 (function(angular){
     'use strict';
 
-    angular.module('storiesApp',['ui.router','CategoriesService','AuthenticationService','StoryService'])
+    angular.module('storiesApp',['ui.router','CategoriesService','AuthenticationService','StoryService','boringStuff'])
         .controller('LandingCtrlr',function($scope){
             $scope.msg="hi";
         })
@@ -44,28 +44,11 @@
                     controller:function($scope,$state,$stateParams){
                         //console.log($stateParams);
                     }
-                }).state('app.boring-stuff.privacy',{
-                    url:'/privacy',
-                    templateUrl:'partials/common/boring-stuff/privacy-policy.html',
+                })
+                .state('app.take-control',{
+                    url:'/admin',
+                    template:'<admin-module />',
                     controller:function($scope,$state,$stateParams){
-                        //console.log($stateParams);
-                    }
-                }).state('app.boring-stuff.disclaimer',{
-                    url:'/disclaimer',
-                    templateUrl:'partials/common/boring-stuff/disclaimer.html',
-                    controller:function($scope,$state,$stateParams){
-                        //console.log($stateParams);
-                    }
-                }).state('app.boring-stuff.terms-of-use',{
-                    url:'/terms-of-use',
-                    templateUrl:'partials/common/boring-stuff/terms-of-use.html',
-                    controller:function($scope,$state,$stateParams){
-                        //console.log($stateParams);
-                    }
-                }).state('app.boring-stuff.site-map', {
-                    url: '/site-map',
-                    templateUrl: 'partials/common/boring-stuff/site-map.html',
-                    controller: function ($scope, $state, $stateParams) {
                         //console.log($stateParams);
                     }
                 });
