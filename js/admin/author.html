@@ -2,15 +2,9 @@
     <div>
         <div class="menu">
             <ul>
-                <li>Submit a Story</li>
-                <li>Morals</li>
-                <li>Quotes</li>
-                <li>People</li>
-                <li>Places</li>
-                <li>Buildings</li>
-                <li>Arts/Crafts</li>
-                <li>Store</li>
-                <li>w</li>
+                <li ui-sref="app.dash"><i class="fa fa-home"></i></li>
+                <li ng-class="{'submenu-active':$ctrl.routerState.current.name == 'app.take-control.submit-a-story'}">Submit a Story</li>
+
             </ul>
         </div>
     </div>

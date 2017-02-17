@@ -2,14 +2,17 @@
     'use strict';
 
     angular.module('storiesApp')
-        .component('adminModule',{
-            templateUrl : 'js/admin/admin.html',
-            controller: adminCtrl
+        .component('authorModule',{
+            templateUrl : 'js/admin/author.html',
+            controller: authorCtrl
         });
 
-    adminCtrl.$inject = ['$scope','$state','storyService','categoryService'];
-    function adminCtrl($scope, $state, storyService, categoryService){
+    authorCtrl.$inject = ['$scope','$state','storyService','categoryService'];
+    function authorCtrl($scope, $state, storyService, categoryService){
         var vm = this;
+        var routerState = $state;
+
+        vm.routerState = routerState;
         //update the preview
         var updatePreview = function(){
             document.getElementById("previewStoryHere").innerHTML = tinyMCE.get('writeStoryHere').getContent();

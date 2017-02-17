@@ -11,3 +11,7 @@
     font-size: 2em;
     border-bottom: 1px dashed gray;
 }
+.submenu-active {
+    color: crimson;
+    background: white;
+}

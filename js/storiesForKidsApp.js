@@ -1,10 +1,14 @@
 (function(angular){
     'use strict';
 
-    angular.module('storiesApp',['ui.router','CategoriesService','AuthenticationService','StoryService','boringStuff'])
-        .controller('LandingCtrlr',function($scope){
-            $scope.msg="hi";
-        })
+    angular.module('storiesApp',[
+        'ui.router',
+        'CategoriesService',
+        'AuthenticationService',
+        'StoryService',
+        'boringStuff',
+        'adminModule'
+    ])
         .config(function($stateProvider, $urlRouterProvider){
             $urlRouterProvider.otherwise('/welcome');
             $stateProvider
@@ -47,7 +51,7 @@
                 })
                 .state('app.take-control',{
                     url:'/admin',
-                    template:'<admin-module />',
+                    template:'<ui-view/>',
                     controller:function($scope,$state,$stateParams){
                         //console.log($stateParams);
                     }
@@ -74,8 +78,5 @@
                     return false;
                 }
             }
-        })
-    .controller('mainCtrl',function($scpoe){
-        
-    });
+        });
 }(angular));
