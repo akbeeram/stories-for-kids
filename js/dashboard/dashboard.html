@@ -2,14 +2,14 @@
     <div>
         <div class="menu">
             <ul>
-                <li>Stories</li>
-                <li>Morals</li>
+                <li ng-class="{'submenu-active':$ctrl.routerState.current.name == 'app.dash'}">Stories</li>
+                <!--<li>Morals</li>
                 <li>Quotes</li>
                 <li>People</li>
                 <li>Places</li>
                 <li>Buildings</li>
                 <li>Arts/Crafts</li>
-                <li>Store</li>
+                <li>Store</li>-->
                 <li ui-sref="app.take-control.submit-a-story">Admin</li>
             </ul>
         </div>
@@ -49,7 +49,7 @@
         <div class="dash-story-desc">{{$ctrl.dash.categoryData.categoryDesc}}</div>
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
-        <right-panel></right-panel>
+        <!--<right-panel></right-panel>-->
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
 </div>

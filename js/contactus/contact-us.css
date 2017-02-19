@@ -1,0 +1,30 @@
+.contact-us{
+    font-family: 'Slabo';
+    padding: 1.5em 1em;
+}
+.contact-us-header{
+    font-size: 1.6em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+.contact-form-row{
+    padding: 0.5em;
+}
+.contact-form-row input, .contact-form-row textarea{
+    padding: 0.5em 0.6em;
+}
+.contact-form-row label{
+    padding-top: 0.7em;
+}
+textarea{
+    width:75%;
+}
+.input-invalid{
+    padding-top: 1em;
+    color: crimson;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}

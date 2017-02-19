@@ -12,8 +12,6 @@
     text-align: center;
 }
 .loginBoxClose{
-    margin-top: -1em;
-    margin-right: -0.8em;
     color: darkgray;
 }
 .loginBoxClose:hover{
@@ -22,10 +20,8 @@
 .light-box-body{
     font-family: Slabo;
     background-color:white;
-    width:30%;
-    margin:10% auto;
-    vertical-align:middle;
-    padding:1.5em 1.5em;
+    padding:1.5em 2em;
+    margin: 15% auto;
     border-radius: 0.5em;
     transition: all 200ms ease-in;
     -webkit-transition: all 200ms ease-in;
@@ -62,4 +58,5 @@
     font-size:1.2em;
     font-family:Slabo;
     color:darkgray;
+    text-align: center;
 }

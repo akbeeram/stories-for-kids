@@ -11,6 +11,8 @@
     function dashMainCtrl($scope, $state, storyService, categoryService){
         var vm = this;
         var categorySelected;
+        var routerState = $state;
+
         //if user is navigating from reader page back to dashboard
         //er-select the story
         if(localStorage.getItem('currStory')){
@@ -61,6 +63,7 @@
         vm.changeCategory = changeCategory;
         vm.getStoriesList = getStoriesList;
         vm.getCategoryList = getCategoryList;
+        vm.routerState = routerState;
         
         vm.getCategoryList();
         vm.getStoriesList(vm.categorySelected);
