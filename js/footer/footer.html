@@ -2,7 +2,7 @@
     <!-- To offset the footer fromoverlapping the content -->
 </div>
 <div class="footer">
-    <div class="row" style="padding: 2em;">
+    <div class="row" style="padding: 1em;">
         <div class="col-md-6 col-sm-6 col-xs-12">
             <!--<div style=font-size:1.8em;>Stay Connected</div>
             <div style="color:darkgray;font-size:1em;">Get regular notifications when new story has been added.</div>
@@ -19,7 +19,7 @@
                 <li ng-repeat="news in $ctrl.recentlyAdded" style="color:darkgray;line-height:1.2em;">{{news|limitTo:30}}</li>
             </ul>-->
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-12 boringStuff" style="color:darkgray;margin-top:1em;line-height:1.2em;">
+        <div class="col-md-3 col-sm-3 col-xs-12 boringStuff" style="color:darkgray;line-height:1.2em;">
             <!-- need to dynamically render these as divs -->
             <a ui-sref="app.boring-stuff.privacy">Privacy Policy</a><br>
             <a ui-sref="app.boring-stuff.terms-of-use">Terms of Use</a><br>

@@ -10,7 +10,7 @@
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
             <div class="headerSearch col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center;position:relative;">
-                <span class="headerSearchAnchor"><div>
+                <!--<span class="headerSearchAnchor"><div>
                     <i class="fa fa-search fa-2x" aria-hidden="true"></i>
                 </div>
                 Search a Story</span>
@@ -20,7 +20,7 @@
                     <div>
                         Type something to see results
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">
                 <!-- If user is not authenticated, display login-->
@@ -53,7 +53,7 @@
                                         <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
                                         <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
                                         <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>-->
-                                        <div><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
+                                        <div ng-click="$ctrl.logoutUser()" class="user-info-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
                                     </td>
                                 </tr>
                             </table>

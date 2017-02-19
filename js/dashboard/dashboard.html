@@ -2,7 +2,7 @@
     <div>
         <div class="menu">
             <ul>
-                <li ui-sref="welcome"><i class="fa fa-angle-double-left"></i></li>
+                <li ui-sref="welcome"><i class="fa fa-angle-double-left" style="font-weight:bold;"></i></li>
                 <li ng-class="{'submenu-active':$ctrl.routerState.current.name == 'app.dash'}">Stories</li>
                 <!--<li>Morals</li>
                 <li>Quotes</li>
@@ -11,7 +11,7 @@
                 <li>Buildings</li>
                 <li>Arts/Crafts</li>
                 <li>Store</li>-->
-                <li ui-sref="app.take-control.submit-a-story">Admin</li>
+                <li ui-sref="app.take-control.submit-a-story" ng-if="$ctrl.isUserAdmin">Admin</li>
             </ul>
         </div>
     </div>

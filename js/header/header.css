@@ -101,5 +101,9 @@
 }
 .user-info-circle:hover {
     background: chocolate;
-    
+}
+.user-info-logout:hover {
+    background: crimson;
+    color:white;
+    cursor: pointer;
 }

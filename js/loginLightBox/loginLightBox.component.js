@@ -11,6 +11,7 @@ angular.module('storiesApp')
 loginLightBoxCtrl.$inject = ['$state','$http', '$window'];
 function loginLightBoxCtrl($state,$http,$window){
     var vm = this;
+    var routerState = $state;
     //to show the login form & hide the register form by default
     vm.loginForm=true;
     vm.registerForm=false;
@@ -38,4 +39,5 @@ function loginLightBoxCtrl($state,$http,$window){
     vm.close = function(){
       vm.showLoginForm=false;
     }
+    vm.routerState = routerState;
 }

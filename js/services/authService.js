@@ -20,6 +20,24 @@ angular.module('AuthenticationService',[])
 				return deferred.promise;
 			});
 		},
+		logoutUser:function(userInfo){
+			var deferred=$q.defer();
+			return $http({
+				url:'api/v1/logout.php',
+				method:'POST',
+				headers: {'Content-Type': 'application/json'},
+				data:{
+                    email:userInfo.email
+                }                
+			})
+			.then(function(response){
+				deferred.resolve(response.data);
+				return deferred.promise;
+			},function(response){
+				deferred.reject(response);
+				return deferred.promise;
+			});
+		},
 		authenticateUser:function(email, accessToken){
 			var deferred=$q.defer();
 			return $http({

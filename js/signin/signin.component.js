@@ -26,7 +26,8 @@ function signinCtrl($scope,$state,authService){
                     vm.showSignIn = false;
                     vm.showSignedIn = true;
                     if(data.loginSuccess){
-                        $state.reload();
+                        //console.log($state);
+                        $state.go('app.dash');
                     }
 
                 }

@@ -5,8 +5,8 @@ angular.module('storiesApp')
         controller: headerCtrl
 });
 
-headerCtrl.$inject = ['$scope','$state','$timeout'];
-function headerCtrl($scope,$state, $timeout){
+headerCtrl.$inject = ['$scope','$state','authService'];
+function headerCtrl($scope,$state, authService){
     var vm = this;
     var isAuthenticatedUser = false;
     var displayShortName = '';
@@ -26,9 +26,29 @@ function headerCtrl($scope,$state, $timeout){
             vm.email = userInfo.email || '';
             vm.name = userInfo.username || ''; 
         }
+    }else{
+        //temporary fix for authentication for other routes
+        if($state.current.name !== 'welcome'){
+            $state.go('login');
+        }
     }
     openLoginLightBox = function(){
         vm.showLoginForm = true;
+    }
+    logoutUser = function(){
+        if(localStorage.getItem('sfkUserInfo')){
+            userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
+            authService.logoutUser(userInfo).then(function(data){
+                if(data.logoutSuccess){
+                    $state.go('welcome');
+                    localStorage.removeItem('sfkUserInfo');
+                    localStorage.removeItem('currStory');
+                }
+                //needs an else block here
+            });
+        }else{
+            $state.go('welcome');
+        }
     }
     //registering clicks to hide dropdowns
     var everywhere = angular.element(window.document);
@@ -64,4 +84,5 @@ function headerCtrl($scope,$state, $timeout){
     });
     vm.isAuthenticatedUser = isAuthenticatedUser;
     vm.openLoginLightBox = openLoginLightBox;
+    vm.logoutUser = logoutUser;
 }

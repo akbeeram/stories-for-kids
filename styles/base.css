@@ -36,11 +36,6 @@ html, body{
     box-sizing: border-box;
     font-family: Slabo;
 }
-.footer .row div:first{
-    padding-left: 2em;
-}
-
-
 .totop{
   position:fixed;
   bottom:10px;
@@ -53,7 +48,6 @@ html, body{
     width:12em;
     color:black;
     padding:0.4em 0.5em;
-    margin-top:1em;
     border-radius:0.5em;
 }
 .emailFooterInput:focus{
