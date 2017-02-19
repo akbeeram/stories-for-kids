@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4484053b-2d13-4b01-b64c-126188a50a62" name="Default" comment="line height styling for">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/dashboard/dashboard.component.js" afterPath="$PROJECT_DIR$/js/dashboard/dashboard.component.js" />
@@ -8,7 +9,27 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/dashboard/dboard.css" afterPath="$PROJECT_DIR$/js/dashboard/dboard.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header/header.html" afterPath="$PROJECT_DIR$/js/header/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/signin/signin.component.js" afterPath="$PROJECT_DIR$/js/signin/signin.component.js" />
+=======
+    <list default="true" id="4484053b-2d13-4b01-b64c-126188a50a62" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/contactus/contact-us.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/contactus/contact-us.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/contactus/contactUs.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/dashboard/dashboard.component.js" afterPath="$PROJECT_DIR$/js/dashboard/dashboard.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/js/dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/footer/footer.css" afterPath="$PROJECT_DIR$/js/footer/footer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/footer/footer.html" afterPath="$PROJECT_DIR$/js/footer/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header/header.html" afterPath="$PROJECT_DIR$/js/header/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/loginLightBox/login-light-box.css" afterPath="$PROJECT_DIR$/js/loginLightBox/login-light-box.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/loginLightBox/login-lightbox.html" afterPath="$PROJECT_DIR$/js/loginLightBox/login-lightbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/signin/signin.html" afterPath="$PROJECT_DIR$/js/signin/signin.html" />
+>>>>>>> feature/author
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/storiesForKidsApp.js" afterPath="$PROJECT_DIR$/js/storiesForKidsApp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/common/boring-stuff/disclaimer.html" afterPath="$PROJECT_DIR$/partials/common/boring-stuff/disclaimer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/common/boring-stuff/privacy-policy.html" afterPath="$PROJECT_DIR$/partials/common/boring-stuff/privacy-policy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/common/boring-stuff/terms-of-use.html" afterPath="$PROJECT_DIR$/partials/common/boring-stuff/terms-of-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/base.css" afterPath="$PROJECT_DIR$/styles/base.css" />
     </list>
     <ignored path="stories-for-kids.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +50,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/header/header.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="408">
               <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+=======
+            <state vertical-scroll-proportion="0.12865497">
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+>>>>>>> feature/author
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -48,84 +74,136 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/admin/admin.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
+=======
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/footer/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> feature/author
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="dboard.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/dashboard/dboard.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1207">
               <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+=======
+      <file leaf-file-name="storiesForKidsApp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/storiesForKidsApp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+>>>>>>> feature/author
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="author.component.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/admin/author.component.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
               <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+=======
+      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/welcomePage/welcome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+>>>>>>> feature/author
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="storiesForKidsApp.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/storiesForKidsApp.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
               <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+=======
+      <file leaf-file-name="contactUs.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/contactus/contactUs.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+>>>>>>> feature/author
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="dashboard.component.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/dashboard/dashboard.component.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+=======
+      <file leaf-file-name="author.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/admin/author.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+>>>>>>> feature/author
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="author.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/admin/author.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="289">
               <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="80" selection-start-line="43" selection-start-column="80" selection-end-line="43" selection-end-column="80" />
+              <folding />
+>>>>>>> feature/author
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signin.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/signin/signin.component.js">
+      <file leaf-file-name="contact-us.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/contactus/contact-us.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="340">
               <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="headerBlock.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/header/headerBlock.component.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-              <folding />
+=======
+            <state vertical-scroll-proportion="-22.064516">
+              <caret line="61" column="164" selection-start-line="61" selection-start-column="164" selection-end-line="61" selection-end-column="164" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> feature/author
             </state>
           </provider>
         </entry>
@@ -133,8 +211,31 @@
       <file leaf-file-name="signin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/signin/signin.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="221">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding />
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="75" selection-start-line="1" selection-start-column="75" selection-end-line="7" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> feature/author
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact-us.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/contactus/contact-us.css">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="204">
               <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="14" />
+>>>>>>> feature/author
               <folding />
             </state>
           </provider>
@@ -145,9 +246,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -160,26 +261,25 @@
         <option value="$PROJECT_DIR$/partials/common/login-lightbox.html" />
         <option value="$PROJECT_DIR$/js/directives/directives.js" />
         <option value="$PROJECT_DIR$/js/welcomePage/welcomePage.component.js" />
-        <option value="$PROJECT_DIR$/js/loginLightBox/login-light-box.css" />
-        <option value="$PROJECT_DIR$/js/loginLightBox/login-lightbox.html" />
         <option value="$PROJECT_DIR$/js/signup/signup.html" />
         <option value="$PROJECT_DIR$/js/header/headerBlock.component.js" />
         <option value="$PROJECT_DIR$/js/header/header.css" />
         <option value="$PROJECT_DIR$/js/welcomePage/welcome.html" />
-        <option value="$PROJECT_DIR$/partials/common/main.html" />
-        <option value="$PROJECT_DIR$/partials/common/boring-stuff/privacy-policy.html" />
-        <option value="$PROJECT_DIR$/partials/common/boring-stuff/terms-of-use.html" />
-        <option value="$PROJECT_DIR$/partials/common/boring-stuff/disclaimer.html" />
         <option value="$PROJECT_DIR$/partials/common/boring-stuff/site-map.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/js/footer/footer.css" />
         <option value="$PROJECT_DIR$/styles/base.css" />
         <option value="$PROJECT_DIR$/js/header/header.html" />
+=======
+>>>>>>> feature/author
         <option value="$PROJECT_DIR$/js/footer/boringStuff.component.js" />
         <option value="$PROJECT_DIR$/js/admin/admin.html" />
-        <option value="$PROJECT_DIR$/js/footer/footer.html" />
         <option value="$PROJECT_DIR$/js/footer/boringStuff.config.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/dashboard/dashboard.html" />
+=======
+>>>>>>> feature/author
         <option value="$PROJECT_DIR$/js/admin/admin.config.js" />
         <option value="$PROJECT_DIR$/js/admin/admin.component.js" />
         <option value="$PROJECT_DIR$/js/dashboard/dboard.css" />
@@ -187,9 +287,31 @@
         <option value="$PROJECT_DIR$/js/admin/admin.css" />
         <option value="$PROJECT_DIR$/js/admin/author.html" />
         <option value="$PROJECT_DIR$/js/signin/signin.component.js" />
+        <option value="$PROJECT_DIR$/js/loginLightBox/login-lightbox.html" />
+        <option value="$PROJECT_DIR$/js/loginLightBox/login-light-box.css" />
+        <option value="$PROJECT_DIR$/libs/angular/angular-messages.min.js" />
+        <option value="$PROJECT_DIR$/js/dashboard/dashboard.component.js" />
+        <option value="$PROJECT_DIR$/js/dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/partials/common/main.html" />
+        <option value="$PROJECT_DIR$/styles/base.css" />
+        <option value="$PROJECT_DIR$/partials/common/boring-stuff/privacy-policy.html" />
+        <option value="$PROJECT_DIR$/partials/common/boring-stuff/terms-of-use.html" />
+        <option value="$PROJECT_DIR$/partials/common/boring-stuff/disclaimer.html" />
+        <option value="$PROJECT_DIR$/js/footer/footer.css" />
+        <option value="$PROJECT_DIR$/js/storiesForKidsApp.js" />
+        <option value="$PROJECT_DIR$/js/contactus/contactUs.componets.js" />
+        <option value="$PROJECT_DIR$/js/footer/footer.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/signin/signin.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/js/dashboard/dashboard.component.js" />
         <option value="$PROJECT_DIR$/js/storiesForKidsApp.js" />
+=======
+        <option value="$PROJECT_DIR$/js/contactus/contactUs.component.js" />
+        <option value="$PROJECT_DIR$/js/contactus/contact-us.css" />
+        <option value="$PROJECT_DIR$/js/contactus/contact-us.html" />
+        <option value="$PROJECT_DIR$/js/header/header.html" />
+>>>>>>> feature/author
       </list>
     </option>
   </component>
@@ -200,10 +322,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
     <option name="height" value="1010" />
+=======
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1932" />
+    <option name="height" value="1050" />
+>>>>>>> feature/author
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -439,6 +568,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="loginLightBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stories-for-kids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stories-for-kids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="header" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -476,6 +623,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stories-for-kids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stories-for-kids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contactus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -611,12 +776,20 @@
       <updated>1486055021308</updated>
       <workItem from="1487429347098" duration="4819000" />
     </task>
+    <task id="LOCAL-00001" summary="set up for tinymce">
+      <created>1487347602670</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1487347602670</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="4819000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
     <editor active="false" />
     <layout>
@@ -625,17 +798,32 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="-9" y="-9" width="1932" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24869384" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+>>>>>>> feature/author
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> feature/author
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -649,11 +837,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set up for tinymce" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up for tinymce" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/js/header/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -685,6 +878,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> feature/author
     <entry file="file://$PROJECT_DIR$/js/signup/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -821,92 +1016,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/loginLightBox/login-light-box.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/loginLightBox/loginLightBox.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/loginLightBox/login-lightbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/signup/signup.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+=======
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="61" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="61" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/header/header.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
           <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/welcomePage/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="133" selection-start-line="8" selection-start-column="133" selection-end-line="8" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/common/boring-stuff/privacy-policy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="87" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/common/boring-stuff/disclaimer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/common/boring-stuff/terms-of-use.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="33" column="119" selection-start-line="33" selection-start-column="119" selection-end-line="33" selection-end-column="119" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/common/boring-stuff/site-map.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/reader/reader.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="61" />
+=======
+        <state vertical-scroll-proportion="-17.032259">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/footer/footerBlock.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/footer/boringStuff.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="8" column="133" selection-start-line="8" selection-start-column="133" selection-end-line="8" selection-end-column="133" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="7" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin/admin.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="11" column="87" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="87" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dashboard/dboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="13" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="6" />
+=======
+        <state vertical-scroll-proportion="-13.67742">
+          <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="33" column="119" selection-start-line="33" selection-start-column="119" selection-end-line="33" selection-end-column="119" />
+=======
+        <state vertical-scroll-proportion="-11.354838">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/signin/signin.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/footer/footer.css">
+    <entry file="file://$PROJECT_DIR$/js/loginLightBox/loginLightBox.component.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/base.css">
+    <entry file="file://$PROJECT_DIR$/js/loginLightBox/login-lightbox.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="20" />
+=======
+        <state vertical-scroll-proportion="-9.225806">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="47" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/common/main.html">
+    <entry file="file://$PROJECT_DIR$/js/loginLightBox/login-light-box.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4626865">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/header/headerBlock.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.9444447">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin/author.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
@@ -916,32 +1186,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+=======
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="117" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/footer/footerBlock.component.js">
+    <entry file="file://$PROJECT_DIR$/js/dashboard/dashboard.component.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dashboard/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5161295">
+          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+>>>>>>> feature/author
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/common/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="17" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
+=======
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/footer/footer.html">
+    <entry file="file://$PROJECT_DIR$/styles/base.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+=======
+        <state vertical-scroll-proportion="-9.19403">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/footer/boringStuff.config.js">
+    <entry file="file://$PROJECT_DIR$/partials/common/boring-stuff/privacy-policy.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="10" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="7" />
+=======
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="90" />
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/partials/common/boring-stuff/terms-of-use.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
           <folding />
@@ -952,87 +1256,154 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+=======
+        <state vertical-scroll-proportion="-0.9032258">
+          <caret line="4" column="266" selection-start-line="4" selection-start-column="224" selection-end-line="4" selection-end-column="266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/common/boring-stuff/disclaimer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="173" selection-start-line="5" selection-start-column="173" selection-end-line="5" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/footer/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0">
+          <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin/author.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+>>>>>>> feature/author
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/admin/admin.config.js">
+    <entry file="file://$PROJECT_DIR$/js/storiesForKidsApp.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="85">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+>>>>>>> feature/author
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/dashboard/dboard.css">
+    <entry file="file://$PROJECT_DIR$/js/welcomePage/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1207">
           <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+=======
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+>>>>>>> feature/author
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/admin/admin.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="272">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="80" selection-start-line="43" selection-start-column="80" selection-end-line="43" selection-end-column="80" />
+>>>>>>> feature/author
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/admin/author.html">
+    <entry file="file://$PROJECT_DIR$/js/footer/footer.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="289">
           <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+>>>>>>> feature/author
           <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/header/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/signin/signin.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="408">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="75" selection-start-line="1" selection-start-column="75" selection-end-line="7" selection-end-column="10" />
+>>>>>>> feature/author
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/contactus/contactUs.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="204">
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+>>>>>>> feature/author
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/signin/signin.component.js">
+    <entry file="file://$PROJECT_DIR$/js/contactus/contact-us.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="340">
           <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="14" />
+>>>>>>> feature/author
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/header/headerBlock.component.js">
+    <entry file="file://$PROJECT_DIR$/js/contactus/contact-us.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="221">
           <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
           <folding />
+=======
+        <state vertical-scroll-proportion="-22.064516">
+          <caret line="61" column="164" selection-start-line="61" selection-start-column="164" selection-end-line="61" selection-end-column="164" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/admin/author.component.js">
+    <entry file="file://$PROJECT_DIR$/js/header/header.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="663">
           <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding />
@@ -1052,6 +1423,20 @@
         <state relative-caret-position="447">
           <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.12865497">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#1;n#span#1;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> feature/author
         </state>
       </provider>
     </entry>

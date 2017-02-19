@@ -32,6 +32,13 @@
                         //not running
                     }
                 })
+                .state('contact-us',{
+                    url:'/contact-us',
+                    template:'<contact-us />',
+                    controller:function($scope,$state){
+
+                    }
+                })
                 .state('app.dash',{
                     url:'/dashboard',
                     template:'<dash-board-main />',

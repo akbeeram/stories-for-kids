@@ -7,7 +7,6 @@ angular.module('storiesApp')
     templateUrl : 'js/dashboard/dashboard.html',
     controller: dashMainCtrl
 });
-
 dashMainCtrl.$inject = ['$scope','$state','storyService','categoryService'];
 function dashMainCtrl($scope, $state, storyService, categoryService){
     var vm = this;
@@ -27,8 +26,27 @@ function dashMainCtrl($scope, $state, storyService, categoryService){
     var changeCategory = function(){
         if(vm.categorySelected){
             vm.getStoriesList(vm.categorySelected);
+            }
         }
-    }
+        //called first time when controller loads to get data
+        //to get all the sotires for a category
+        var getStoriesList = function(catCode){
+            storyService.getStoriesList(catCode).then(function(stories_data){
+                vm.dash= vm.dash || {};               
+                categoryService.getCategoryInfo(catCode).then(function(cat_data){
+                    vm.dash.storyData=stories_data;
+                    vm.dash.categoryData=cat_data; 
+                });
+            });
+        }
+        //when user selects astory,story is persisted in localstorage
+        //and user is navigated to reader page
+        var openStory = function(story){
+            localStorage.setItem('currStory',JSON.stringify(story));
+            $state.go('app.read',{
+                htmlPage: story.story_html_name
+            });
+        }
     //called first time when controller loads to get data
     //to get all the sotires for a category
     var getStoriesList = function(catCode){

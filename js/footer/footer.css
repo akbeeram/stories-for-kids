@@ -53,6 +53,14 @@
     list-style-type: disc;
 
 }
+.privacy-policy a, .terms-of-use a, .disclaimer a {
+    color: crimson;
+    text-decoration: none;
+}
+.privacy-policy a:hover, .terms-of-use a:hover, .disclaimer a:hover {
+    color: yellowgreen;
+}
+
 .footer-license a {
     text-decoration:none;
     color: gray;

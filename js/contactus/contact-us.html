@@ -1,0 +1,68 @@
+<header-block></header-block>
+<div class="contact-us">
+    <div class="row">
+        <div class="col-lg-2 col-sm-2 col-md-1 hidden-xs"></div>
+        <div class="col-lg-8 col-sm-8 col-md-10 col-xs-12">
+            <div class="contact-us-header">
+                Hi there !! Wanna get in touch with us or give us a comment/feedback ?
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-2 col-md-1 hidden-xs"></div>
+    </div>
+    <div>
+        <form name="contactUsForm" novalidate>
+            <div class="row contact-form-row">
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-3" style="text-align: right">
+                    <label>Name :</label>
+                </div>
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-9">
+                    <input type="text" ng-model="$ctrl.contact.name" name="name" placeholder="Your Name" required
+                           ng-minlength="4" ng-pattern="/^[a-zA-Z0-9]*$/" ng-maxlength="15"/>
+                    <div ng-show="contactUsForm.name.$dirty && contactUsForm.name.$error.minlength" class="input-invalid">
+                        Name must be minimum 4 characters</div>
+                    <div ng-show="contactUsForm.name.$dirty && contactUsForm.name.$error.maxlength" class="input-invalid">
+                        Name should not be more than 15 characters</div>
+                    <div ng-show="contactUsForm.name.$dirty && contactUsForm.name.$error.pattern" class="input-invalid">
+                        No special Characters allowed</div>
+                    <div ng-show="contactUsForm.name.$dirty && contactUsForm.name.$error.required" class="input-invalid">
+                        Name is required</div>
+                </div>
+            </div>
+            <div class="row contact-form-row">
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-3" style="text-align: right">
+                    <label>Email :</label>
+                </div>
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-9">
+                    <input type="email" ng-model="$ctrl.contact.email" name="email" placeholder="E-mail address" required/>
+                    <div ng-show="contactUsForm.email.$dirty && contactUsForm.email.$error.email" class="input-invalid">
+                        Please enter a valid email</div>
+                    <div ng-show="contactUsForm.email.$dirty && contactUsForm.email.$error.required" class="input-invalid">
+                        Email is required</div>
+                </div>
+            </div>
+            <div class="row contact-form-row">
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-3" style="text-align: right">
+                    <label>Comments :</label>
+                </div>
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-9">
+                    <textarea ng-model="$ctrl.contact.comments" width="75%" rows="5" name="comments" required ng-pattern="/^[\w\s.,/(){}:;_-]*$/"
+                              placeholder="Enter your comments/feedback/suggestions here" ng-maxlength="250"></textarea>
+                    <div> {{250 - $ctrl.contact.comments.length}} characters left.</div>
+                    <div ng-show="contactUsForm.comments.$dirty && contactUsForm.comments.$error.required" class="input-invalid">
+                        Please enter your feedback/comments</div>
+                    <div ng-show="contactUsForm.comments.$dirty && contactUsForm.comments.$error.pattern" class="input-invalid">
+                        Do not enter special Characters</div>
+                </div>
+            </div>
+            <div class="row contact-form-row">
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-3" style="text-align: right">
+
+                </div>
+                <div class="col-lg-8 col-sm-8 col-md-8 col-xs-9">
+                    <button ng-click="$ctrl.submitComment()" ng-disabled="!contactUsForm.$valid" ng-style="{'cursor':!contactUsForm.$valid ? 'not-allowed':'pointer'}">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<footer-block></footer-block>

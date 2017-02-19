@@ -8,15 +8,27 @@
   font-weight: 400;
   src: url('fonts/Courgette/Courgette-Regular.ttf');
 }
-body{
+html, body{
     font-family: Slabo;
     background-color: #f2f2f2;
     overflow-x: hidden;
+    height:100%;
 }
+.body-container{
+    position: relative;
+    margin: 0 auto;
 
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+
+    min-height:100%; /* real browsers */
+}
 .footer{
+    position: absolute;
+    width: 100%;
+    bottom:0;   /*To offset page overlap when dynamic partial is loaded*/
     margin-top: 5em;
-    padding:2em;
+    padding:0;
     color:white;
     background-color:#1B242D;
     -moz-box-sizing: border-box;
