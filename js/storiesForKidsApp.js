@@ -15,6 +15,9 @@
                 .state('welcome',{
                     url:'/welcome',
                     requireLogin:false,
+                    resolve:{
+                        isUserAlreadyLoggedIn:isUserValid
+                    },
                     template:'<welcome-page />'
                 })
                 .state('app',{
@@ -32,8 +35,7 @@
                 .state('app.dash',{
                     url:'/dashboard',
                     template:'<dash-board-main />',
-                    controller:function($scope,$state){
-                        
+                    controller:function($scope,$state,isUserAlreadyLoggedIn){
                     }
                 })
                 .state('app.read',{

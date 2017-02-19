@@ -15,15 +15,17 @@ function headerCtrl($scope,$state, $timeout){
         userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
         isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
-        if(userInfo.username.indexOf(' ') >= 0){
-            var temp = userInfo.username.split(' ');
-            displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
-        } else {
-            displayShortName = userInfo.username.slice(0,2);
-        } 
-        vm.displayShortName = displayShortName;
-        vm.email = userInfo.email || '';
-        vm.name = userInfo.username || '';
+        if(userInfo.isAuthenticatedUser){
+            if(userInfo.username.indexOf(' ') >= 0){
+                var temp = userInfo.username.split(' ');
+                displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
+            } else {
+                displayShortName = userInfo.username.slice(0,2);
+            } 
+            vm.displayShortName = displayShortName;
+            vm.email = userInfo.email || '';
+            vm.name = userInfo.username || ''; 
+        }
     }
     openLoginLightBox = function(){
         vm.showLoginForm = true;

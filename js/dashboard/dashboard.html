@@ -2,14 +2,15 @@
     <div>
         <div class="menu">
             <ul>
-                <li>Stories</li>
-                <li>Morals</li>
+                <li ui-sref="welcome"><i class="fa fa-angle-double-left"></i></li>
+                <li ng-class="{'submenu-active':$ctrl.routerState.current.name == 'app.dash'}">Stories</li>
+                <!--<li>Morals</li>
                 <li>Quotes</li>
                 <li>People</li>
                 <li>Places</li>
                 <li>Buildings</li>
                 <li>Arts/Crafts</li>
-                <li>Store</li>
+                <li>Store</li>-->
                 <li ui-sref="app.take-control.submit-a-story">Admin</li>
             </ul>
         </div>
@@ -18,7 +19,8 @@
 <!-- folowing style is required -->
 <div class="dash-body row">
     <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
-    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12" >
+    
+    <div class="col-lg-7 col-md-8 col-sm-8 col-xs-12" >
         <div class="dash-container">
             Hi there ! Select your favorite story to start reading.<br><br>
             Select a Category :
@@ -28,6 +30,15 @@
                 </option>
             </select>
             <br><br>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 dash-story-fig">
+                    <img ng-src="{{$ctrl.dash.categoryData.categoryImgLoc}}" />
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 dash-story-desc">
+                    {{$ctrl.dash.categoryData.categoryDesc}}
+                </div>
+            </div>
+            
             <div>
                 <div ng-repeat="(k,v) in $ctrl.dash.storyData.story_list">
                     <div class="story-part-title" ng-if="k.length>0">Part {{$index+1}}</div>
@@ -42,13 +53,9 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-        <div class="dash-story-fig">
-            <img ng-src="{{$ctrl.dash.categoryData.categoryImgLoc}}" />
-        </div>
-        <div class="dash-story-desc">{{$ctrl.dash.categoryData.categoryDesc}}</div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
+    
+    
+    <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
         <right-panel></right-panel>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
