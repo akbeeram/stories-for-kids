@@ -27,10 +27,11 @@ if(!$conn){
     $highest_id++;
     $getCommentsSql="INSERT INTO ".$table." (`COMMENTS_SUBMITTED_ID`, `NAME`, `EMAIL`, `COMMENTS`) VALUES (".$highest_id.",'".$name."','".$email."','".$comments."')";
     $getCommentsSqlResult=mysql_query($getCommentsSql);
+        header('Content-type: application/json');
     if(mysql_affected_rows($conn)!=1){
         //handle this failure scenario
+        echo json_encode(array('commentSubmitted'=>false));
     }else{
-        header('Content-type: application/json');
         echo json_encode(array('commentSubmitted'=>true));
     }
 }

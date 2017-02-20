@@ -19,9 +19,7 @@
                 comments:vm.contact.comments
             }
             authService.submitComments(cmntInfo).then(function(data){
-                if(data && data.commentSubmitted){
-                    vm.commentSubmitResult=true;
-                }
+                vm.commentSubmitResult = data && data.commentSubmitted ? true : false;
             });
         }
 

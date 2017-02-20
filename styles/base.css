@@ -81,3 +81,7 @@ html, body{
   box-shadow: 0 2px #2980B9;
   transform: translateY(3px);
 }
+.input-invalid-signup{
+    color: crimson;
+    padding-bottom: 0.5em;
+}

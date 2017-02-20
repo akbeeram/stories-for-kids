@@ -35,12 +35,12 @@
     transition: all 0.2s ease-in;
 }
 .story-line-item:hover {
-    background: crimson;
-    color: white;
+    background: yellowgreen;
+    color: black;
     cursor: pointer;
 }
 .story-part-title {
-    border-bottom: 1px dotted crimson;
+    border-bottom: 1px dotted yellowgreen;
     padding: 0.5em 0;
     margin: 0.5em 0;
 }

@@ -76,7 +76,23 @@ angular.module('AuthenticationService',[])
 		createUser:function (userInfo) {
 			var deferred=$q.defer();
 			return $http({
-				url:'api/v1/register.php',
+				url:'api/v1/signup.php',
+				method:'POST',
+				headers: {'Content-Type': 'application/json'},
+				data:userInfo
+			})
+			.then(function(response){
+				deferred.resolve(response.data);
+				return deferred.promise;
+			},function(response){
+				deferred.reject(response);
+				return deferred.promise;
+			});
+		},
+		isUserUnique:function (userInfo) {
+			var deferred=$q.defer();
+			return $http({
+				url:'api/v1/signup.php',
 				method:'POST',
 				headers: {'Content-Type': 'application/json'},
 				data:userInfo
