@@ -57,13 +57,13 @@ angular.module('AuthenticationService',[])
 				return deferred.promise;
 			});
 		},
-		logoutUser:function (userInfo) {
+		submitComments:function (cmntInfo) {
 			var deferred=$q.defer();
 			return $http({
-				url:'api/v1/logout.php',
+				url:'api/v1/contact.php',
 				method:'POST',
 				headers: {'Content-Type': 'application/json'},
-				data:userInfo
+				data:cmntInfo
 			})
 			.then(function(response){
 				deferred.resolve(response.data);
