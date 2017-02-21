@@ -32,8 +32,12 @@ function headerCtrl($scope,$state, authService){
         }
     }
     }else{
+        console.log($state);
+        console.log($state.current.name);
         //temporary fix for authentication for other routes
-        if($state.current.name !== 'welcome'){
+        //the next line is to avoid authentication to routes that dont need authentication
+        //in futue refine this logicby adding a all routes to constants that dont need login
+        if($state.current.name !== 'welcome' && $state.current.name.indexOf('boring')<0 && $state.current.name !== 'contact-us'){
             $state.go('login');
         }
     }

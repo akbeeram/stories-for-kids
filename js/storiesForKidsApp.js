@@ -16,10 +16,18 @@
             .state('welcome',{
                 url:'/welcome',
                 requireLogin:false,
+                resolve:{
+                    isUserAlreadyLoggedIn:isUserValid
+                },
                 template:'<welcome-page />'
+            })
+            .state('login',{
+                url:'/login',
+                template:'<login-light-box />'
             })
             .state('contact-us',{
                 url:'/contact-us',
+                requireLogin:false,
                 template:'<contact-us />',
                 controller:function($scope,$state){
 
@@ -27,6 +35,7 @@
             })
             .state('boring-stuff',{
                 url:'/boring-stuff',
+                requireLogin:false,
                 templateUrl : 'js/boringStuff/boring-stuff.html',
                 controller:function($scope,$state,$stateParams){
                     //console.log($stateParams);
