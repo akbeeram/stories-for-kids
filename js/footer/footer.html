@@ -1,16 +1,23 @@
+<div style="height: 15em;">
+    <!-- To offset the footer fromoverlapping the content -->
+</div>
 <div class="footer">
-    <div class="row">
+    <div class="row" style="padding: 2em;">
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <div style=font-size:1.8em;>Stay Connected</div>
+            <!--<div style=font-size:1.8em;>Stay Connected</div>
             <div style="color:darkgray;font-size:1em;">Get regular notifications when new story has been added.</div>
             <input type="text" class="emailFooterInput" style=""/>
-            <button class="button" ng-click="$ctrl.submitA()">Submit<i ng-class="{'fa fa-envelope leftMar1':!$ctrl.submitted,'fa fa-spin fa-spinner fa-pulse fa-fw':$ctrl.isSubmittin,'fa fa-check leftMar1':$ctrl.submitted}" aria-hidden="true"></i></button>
+            <button class="button" ng-click="$ctrl.submitA()">
+                Submit
+                <i ng-class="{'fa fa-envelope leftMar1':!$ctrl.submitted,'fa fa-spin fa-spinner fa-pulse fa-fw':$ctrl.isSubmittin,'fa fa-check leftMar1':$ctrl.submitted}"
+                   aria-hidden="true"></i>
+            </button>-->
         </div>
         <div class="col-md-3 col-sm-3 col-xs-12">
-            <div style=font-size:1.8em;margin-bottom:0.5em;>Recently Added</div>
+            <!--<div style=font-size:1.8em;margin-bottom:0.5em;>Recently Added</div>
             <ul>
                 <li ng-repeat="news in $ctrl.recentlyAdded" style="color:darkgray;line-height:1.2em;">{{news|limitTo:30}}</li>
-            </ul>
+            </ul>-->
         </div>
         <div class="col-md-3 col-sm-3 col-xs-12 boringStuff" style="color:darkgray;margin-top:1em;line-height:1.2em;">
             <!-- need to dynamically render these as divs -->
@@ -18,11 +25,12 @@
             <a ui-sref="app.boring-stuff.terms-of-use">Terms of Use</a><br>
             <a ui-sref="app.boring-stuff.disclaimer">Disclaimer</a><br>
             <a ui-sref="app.boring-stuff.site-map">Site Map</a><br>
-            <a>Contact Us</a><br>
-            help@abc.com
+            <a ui-sref="contact-us">Contact Us</a>
         </div>
     </div>
-</div>
-<div class="footer-license">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>&nbsp;This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    <div class="row">
+        <div class="footer-license">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>&nbsp;This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </div>
+    </div>
 </div>

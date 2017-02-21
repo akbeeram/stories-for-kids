@@ -1,0 +1,17 @@
+.admin-module{
+    padding-top: 2em;
+    font-family: 'Slabo';
+}
+.admin-sub-menu ul li{
+    display: block;
+    padding: 0.5em;
+}
+.author-preview-header {
+    padding: 1em 0 0.5em 0;
+    font-size: 2em;
+    border-bottom: 1px dashed gray;
+}
+.submenu-active {
+    color: crimson;
+    background: white;
+}
