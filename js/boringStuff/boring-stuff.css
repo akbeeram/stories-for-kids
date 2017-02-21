@@ -1,0 +1,37 @@
+.disclaimer,
+.terms-of-use,
+.privacy-policy,
+.site-map {
+    font-family: 'Slabo';
+    font-size: 1.3em;
+    text-align: justify;
+    padding-top: 2em;
+    line-height:1.3em;
+}
+.disclaimer p,
+.privacy-policy p,
+.terms-of-use p {
+    margin-bottom: 1.5em;
+}
+.disclaimer p:first-letter,
+.privacy-policy p:first-letter,
+.terms-of-use p:first-letter {
+    padding-left: 1.5em;
+}
+.privacy-policy ul,
+.terms-of-use ul {
+
+    padding-left: 2em;
+}
+.privacy-policy li,
+.terms-of-use li{
+    list-style-type: disc;
+
+}
+.privacy-policy a, .terms-of-use a, .disclaimer a {
+    color: darkgreen;
+    text-decoration: none;
+}
+.privacy-policy a:hover, .terms-of-use a:hover, .disclaimer a:hover {
+    color: crimson;
+}

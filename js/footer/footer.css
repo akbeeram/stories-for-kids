@@ -1,27 +1,36 @@
+.footer{
+    position: absolute;
+    width: 100%;
+    bottom:0;   /*To offset page overlap when dynamic partial is loaded*/
+    margin-top: 5em;
+    padding:0;
+    color:white;
+    background-color:#1B242D;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Slabo;
+}
+.footer .row div:first{
+    padding-left: 2em;
+}
+.emailFooterInput{
+    width:12em;
+    color:black;
+    padding:0.4em 0.5em;
+    margin-top:1em;
+    border-radius:0.5em;
+}
+.emailFooterInput:focus{
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 .boringStuff{
     text-align: right;
     padding-right: 3em;
 }
-.disclaimer,
-.terms-of-use,
-.privacy-policy,
-.site-map {
-    font-family: 'Slabo';
-    font-size: 1.3em;
-    text-align: justify;
-    padding-top: 2em;
-    line-height:1.3em;
-}
-.disclaimer p,
-.privacy-policy p,
-.terms-of-use p {
-    margin-bottom: 1.5em;
-}
-.disclaimer p:first-letter,
-.privacy-policy p:first-letter,
-.terms-of-use p:first-letter {
-    padding-left: 1.5em;
-}
+
 .boring-header {
     font-size:1.6em;
     padding-bottom: 0.6em;
@@ -43,24 +52,6 @@
     font-size: 1em;
     vertical-align: text-top;
 }
-.privacy-policy ul,
-.terms-of-use ul {
-
-    padding-left: 2em;
-}
-.privacy-policy li,
-.terms-of-use li{
-    list-style-type: disc;
-
-}
-.privacy-policy a, .terms-of-use a, .disclaimer a {
-    color: crimson;
-    text-decoration: none;
-}
-.privacy-policy a:hover, .terms-of-use a:hover, .disclaimer a:hover {
-    color: yellowgreen;
-}
-
 .footer-license a {
     text-decoration:none;
     color: gray;

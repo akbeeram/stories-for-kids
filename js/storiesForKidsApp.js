@@ -7,7 +7,8 @@
         'AuthenticationService',
         'StoryService',
         'boringStuff',
-        'adminModule'
+        'adminModule',
+        'dashboardModule'
     ])
     .config(function($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise('/welcome');
@@ -15,14 +16,21 @@
             .state('welcome',{
                 url:'/welcome',
                 requireLogin:false,
-                resolve:{
-                    isUserAlreadyLoggedIn:isUserValid
-                },
                 template:'<welcome-page />'
             })
-            .state('login',{
-                url:'/login',
-                template:'<login-light-box />'
+            .state('contact-us',{
+                url:'/contact-us',
+                template:'<contact-us />',
+                controller:function($scope,$state){
+
+                }
+            })
+            .state('boring-stuff',{
+                url:'/boring-stuff',
+                templateUrl : 'js/boringStuff/boring-stuff.html',
+                controller:function($scope,$state,$stateParams){
+                    //console.log($stateParams);
+                }
             })
             .state('app',{
                 url:'',
@@ -31,60 +39,19 @@
                 resolve: {
                     isUserAlreadyLoggedIn : isUserValid
                 },
-                templateUrl:'partials/common/main.html',
-                controller: function($scope,$state,isUserAlreadyLoggedIn){
+                templateUrl:'js/common/main.html',
+                controller: function($scope,isUserAlreadyLoggedIn){
                     //not running
-//                    if(!isUserAlreadyLoggedIn){
-//                        $state.go('login');
-//                    }
-                }
-            })
-            .state('app.dash',{
-                url:'/dashboard',
-                template:'<dash-board-main />',
-                controller:function($scope,$state,isUserAlreadyLoggedIn){
-                    console.log(isUserAlreadyLoggedIn);
-                    if(isUserAlreadyLoggedIn){
-                        
-                    }
-                }
-            })
-            .state('app.read',{
-                url:'/read/:htmlPage',
-                template:'<reader-pane />',
-                controller:function($scope,$state,$stateParams){
-                    //console.log($stateParams);
-                }
-            }).state('app.boring-stuff',{
-                url:'/boring-stuff',
-                template:'<ui-view/>',
-                controller:function($scope,$state,$stateParams){
-                    //console.log($stateParams);
-                }
-            })
-            .state('app.take-control',{
-                url:'/admin',
-                template:'<ui-view/>',
-                controller:function($scope,$state,$stateParams){
-                    //console.log($stateParams);
-                }
-            })
-            .state('contact-us',{
-                url:'/contact-us',
-                template:'<contact-us />',
-                controller:function($scope,$state){
-
                 }
             });
 
-        function isUserValid(authService,$state){
-            var toReturn;
+        function isUserValid(authService){
             if(localStorage.getItem('sfkUserInfo')){
                 var userData = JSON.parse(localStorage.getItem('sfkUserInfo'));
                 if(userData.username && userData.accessToken){
                     //check wiht DB for auth token & username
-                    authService
-                        .authenticateUser(userData.email,userData.accessToken)      .then(function(data){
+                    authService.authenticateUser(userData.email, userData.accessToken)
+                    .then(function(data){
                         //set local storage data every time
                         localStorage.setItem('sfkUserInfo',JSON.stringify(data));
                         return true;
@@ -96,7 +63,6 @@
                 }
             }else{
                 //if no localstorage data found
-                //$state.go('login');
                 return false;
             }
         }

@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="105c5f1e-71cc-4adf-b655-89465ea6006b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/v1/contact.php" afterPath="$PROJECT_DIR$/api/v1/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/contactus/contact-us.html" afterPath="$PROJECT_DIR$/js/contactus/contact-us.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/contactus/contactUs.component.js" afterPath="$PROJECT_DIR$/js/contactus/contactUs.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/dashboard/dboard.css" afterPath="$PROJECT_DIR$/js/dashboard/dboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services/authService.js" afterPath="$PROJECT_DIR$/js/services/authService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/signup/signup.component.js" afterPath="$PROJECT_DIR$/js/signup/signup.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/signup/signup.html" afterPath="$PROJECT_DIR$/js/signup/signup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/boringStuff/boring-stuff.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/common/main.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/dashboard/dashboard.config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/footer/boringStuff.config.js" afterPath="$PROJECT_DIR$/js/boringStuff/boringStuff.config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/partials/common/boring-stuff/disclaimer.html" afterPath="$PROJECT_DIR$/js/boringStuff/disclaimer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/partials/common/boring-stuff/privacy-policy.html" afterPath="$PROJECT_DIR$/js/boringStuff/privacy-policy.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/partials/common/boring-stuff/site-map.html" afterPath="$PROJECT_DIR$/js/boringStuff/site-map.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/partials/common/boring-stuff/terms-of-use.html" afterPath="$PROJECT_DIR$/js/boringStuff/terms-of-use.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/partials/common/main.html" afterPath="$PROJECT_DIR$/js/boringStuff/boring-stuff.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/footer/footer.css" afterPath="$PROJECT_DIR$/js/footer/footer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/footer/footer.html" afterPath="$PROJECT_DIR$/js/footer/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header/header.css" afterPath="$PROJECT_DIR$/js/header/header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header/header.html" afterPath="$PROJECT_DIR$/js/header/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/header/headerBlock.component.js" afterPath="$PROJECT_DIR$/js/header/headerBlock.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/storiesForKidsApp.js" afterPath="$PROJECT_DIR$/js/storiesForKidsApp.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/base.css" afterPath="$PROJECT_DIR$/styles/base.css" />
     </list>
     <ignored path="stories-for-kids.iws" />
@@ -28,20 +37,33 @@
   <component name="FavoritesManager">
     <favorites_list name="stories-for-kids" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.64327484">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1010" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -53,13 +75,50 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stories-for-kids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stories-for-kids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stories-for-kids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -68,7 +127,6 @@
       <changelist id="105c5f1e-71cc-4adf-b655-89465ea6006b" name="Default" comment="" />
       <created>1487611577878</created>
       <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
       <updated>1487611577878</updated>
       <workItem from="1487611584263" duration="596000" />
     </task>
@@ -78,23 +136,23 @@
     <option name="totallyTimeSpent" value="596000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -113,5 +171,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64327484">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

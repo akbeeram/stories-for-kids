@@ -21,10 +21,10 @@ function headerCtrl($scope,$state, authService){
                 displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
             } else {
                 displayShortName = userInfo.username.slice(0,2);
-            } 
+            }
             vm.displayShortName = displayShortName;
             vm.email = userInfo.email || '';
-            vm.name = userInfo.username || ''; 
+            vm.name = userInfo.username || '';
         }else{
         //temporary fix for authentication for other routes
         if($state.current.name !== 'welcome'){
@@ -62,13 +62,18 @@ function headerCtrl($scope,$state, authService){
         //for search area
         isSearchAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('header-search-input') >= 0;
         isSearchIconClicked = event.target.className == 'headerSearchAnchor' || event.target.className.indexOf('fa-search') >= 0;
-        isUserInfoAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('fa-user') >= 0;
-        isUserInfoIconClicked = event.target.className == 'user-info-circle' ||  event.target.className == 'user-info-name';
         //if search area open and clicked elsewhere
-        //console.log(event.target.className);
-        //console.log(vm.showUserInfoBox);
-        
-        
+
+
+        //start of info box click handle
+        var isUserCircleClicked = event.target.className.indexOf('circle-click')>=0 ? true : false;
+        var isUserInfoClicked = event.target.className.indexOf('click-identifier')>=0 ||
+        (event.target.parent && event.target.parent.className.indexOf('click-identifier')>=0) ? true : false;
+        vm.showUserInfoBox = isUserCircleClicked ? !vm.showUserInfoBox :    isUserInfoClicked ? true : false;
+        //end of info box click handle
+
+
+        // click-identifier
         if(isSearchIconClicked){
             if(vm.showSearchBox){
                 $scope.$apply(function(){
