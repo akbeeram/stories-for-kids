@@ -18,18 +18,24 @@ function signinCtrl($scope,$state,authService){
         vm.showSignIn = false;
         vm.showSigningIn = true;
         vm.showSignedIn = false;
+        vm.showSignInErr = false;
         if($scope.loginForm && $scope.loginForm.$valid){
             authService.loginUser(vm.userLoginInput).then(function(data){
-                if(data){
+                if(data && data.loginSuccess){
                     localStorage.setItem('sfkUserInfo',JSON.stringify(data));
                     vm.showSigningIn = false;
                     vm.showSignIn = false;
                     vm.showSignedIn = true;
-                    if(data.loginSuccess){
-                        //console.log($state);
-                        $state.go('app.dash');
-                    }
-
+                    vm.showSignInErr = false;
+                    //console.log($state);
+                    $state.go('app.dash');
+                }else if(data.loginError){
+                    vm.loginError = data.loginError;
+                    
+                    vm.showSigningIn = false;
+                    vm.showSignIn = false;
+                    vm.showSignedIn = false;
+                    vm.showSignInErr = true;
                 }
             });
         }

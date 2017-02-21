@@ -13,20 +13,22 @@ function signupCtrl($scope,$state,authService){
     vm.showSignUpErr = false;
     
     vm.isUserUnique = function(){
-        vm.signupData.call = 'isUserUnique';
-        authService.isUserUnique(vm.signupData).then(function(data){
-            if(data){
-                if(data.isUserUnique){
-                    vm.isUserAvailable = true;
-                    vm.isUserNotAvailable = false;
+        if($scope.regForm.email.$valid){
+            vm.signupData.call = 'isUserUnique';
+            authService.isUserUnique(vm.signupData).then(function(data){
+                if(data){
+                    if(data.isUserUnique){
+                        vm.isUserAvailable = true;
+                        vm.isUserNotAvailable = false;
+                    }else{
+                        vm.isUserAvailable = false;
+                        vm.isUserNotAvailable = true;
+                    }
                 }else{
-                    vm.isUserAvailable = false;
-                    vm.isUserNotAvailable = true;
+                    //service error
                 }
-            }else{
-                //service error
-            }
-        });
+            });
+        }
     }
     
     
