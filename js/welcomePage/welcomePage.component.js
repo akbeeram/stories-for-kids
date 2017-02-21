@@ -7,16 +7,13 @@
         controller: welcomeCtrl
     });
     
-    welcomeCtrl.$inject = ['$scope','$state','categoryService','authService'];
-    function welcomeCtrl($scope,$state,categoryService,authService){
+    welcomeCtrl.$inject = ['$scope','$state','categoryService','authService','localStorageService'];
+    function welcomeCtrl($scope,$state,categoryService,authService,localStorageService){
         var vm = this;
-        var userInfo;
         var isAuthenticatedUser = false;
-        if(localStorage.getItem('sfkUserInfo')){
-            userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
-            //is user valid : is set here
-            isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
-        }
+        var userInfo = localStorageService.getUserAuthInfo();
+        //is user valid : is set here
+        isAuthenticatedUser = userInfo && userInfo.isAuthenticatedUser ? true : false;
         //to get category list for welcomepage
         var getCategoryList = function() {
             categoryService.getCategories().then(function(data){
@@ -31,14 +28,13 @@
                     story_cat_id:item.categoryId
                 }
                 //in dash, we load the current dategory from localstorage
-                localStorage.setItem('currStory',JSON.stringify(story));
+                localStorageService.setCurrentStory(story);
                 $state.go('app.dash');
             }else{
                 vm.showLoginForm = true;   
             }
         }
-        
-        
+
         vm.getCategoryList = getCategoryList;
         vm.onTileClick = onTileClick;
         vm.isAuthenticatedUser = isAuthenticatedUser;

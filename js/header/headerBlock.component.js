@@ -5,17 +5,18 @@ angular.module('storiesApp')
         controller: headerCtrl
 });
 
-headerCtrl.$inject = ['$scope','$state','authService'];
-function headerCtrl($scope,$state, authService){
+headerCtrl.$inject = ['$scope','$state','authService','localStorageService'];
+function headerCtrl($scope,$state, authService, localStorageService){
     var vm = this;
     var isAuthenticatedUser = false;
     var displayShortName = '';
-    var sfkUserInfo;
-    if(localStorage.getItem('sfkUserInfo')){
-        userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
+    var userInfo = localStorageService.getUserAuthInfo();
+    //authentication is happending in header automatically
+    //this is a temp fix
+    if(userInfo){
         isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
-        if(userInfo.isAuthenticatedUser){
+        if(isAuthenticatedUser){
             if(userInfo.username.indexOf(' ') >= 0){
                 var temp = userInfo.username.split(' ');
                 displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
@@ -32,8 +33,6 @@ function headerCtrl($scope,$state, authService){
         }
     }
     }else{
-        console.log($state);
-        console.log($state.current.name);
         //temporary fix for authentication for other routes
         //the next line is to avoid authentication to routes that dont need authentication
         //in futue refine this logicby adding a all routes to constants that dont need login
@@ -45,15 +44,18 @@ function headerCtrl($scope,$state, authService){
         vm.showLoginForm = true;
     }
     logoutUser = function(){
-        if(localStorage.getItem('sfkUserInfo')){
-            userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
+        //need to improve this logic
+        //when user clciks on logout & there is not data in localstorage, they y check for data at
+        var userInfo = localStorageService.getUserAuthInfo();
+        if(userInfo){
             authService.logoutUser(userInfo).then(function(data){
                 if(data.logoutSuccess){
                     $state.go('welcome');
-                    localStorage.removeItem('sfkUserInfo');
-                    localStorage.removeItem('currStory');
+                    localStorageService.logoutUser();
+                }else{
+                    //error with logout
+                    //show user the error message
                 }
-                //needs an else block here
             });
         }else{
             $state.go('welcome');
@@ -68,7 +70,6 @@ function headerCtrl($scope,$state, authService){
         isSearchIconClicked = event.target.className == 'headerSearchAnchor' || event.target.className.indexOf('fa-search') >= 0;
         //if search area open and clicked elsewhere
 
-
         //start of info box click handle
         var isUserCircleClicked = event.target.className.indexOf('circle-click')>=0 ? true : false;
         var isUserInfoClicked = event.target.className.indexOf('click-identifier')>=0 ||
@@ -76,8 +77,6 @@ function headerCtrl($scope,$state, authService){
         vm.showUserInfoBox = isUserCircleClicked ? !vm.showUserInfoBox :    isUserInfoClicked ? true : false;
         //end of info box click handle
 
-
-        // click-identifier
         if(isSearchIconClicked){
             if(vm.showSearchBox){
                 $scope.$apply(function(){

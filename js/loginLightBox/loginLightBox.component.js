@@ -21,7 +21,6 @@ function loginLightBoxCtrl($state,$http,$window){
     }
     //to show the signin form
     vm.openLoginForm = function(){
-        console.log('in openLoginForm');
         vm.loginForm=true;
         vm.registerForm=false;
         vm.loginStyle={'color':'darkcyan'};
@@ -29,7 +28,6 @@ function loginLightBoxCtrl($state,$http,$window){
     }
     //to show the register/signup form
     vm.openRegisterForm = function(){
-        console.log('in openRegisterForm');
         vm.loginForm=false;
         vm.registerForm=true;
         vm.loginStyle={'color':'darkgray'};

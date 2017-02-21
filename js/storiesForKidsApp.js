@@ -8,7 +8,8 @@
         'StoryService',
         'boringStuff',
         'adminModule',
-        'dashboardModule'
+        'dashboardModule',
+        'localStorageModule'
     ])
     .config(function($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise('/welcome');
@@ -54,24 +55,18 @@
                 }
             });
 
-        function isUserValid(authService){
-            if(localStorage.getItem('sfkUserInfo')){
-                var userData = JSON.parse(localStorage.getItem('sfkUserInfo'));
-                if(userData.username && userData.accessToken){
-                    //check wiht DB for auth token & username
-                    authService.authenticateUser(userData.email, userData.accessToken)
-                    .then(function(data){
-                        //set local storage data every time
-                        localStorage.setItem('sfkUserInfo',JSON.stringify(data));
-                        return true;
-                    });
-                }else{
-                    //if local storage data found and
-                    //if any data is not missing
-                    return false;
-                }
+        function isUserValid(authService, localStorageService){
+            var sfkUserInfo = localStorageService.getUserAuthInfo();
+            if(sfkUserInfo && sfkUserInfo.username && sfkUserInfo.accessToken){
+                //check wiht DB for auth token & username
+                authService.authenticateUser(sfkUserInfo.email, sfkUserInfo.accessToken)
+                .then(function(data){
+                    //set local storage data every time
+                    localStorageService.setUserAuthInfo(data);
+                    return true;
+                });
             }else{
-                //if no localstorage data found
+                //if no localstorage data found ??
                 return false;
             }
         }

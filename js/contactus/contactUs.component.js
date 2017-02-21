@@ -7,12 +7,11 @@
             controller: contactUsCtrl
         });
 
-    contactUsCtrl.$inject = ['$scope','$state','authService','categoryService'];
-    function contactUsCtrl($scope, $state, authService, categoryService){
+    contactUsCtrl.$inject = ['$scope','$state','authService'];
+    function contactUsCtrl($scope, $state, authService){
         var vm = this;
         var routerState = $state;
         var submitComment = function(){
-            console.log(vm.contact);
             var cmntInfo={
                 email:vm.contact.email,
                 name:vm.contact.name,

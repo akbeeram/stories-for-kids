@@ -4,15 +4,21 @@ angular.module('storiesApp')
         controller: signupCtrl
 });
 
-signupCtrl.$inject = ['$scope','$state','authService'];
-function signupCtrl($scope,$state,authService){
+signupCtrl.$inject = ['$scope','$state','authService','localStorageService'];
+function signupCtrl($scope,$state,authService,localStorageService){
     var vm = this;
-    vm.showSignIn = true;
-    vm.showSigningIn = false;
-    vm.showSignedIn = false;
-    vm.showSignUpErr = false;
+
+    setSubmitButtonDesign = function(a,b,c,d){
+        vm.showSignIn = a;
+        vm.showSigningIn = b;
+        vm.showSignedIn = c;
+        vm.showSignUpErr = d;
+    }
+    vm.setSubmitButtonDesign = setSubmitButtonDesign;
+
+    vm.setSubmitButtonDesign(true,false,false,false);
     
-    vm.isUserUnique = function(){
+    isUserUnique = function(){
         if($scope.regForm.email.$valid){
             vm.signupData.call = 'isUserUnique';
             authService.isUserUnique(vm.signupData).then(function(data){
@@ -31,30 +37,21 @@ function signupCtrl($scope,$state,authService){
         }
     }
     
-    
-    vm.createUser = function(){
-        vm.showSignIn = false;
-        vm.showSigningIn = true;
-        vm.showSignedIn = false;
-        vm.showSignUpErr = false;
+    createUser = function(){
+        vm.setSubmitButtonDesign(false,true,false,false);
         vm.signupData.call = 'createUser';
         authService.createUser(vm.signupData).then(function(data){
             vm.signupSuccess = data && data.registerStatus ? true : false;
             if(vm.signupSuccess){
-                vm.showSignIn = false;
-                vm.showSigningIn = false;
-                vm.showSignedIn = true;
-                vm.showSignUpErr = false;
-                localStorage.setItem('sfkUserInfo',JSON.stringify(data));
+                vm.setSubmitButtonDesign(false,false,true,false);
+                localStorageService.setUserAuthInfo(data);
                 $state.go('app.dash');
             }else{
-                vm.showSignIn = false;
-                vm.showSigningIn = false;
-                vm.showSignedIn = false;
-                vm.showSignUpErr = true;
+                vm.setSubmitButtonDesign(false,false,false,true);
             }
         });
     }
     
-    
+    vm.createUser = createUser;
+    vm.isUserUnique = isUserUnique;
 }
