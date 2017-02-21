@@ -36,6 +36,17 @@ function headerCtrl($scope,$state, $timeout){
         isSearchAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('header-search-input') >= 0;
         isSearchIconClicked = event.target.className == 'headerSearchAnchor' || event.target.className.indexOf('fa-search') >= 0;
         //if search area open and clicked elsewhere
+
+
+        //start of info box click handle
+        var isUserCircleClicked = event.target.className.indexOf('circle-click')>=0 ? true : false;
+        var isUserInfoClicked = event.target.className.indexOf('click-identifier')>=0 ||
+        (event.target.parent && event.target.parent.className.indexOf('click-identifier')>=0) ? true : false;
+        vm.showUserInfoBox = isUserCircleClicked ? !vm.showUserInfoBox :    isUserInfoClicked ? true : false;
+        //end of info box click handle
+
+
+        // click-identifier
         if(isSearchIconClicked){
             if(vm.showSearchBox){
                 $scope.$apply(function(){

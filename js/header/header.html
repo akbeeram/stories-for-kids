@@ -3,17 +3,17 @@
         <div class="row">
             <!-- <div class="header-title col-lg-1 col-md-1 col-sm-1 hidden-xs"></div> -->
             <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <i class="fa fa-book header-brand-image" aria-hidden="true"></i>
+                <!--<i class="fa fa-book header-brand-image" aria-hidden="true"></i>
                 <div class="header-brand-name">Stories for <span class="title-kids">Kids</span>
                     <div class="header-tagline">Moral, Motivational & Inspirational Stories</div>
-                </div>
+                </div>-->
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
             <div class="headerSearch col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center;position:relative;">
-                <span class="headerSearchAnchor"><div>
+               <!-- <span class="headerSearchAnchor"><div>
                     <i class="fa fa-search fa-2x" aria-hidden="true"></i>
                 </div>
-                Search a Story</span>
+                Search a Story</span>-->
                 <div class="header-search-results" ng-show="$ctrl.showSearchBox">
                     <div class="arrow-up"></div>
                     <input type="text" ng-model="$ctrl.storySearch" placeholder="Search for a story, person or a place" class="header-search-input"/>
@@ -31,29 +31,29 @@
                     Login / Sing Up</span>
                 </span>
                 <span>
-                    <div class="user-info-circle" ng-click="$ctrl.showUserInfoBox = !$ctrl.showUserInfoBox" ng-show="$ctrl.isAuthenticatedUser">
-                        <div>{{$ctrl.displayShortName | uppercase}}</div>
+                    <div class="user-info-circle circle-click" ng-show="$ctrl.isAuthenticatedUser">
+                        <div class="circle-click">{{'AA' | uppercase}}</div>
                     </div>
-                    <div class="header-search-results" ng-show="$ctrl.showUserInfoBox">
-                        <div class="arrow-up"></div>
-                        <div style="color: #5e5e5e;text-align: left;text-shadow: none;">
-                            <table width="100%">
-                                <tr>
-                                    <td width="25%" align="center" style="display: table-cell;vertical-align: middle;">
-                                        <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                    <div class="header-search-results click-identifier" ng-show="$ctrl.showUserInfoBox">
+                        <div class="arrow-up click-identifier"></div>
+                        <div style="color: #5e5e5e;text-align: left;text-shadow: none;" class=" click-identifier">
+                            <table width="100%" class=" click-identifier">
+                                <tr class="click-identifier">
+                                    <td class="click-identifier" width="25%" align="center" style="display: table-cell;vertical-align: middle;">
+                                        <i class="fa fa-user-circle fa-2x click-identifier" aria-hidden="true"></i>
                                     </td>
-                                    <td style="display: table-cell;vertical-align: middle;">
+                                    <td class="click-identifier" style="display: table-cell;vertical-align: middle;">
                                         <span style="font-size: 1.5em;">{{::$ctrl.name}}</span><br>
                                         <span style="font-size: 0.8em;">{{::$ctrl.email}}</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td colspan="2" style="padding: 2em 2em 0 2em;line-height: 1.6em;">
+                                <tr class="click-identifier">
+                                    <td class="click-identifier" colspan="2" style="padding: 2em 2em 0 2em;line-height: 1.6em;">
                                         <!--<div><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;Profile</div>
                                         <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
                                         <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
                                         <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>-->
-                                        <div><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
+                                        <div class="click-identifier"><i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
                                     </td>
                                 </tr>
                             </table>
