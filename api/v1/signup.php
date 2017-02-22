@@ -15,11 +15,58 @@ if(function_exists($function)){
     call_user_func($function,$request);
 }
 
-function isUserUnique($request){
+function userExists($request){
 $table='USERSDATA';
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){
         die("Unable to connect to MySQL"); 
+    }else{
+        $email = $request->email;
+        $getUserSql='SELECT * FROM '.$table.' WHERE EMAIL="'.$email.'"';
+        $getUserSqlResult=mysql_query($getUserSql);
+        if(mysql_num_rows($getUserSqlResult)==1){
+            echo json_encode(array('userExists'=>true));
+        }else{
+            echo json_encode(array('userExists'=>false));
+        }
+    }
+    mysql_close($conn);
+}
+
+function sendResetMail($request){
+$table='USERSDATA';
+    $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
+    if(!$conn){
+        die("Unable to connect to MySQL");
+    }else{
+        $email = $request->email;
+        $tempPwd = randomString();
+
+        $getUserSql='INSERT INTO  '.$table.' (PASSWORD) VALUES("'.md5($tempPwd).'") WHERE EMAIL="'.$email.'"';
+        $getUserSqlResult=mysql_query($getUserSql);
+
+        if(mysql_affected_rows($conn)!=1){
+            echo json_encode(array('sentResetEmail'=>false));
+        }else{
+            $msg = "Your temporary paswword is : '".$tempPwd."'.";
+
+            $headers  = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+            // Additional headers
+            $headers .= 'From: Storiesforkids <support@storiesforkids.in>' . "\r\n";
+            $headers .= 'Reply-To: Storiesforkids <support@storiesforkids.in>' . "\r\n";
+            mail($email,"Password Reset for storiesforkids.in",$msg,$headers);
+            echo json_encode(array('sentResetEmail'=>true));
+        }
+    }
+    mysql_close($conn);
+}
+
+function isUserUnique($request){
+$table='USERSDATA';
+    $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
+    if(!$conn){
+        die("Unable to connect to MySQL");
     }else{
         $email = $request->email;
         $getUserSql='SELECT * FROM '.$table.' WHERE EMAIL="'.$email.'"';

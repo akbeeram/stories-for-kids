@@ -60,3 +60,25 @@
     color:darkgray;
     text-align: center;
 }
+.forgot-pwd{
+    float: right;
+    color: gray;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+}
+.forgot-pwd:hover{
+    color: yellowgreen;
+    cursor: pointer;
+}
+.forgot-pwd-back{
+    float: right;
+    color: gray;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+}
+.forgot-pwd-back span:hover {
+    color: yellowgreen;
+    cursor: pointer;
+}

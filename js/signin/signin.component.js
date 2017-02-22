@@ -36,7 +36,11 @@ function signinCtrl($scope,$state,authService, localStorageService){
             });
         }
     }
+    forgotPwd = function () {
+
+    }
 
     vm.LOGIN_TEXT = 'Login';
     vm.userLogin = userLogin;
+    vm.forgotPwd = forgotPwd;
 }
