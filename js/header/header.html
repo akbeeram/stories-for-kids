@@ -24,7 +24,7 @@
             </div>
             <div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">
                 <!-- If user is not authenticated, display login-->
-                <span ng-click="$ctrl.openLoginLightBox()" ng-show="$ctrl.isAuthenticatedUser">
+                <span ng-click="$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthenticatedUser">
                     <span href="#" class="headerLoginAnchor"><div>
                         <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
                     </div>
@@ -32,9 +32,9 @@
                 </span>
                 <span>
                     <div class="user-info-circle circle-click" ng-show="$ctrl.isAuthenticatedUser">
-                        <div class="circle-click">{{'AA' | uppercase}}</div>
+                        <div class=" circle-click">{{$ctrl.displayShortName | uppercase}}</div>
                     </div>
-                    <div class="header-search-results click-identifier" ng-show="!$ctrl.showUserInfoBox">
+                    <div class="header-search-results click-identifier" ng-show="$ctrl.showUserInfoBox">
                         <div class="arrow-up click-identifier"></div>
                         <div style="color: #5e5e5e;text-align: left;text-shadow: none;" class=" click-identifier">
                             <table width="100%" class=" click-identifier">
