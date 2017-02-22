@@ -12,19 +12,35 @@
             <div style="text-align:right;" ng-click="$ctrl.close()">
                 <i class="loginBoxClose fa fa-times-circle fa-2x" aria-hidden="true"></i>
             </div>
+            <!-- Login or Signup Header -->
             <div class="login-or-signup">
-                <span style="font-size:2.2em;color:darkcyan;cursor:pointer;" ng-click="$ctrl.openLoginForm()" ng-style="$ctrl.loginStyle">Login</span>
-                <span class="loginOR">or</span>
-                <span style="font-size:2.2em;color:darkgray;cursor:pointer;" ng-click="$ctrl.openRegisterForm()" ng-style="$ctrl.regStyle">Signup</span>
+                <span ng-show="!$ctrl.showForgotPwdForm">
+                    <span style="font-size:2.2em;color:darkcyan;cursor:pointer;" ng-click="$ctrl.openLoginForm()"
+                          ng-style="$ctrl.loginStyle">Login</span>
+                    <span class="loginOR">or</span>
+                    <span style="font-size:2.2em;color:darkgray;cursor:pointer;" ng-click="$ctrl.openRegisterForm()"
+                          ng-style="$ctrl.regStyle">Signup</span>
+                </span>
+                <span style="font-size:2.2em;color:darkcyan;" ng-show="$ctrl.showForgotPwdForm">Forgot Password<br><br></span>
             </div>
+            <!-- login form -->
             <div ng-show="$ctrl.loginForm">
                 <div class="login-or-signup-tag">New User ? Click Singup to register.</div>
                 <sign-in-page></sign-in-page>
             </div>
+            <!-- Signup form -->
             <div ng-show="$ctrl.registerForm">
                 <div class="login-or-signup-tag">Already registered ? Click Login.</div>
                 <sign-up-page ng-show="$ctrl.registerForm"></sign-up-page>
             </div>
+            <!-- forgot pawd form -->
+            <div ng-show="$ctrl.showForgotPwdForm">
+                <forgot-pwd-form ng-show="$ctrl.showForgotPwdForm"></forgot-pwd-form>
+            </div>
+            <span class="forgot-pwd" ng-show="!$ctrl.showForgotPwdForm" ng-click="$ctrl.openForgotPwdForm()">Forgot Password ?</span>
+            <span class="forgot-pwd-back" style="float: right;" ng-show="$ctrl.showForgotPwdForm">
+                <span ng-click="$ctrl.openLoginForm()">Login</span> | <span ng-click="$ctrl.openRegisterForm()">Singup</span>
+            </span>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-2 hidden-xs"></div>
     </div>

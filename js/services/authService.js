@@ -97,13 +97,51 @@ angular.module('AuthenticationService',[])
 				headers: {'Content-Type': 'application/json'},
 				data:userInfo
 			})
-			.then(function(response){
-				deferred.resolve(response.data);
-				return deferred.promise;
-			},function(response){
-				deferred.reject(response);
-				return deferred.promise;
-			});
+				.then(function(response){
+					deferred.resolve(response.data);
+					return deferred.promise;
+				},function(response){
+					deferred.reject(response);
+					return deferred.promise;
+				});
+		},
+		userExists:function (userInfo) {
+			var deferred=$q.defer();
+			return $http({
+				url:'api/v1/signup.php',
+				method:'POST',
+				headers: {'Content-Type': 'application/json'},
+				data:{
+					email:userInfo.email,
+					call:'userExists'
+				}
+			})
+				.then(function(response){
+					deferred.resolve(response.data);
+					return deferred.promise;
+				},function(response){
+					deferred.reject(response);
+					return deferred.promise;
+				});
+		},
+		sendResetMail:function (userInfo) {
+			var deferred=$q.defer();
+			return $http({
+				url:'api/v1/signup.php',
+				method:'POST',
+				headers: {'Content-Type': 'application/json'},
+				data:{
+					email:userInfo.email,
+					call:'sendResetMail'
+				}
+			})
+				.then(function(response){
+					deferred.resolve(response.data);
+					return deferred.promise;
+				},function(response){
+					deferred.reject(response);
+					return deferred.promise;
+				});
 		}
 	};
 });

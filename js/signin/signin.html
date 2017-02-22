@@ -24,12 +24,13 @@
           <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
           <input class="form-control" name="trickyWord" type="password" placeholder="Password" ng-model="$ctrl.userLoginInput.trickyWord" required ng-minlength="6" />
         </div>
-    </div> 
+    </div>
+    <br><br>
     <button class="login-button" ng-click="$ctrl.userLogin()" ng-disabled="!loginForm.$valid" ng-style="{'cursor':!loginForm.$valid ? 'not-allowed':'pointer'}">{{$ctrl.LOGIN_TEXT}}&nbsp;
         <i class="fa fa-sign-in" aria-hidden="true" ng-show="$ctrl.showSignIn"></i>
         <i class="fa fa-spin fa-spinner fa-pulse fa-fw" aria-hidden="true" ng-show="$ctrl.showSigningIn"></i>
         <i class="fa fa-check leftMar1" aria-hidden="true" ng-show="$ctrl.showSignedIn"></i>
         <i class="fa fa-times leftMar1" aria-hidden="true" ng-show="$ctrl.showSignInErr" style="color:red;"></i>
-    </button> 
+    </button>
 </form> 
 <!--login form ends-->
