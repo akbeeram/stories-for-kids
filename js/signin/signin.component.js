@@ -8,36 +8,35 @@ angular.module('storiesApp')
         controller: signinCtrl
 });
 
-signinCtrl.$inject = ['$scope','$state','authService'];
-function signinCtrl($scope,$state,authService){
+signinCtrl.$inject = ['$scope','$state','authService','localStorageService'];
+function signinCtrl($scope,$state,authService, localStorageService){
     var vm = this;
-    vm.LOGIN_TEXT = 'Login';
-    vm.showSignIn = true;
+    setSubmitButtonDesign = function(a,b,c,d){
+        vm.showSignIn = a;
+        vm.showSigningIn = b;
+        vm.showSignedIn = c;
+        vm.showSignInErr = d;
+    }
+    vm.setSubmitButtonDesign = setSubmitButtonDesign;
+    vm.setSubmitButtonDesign(true,false,false,false);
     //user call to login service
-    vm.userLogin = function(){
-        vm.showSignIn = false;
-        vm.showSigningIn = true;
-        vm.showSignedIn = false;
-        vm.showSignInErr = false;
+    userLogin = function(){
+        vm.setSubmitButtonDesign(false,true,false,false);
         if($scope.loginForm && $scope.loginForm.$valid){
             authService.loginUser(vm.userLoginInput).then(function(data){
                 if(data && data.loginSuccess){
-                    localStorage.setItem('sfkUserInfo',JSON.stringify(data));
-                    vm.showSigningIn = false;
-                    vm.showSignIn = false;
-                    vm.showSignedIn = true;
-                    vm.showSignInErr = false;
+                    localStorageService.setUserAuthInfo(data);
+                    vm.setSubmitButtonDesign(false,false,true,false);
                     //console.log($state);
                     $state.go('app.dash');
                 }else if(data.loginError){
                     vm.loginError = data.loginError;
-                    
-                    vm.showSigningIn = false;
-                    vm.showSignIn = false;
-                    vm.showSignedIn = false;
-                    vm.showSignInErr = true;
+                    vm.setSubmitButtonDesign(false,false,false,true);
                 }
             });
         }
     }
+
+    vm.LOGIN_TEXT = 'Login';
+    vm.userLogin = userLogin;
 }

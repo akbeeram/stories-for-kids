@@ -5,26 +5,27 @@ angular.module('storiesApp')
         controller: headerCtrl
 });
 
-headerCtrl.$inject = ['$scope','$state','authService'];
-function headerCtrl($scope,$state, authService){
+headerCtrl.$inject = ['$scope','$state','authService','localStorageService'];
+function headerCtrl($scope,$state, authService, localStorageService){
     var vm = this;
     var isAuthenticatedUser = false;
     var displayShortName = '';
-    var sfkUserInfo;
-    if(localStorage.getItem('sfkUserInfo')){
-        userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
+    var userInfo = localStorageService.getUserAuthInfo();
+    //authentication is happending in header automatically
+    //this is a temp fix
+    if(userInfo){
         isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
-        if(userInfo.isAuthenticatedUser){
+        if(isAuthenticatedUser){
             if(userInfo.username.indexOf(' ') >= 0){
                 var temp = userInfo.username.split(' ');
                 displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
             } else {
                 displayShortName = userInfo.username.slice(0,2);
-            } 
+            }
             vm.displayShortName = displayShortName;
             vm.email = userInfo.email || '';
-            vm.name = userInfo.username || ''; 
+            vm.name = userInfo.username || '';
         }else{
         //temporary fix for authentication for other routes
         if($state.current.name !== 'welcome'){
@@ -33,7 +34,9 @@ function headerCtrl($scope,$state, authService){
     }
     }else{
         //temporary fix for authentication for other routes
-        if($state.current.name !== 'welcome'){
+        //the next line is to avoid authentication to routes that dont need authentication
+        //in futue refine this logicby adding a all routes to constants that dont need login
+        if($state.current.name !== 'welcome' && $state.current.name.indexOf('boring')<0 && $state.current.name !== 'contact-us'){
             $state.go('login');
         }
     }
@@ -41,15 +44,18 @@ function headerCtrl($scope,$state, authService){
         vm.showLoginForm = true;
     }
     logoutUser = function(){
-        if(localStorage.getItem('sfkUserInfo')){
-            userInfo = JSON.parse(localStorage.getItem('sfkUserInfo'));
+        //need to improve this logic
+        //when user clciks on logout & there is not data in localstorage, they y check for data at
+        var userInfo = localStorageService.getUserAuthInfo();
+        if(userInfo){
             authService.logoutUser(userInfo).then(function(data){
                 if(data.logoutSuccess){
                     $state.go('welcome');
-                    localStorage.removeItem('sfkUserInfo');
-                    localStorage.removeItem('currStory');
+                    localStorageService.logoutUser();
+                }else{
+                    //error with logout
+                    //show user the error message
                 }
-                //needs an else block here
             });
         }else{
             $state.go('welcome');
@@ -62,13 +68,15 @@ function headerCtrl($scope,$state, authService){
         //for search area
         isSearchAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('header-search-input') >= 0;
         isSearchIconClicked = event.target.className == 'headerSearchAnchor' || event.target.className.indexOf('fa-search') >= 0;
-        isUserInfoAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('fa-user') >= 0;
-        isUserInfoIconClicked = event.target.className == 'user-info-circle' ||  event.target.className == 'user-info-name';
         //if search area open and clicked elsewhere
-        //console.log(event.target.className);
-        //console.log(vm.showUserInfoBox);
-        
-        
+
+        //start of info box click handle
+        var isUserCircleClicked = event.target.className.indexOf('circle-click')>=0 ? true : false;
+        var isUserInfoClicked = event.target.className.indexOf('click-identifier')>=0 ||
+        (event.target.parent && event.target.parent.className.indexOf('click-identifier')>=0) ? true : false;
+        vm.showUserInfoBox = isUserCircleClicked ? !vm.showUserInfoBox :    isUserInfoClicked ? true : false;
+        //end of info box click handle
+
         if(isSearchIconClicked){
             if(vm.showSearchBox){
                 $scope.$apply(function(){
