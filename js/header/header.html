@@ -3,10 +3,10 @@
         <div class="row">
             <!-- <div class="header-title col-lg-1 col-md-1 col-sm-1 hidden-xs"></div> -->
             <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!--<i class="fa fa-book header-brand-image" aria-hidden="true"></i>
+                <i class="fa fa-book header-brand-image" aria-hidden="true"></i>
                 <div class="header-brand-name">Stories for <span class="title-kids">Kids</span>
                     <div class="header-tagline">Moral, Motivational & Inspirational Stories</div>
-                </div>-->
+                </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
             <div class="headerSearch col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center;position:relative;">
@@ -30,7 +30,7 @@
                     </div>
                     Login / Sing Up</span>
                 </span>
-                <span>
+                <span style="position:relative;">
                     <div class="user-info-circle circle-click" ng-show="$ctrl.isAuthenticatedUser">
                         <div class=" circle-click">{{$ctrl.displayShortName | uppercase}}</div>
                     </div>
@@ -53,7 +53,7 @@
                                         <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
                                         <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
                                         <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>-->
-                                        <div class="click-identifier" ng-click="$ctrl.logoutUser()"><i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
+                                        <div class="user-info-logout click-identifier" ng-click="$ctrl.logoutUser()"><i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
                                     </td>
                                 </tr>
                             </table>

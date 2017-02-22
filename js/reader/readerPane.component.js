@@ -5,8 +5,8 @@ angular.module('storiesApp')
         controller: readerPaneCtrl
 });
 
-readerPaneCtrl.$inject = ['$scope','$state','$stateParams','storyService'];
-function readerPaneCtrl($scope, $state, $stateParams, storyService){
+readerPaneCtrl.$inject = ['$scope','$state','localStorageService','storyService'];
+function readerPaneCtrl($scope, $state, localStorageService, storyService){
     var vm = this;
     var currStory = localStorageService.getCurrentStory();
 
