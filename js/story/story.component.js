@@ -19,6 +19,9 @@ function storyComponentCtrl($scope, $state, $timeout){
                 case 'CG001':
                     templateUrl = 'js/stories/panchatantra/'+vm.config.story_html_name+'.html';
                     break;
+                case 'CG003':
+                    templateUrl = 'js/stories/tenali-raman/'+vm.config.story_html_name+'.html';
+                    break;
                 case 'CG005':
                     templateUrl = 'js/stories/vikram-baethal/'+vm.config.story_html_name+'.html';
                     break;
