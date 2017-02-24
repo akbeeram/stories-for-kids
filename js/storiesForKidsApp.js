@@ -77,7 +77,6 @@
 
             // track pageview on state change
             $rootScope.$on('$stateChangeSuccess', function (event) {
-                console.log($location.path());
                 $window.ga('send', 'pageview', $location.path());
             });
         });

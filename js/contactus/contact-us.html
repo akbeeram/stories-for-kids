@@ -72,7 +72,7 @@
                     <span ng-show="$ctrl.commentSubmitResult">
                         Thank You ! Your comment has been submitted for review.
                     </span>
-                    <span ng-show="$ctrl.commentSubmitResult">
+                    <span ng-show="!$ctrl.commentSubmitResult && $ctrl.submitted">
                         Sorry ! There was an error submitting your comment. Please try after some time.
                     </span>
                 </div>

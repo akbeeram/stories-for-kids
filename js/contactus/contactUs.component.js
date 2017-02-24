@@ -12,6 +12,7 @@
         var vm = this;
         var routerState = $state;
         var submitComment = function(){
+            vm.submitted = true;
             var cmntInfo={
                 email:vm.contact.email,
                 name:vm.contact.name,
