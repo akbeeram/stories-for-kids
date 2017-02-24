@@ -1,24 +1,36 @@
 <!--login form starts-->
 <form name="loginForm" style="font-size:1.2em;text-align:left;" novalidate>
+    <div style="height:1.2em;display:block;">
+        <div ng-show="loginForm.email.$dirty && loginForm.email.$error.email" class="input-invalid-signup">
+            Please enter a valid email</div>
+        <div ng-show="loginForm.email.$dirty && loginForm.email.$error.required" class="input-invalid-signup">
+            Email is required</div>
+        <div ng-show="loginForm.trickyWord.$dirty && loginForm.trickyWord.$error.required" class="input-invalid-signup">
+            Password is required</div>
+        <div ng-show="loginForm.trickyWord.$dirty && loginForm.trickyWord.$error.minlength" class="input-invalid-signup">
+            Password must be minimum 6 characters</div>
+        <div ng-show="$ctrl.loginError" class="input-invalid-signup"> 
+            {{$ctrl.loginError}}
+        </div>
+    </div>
     <div class="form-group">
         <div class="input-group margin-bottom-sm">
           <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
-          <input class="form-control" type="text" placeholder="Email address" ng-model="$ctrl.userLoginInput.email" ng-minlength="6" ng-maxlength="60">
+          <input class="form-control" name="email" type="email" placeholder="Email address" ng-model="$ctrl.userLoginInput.email" ng-minlength="4" ng-maxlength="60" required/>
         </div>
     </div>
     <div class="form-group"> 
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
-          <input class="form-control" type="password" placeholder="Password" ng-model="$ctrl.userLoginInput.trickyWord">
+          <input class="form-control" name="trickyWord" type="password" placeholder="Password" ng-model="$ctrl.userLoginInput.trickyWord" required ng-minlength="6" />
         </div>
-    </div> 
-    <button class="login-button" ng-click="$ctrl.userLogin()">{{$ctrl.LOGIN_TEXT}}&nbsp;
+    </div>
+    <br><br>
+    <button class="login-button" ng-click="$ctrl.userLogin()" ng-disabled="!loginForm.$valid" ng-style="{'cursor':!loginForm.$valid ? 'not-allowed':'pointer'}">{{$ctrl.LOGIN_TEXT}}&nbsp;
         <i class="fa fa-sign-in" aria-hidden="true" ng-show="$ctrl.showSignIn"></i>
         <i class="fa fa-spin fa-spinner fa-pulse fa-fw" aria-hidden="true" ng-show="$ctrl.showSigningIn"></i>
         <i class="fa fa-check leftMar1" aria-hidden="true" ng-show="$ctrl.showSignedIn"></i>
-    </button> 
-    <div ng-show="$ctrl.loginError && !$ctrl.loginForm.$valid" class="label label-danger"> 
-        <b>Error With Login.</b> Please try again. 
-    </div>
+        <i class="fa fa-times leftMar1" aria-hidden="true" ng-show="$ctrl.showSignInErr" style="color:red;"></i>
+    </button>
 </form> 
 <!--login form ends-->

@@ -55,6 +55,10 @@
     text-align: justify;
     margin-bottom: 1em;
 }
+.tile-story-fig {
+    display: block;
+    min-height: 15em;
+}
 .tile-story-fig img{
     height: 100%;
     width: 100%;

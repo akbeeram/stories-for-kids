@@ -19,7 +19,7 @@ function getCategoryInfo($request) {
     if(!$conn){
         die("Unable to connect to MySQL");
     }else{
-        $table='CATEGORIES';
+        $table='categories';
         mysql_selectdb(DB_DBNAME);
         $getCategorySql = 'SELECT * FROM '.$table.' WHERE CATEGORY_ID="'.$request->cat_code.'"';
         $getCategorySqlResult = mysql_query($getCategorySql);
@@ -35,9 +35,10 @@ function getCategories($request) {
     if(!$conn){
         die("Unable to connect to MySQL");
     }else{
-        $table='CATEGORIES';
+        $table='categories';
         mysql_selectdb(DB_DBNAME);
         $getCategoriesSql = 'SELECT * FROM '.$table.' ORDER BY CATEGORY_ID';
+        //echo $getCategoriesSql;
         $getCategoriesSqlResult = mysql_query($getCategoriesSql);
         $count=0;
         $response=array();

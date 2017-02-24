@@ -11,7 +11,4 @@ angular.module('storiesApp')
 singleTileCtrl.$inject = ['$state'];
 function singleTileCtrl(){
     var vm = this;
-    vm.showSignIn = true;
-    vm.showSigningIn = false;
-    vm.showSignedIn = false;
 }

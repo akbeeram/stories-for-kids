@@ -35,28 +35,27 @@
     transition: all 0.2s ease-in;
 }
 .story-line-item:hover {
-    background: crimson;
-    color: white;
+    background: yellowgreen;
+    color: black;
     cursor: pointer;
 }
 .story-part-title {
-    border-bottom: 1px dotted crimson;
+    border-bottom: 1px dotted yellowgreen;
     padding: 0.5em 0;
     margin: 0.5em 0;
 }
 .story-list-name{
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
 }
 .dash-story-desc {
     font-family: 'Slabo';
     line-height: 1.2em;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-align: justify;
 }
 .dash-story-fig {
-    margin: 2em auto;
+    
 }
 .dash-story-fig img{
     height: 100%;
@@ -65,16 +64,18 @@
 
 /*Menu Bar styling*/
 .menu{
-    text-align:center;
+    text-align:left;
     background:yellowgreen;
     color:#1b242d;
     font-weight: bold;
     font-family: 'Slabo';
 }
 .menu ul{
+    padding-left: 1em;
     margin:0;
 }
 .menu ul li {
+    text-align: center;
     padding:1em;
     display:inline-block;
     transition: 0.2s ease;
@@ -84,4 +85,12 @@
     display:inline-block;
     color:crimson;
     background:white;
+}
+.inset-text {
+    /* Shadows are visible under slightly transparent text color */
+    color: rgba(10,60,150, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    font-size: 1.5em;
+    display: block;
+    padding-top: 2em;
 }

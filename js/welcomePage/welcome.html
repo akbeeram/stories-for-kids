@@ -16,7 +16,7 @@
         <div class="row" style="text-align:center;">
             <span login-light-box ng-show="$ctrl.showLoginForm" show-login-form="$ctrl.showLoginForm"></span>
             <div ng-repeat ="item in $ctrl.storyCategory" class="col-md-4 col-sm-6 col-xs-12">
-                <single-tile story-details="item" ng-click="$ctrl.onTileClick(item.categoryId)"></single-tile>
+                <single-tile story-details="item" ng-click="$ctrl.onTileClick(item)"></single-tile>
             </div>
         </div>
     </div>

@@ -47,7 +47,7 @@ if(!$conn){
             }
         }
     } else {
-        echo json_encode(array('loginSuccess'=>false,'loginError'=>'Username of password does not match our records.'));
+        echo json_encode(array('loginSuccess'=>false,'loginError'=>'Username of password does not match.'));
     } 
 }
 mysql_close($conn);

@@ -7,12 +7,20 @@
             controller: contactUsCtrl
         });
 
-    contactUsCtrl.$inject = ['$scope','$state','storyService','categoryService'];
-    function contactUsCtrl($scope, $state, storyService, categoryService){
+    contactUsCtrl.$inject = ['$scope','$state','authService'];
+    function contactUsCtrl($scope, $state, authService){
         var vm = this;
         var routerState = $state;
         var submitComment = function(){
-            console.log(vm.contact);
+            vm.submitted = true;
+            var cmntInfo={
+                email:vm.contact.email,
+                name:vm.contact.name,
+                comments:vm.contact.comments
+            }
+            authService.submitComments(cmntInfo).then(function(data){
+                vm.commentSubmitResult = data && data.commentSubmitted ? true : false;
+            });
         }
 
         vm.routerState = routerState;

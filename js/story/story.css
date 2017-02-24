@@ -13,3 +13,10 @@ div.story p {
     text-align: justify;
     margin-bottom: 1.2em;
 }
+.loadingDiv{
+    text-align: center;
+    min-height: 15em;
+}
+.loadingDiv .fa-pulse{
+    margin-top: 2em;
+}

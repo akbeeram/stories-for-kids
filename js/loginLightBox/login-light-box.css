@@ -54,9 +54,31 @@
     text-align: center;
 }
 .login-or-signup-tag {
-    padding-bottom:2em;
+    padding-bottom:1em;
     font-size:1.2em;
     font-family:Slabo;
     color:darkgray;
     text-align: center;
+}
+.forgot-pwd{
+    float: right;
+    color: gray;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+}
+.forgot-pwd:hover{
+    color: yellowgreen;
+    cursor: pointer;
+}
+.forgot-pwd-back{
+    float: right;
+    color: gray;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+}
+.forgot-pwd-back span:hover {
+    color: yellowgreen;
+    cursor: pointer;
 }
