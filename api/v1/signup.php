@@ -35,7 +35,7 @@ $table='USERSDATA';
 }
 
 function sendResetMail($request){
-$table='USERSDATA';
+$table='usersdata';
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){
         die("Unable to connect to MySQL");
@@ -44,9 +44,10 @@ $table='USERSDATA';
         $email = $request->email;
         $tempPwd = randomString();
 
-        $getUserSql='INSERT INTO  '.$table.' (PASSWORD) VALUES("'.md5($tempPwd).'") WHERE EMAIL="'.$email.'"';
+        $getUserSql='UPDATE '.$table.' SET PASSWORD="'.md5($tempPwd).'"  WHERE EMAIL="'.$email.'"';
         $getUserSqlResult=mysql_query($getUserSql);
-
+        //echo $getUserSql;
+        //echo json_encode(array('sentResetEmail'=>$getUserSqlResult));
         if(mysql_affected_rows($conn)!=1){
             echo json_encode(array('sentResetEmail'=>false));
         }else{
@@ -65,7 +66,7 @@ $table='USERSDATA';
 }
 
 function isUserUnique($request){
-$table='USERSDATA';
+$table='usersdata';
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){
         die("Unable to connect to MySQL");
@@ -75,7 +76,7 @@ $table='USERSDATA';
         $getUserSql='SELECT * FROM '.$table.' WHERE EMAIL="'.$email.'"';
         //echo $getUserSql;
         $getUserSqlResult=mysql_query($getUserSql);
-        //echo mysql_num_rows($getUserSqlResult);
+        //echo json_encode(array('sentResetEmail'=>$getUserSqlResult));
         if($getUserSqlResult != false && mysql_num_rows($getUserSqlResult)>0){
             echo json_encode(array('isUserUnique'=>false));
         }else{
@@ -86,7 +87,7 @@ $table='USERSDATA';
 }
 
 function createUser($request){
-    $table='USERSDATA';
+    $table='usersdata';
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){
         die("Unable to connect to MySQL"); 
@@ -99,6 +100,7 @@ function createUser($request){
         $createUserSql="INSERT INTO ".$table." (EMAIL,USERNAME,PASSWORD,ACCLOCKED,SESSION_ID) VALUES ('".$email."','".mysql_real_escape_string($username)."','".md5(mysql_real_escape_string($password))."','N','".randomString()."')";
         //echo $createUserSql;
         $createUserSqlResult=mysql_query($createUserSql);
+            //echo json_encode(array('data'=>$createUserSql)); 
         header('Content-type: application/json');
         if(mysql_affected_rows($conn)!=1){
             echo json_encode(array('registerStatus'=>false));    

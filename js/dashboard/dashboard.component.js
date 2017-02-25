@@ -8,7 +8,7 @@ function dashMainCtrl($scope, $state, storyService, categoryService, localStorag
     var vm = this;
     var routerState = $state;
     var categorySelected;
-    var isUserAdmin = false;
+    var isUserAdmin,loadingCtgryInProgrs = false;
 
     //if user is navigating from reader page back to dashboard
     //re-select the story
@@ -17,6 +17,8 @@ function dashMainCtrl($scope, $state, storyService, categoryService, localStorag
 
     //called when user selects or changes the category dropdown
     var changeCategory = function(){
+        //display loading icon
+        vm.loadingCtgryInProgrs = true;
         if(vm.categorySelected){
             vm.getStoriesList(vm.categorySelected);
         }
@@ -29,6 +31,8 @@ function dashMainCtrl($scope, $state, storyService, categoryService, localStorag
             categoryService.getCategoryInfo(catCode).then(function(cat_data){
                 vm.dash.storyData=stories_data;
                 vm.dash.categoryData=cat_data;
+                //hide loading icon
+                vm.loadingCtgryInProgrs = false;
             });
         });
     }
@@ -52,6 +56,7 @@ function dashMainCtrl($scope, $state, storyService, categoryService, localStorag
     isUserAdmin = (userData && userData.userRole === 'ADMIN') ? true : false;
 
     //set controller level variable to acces in view
+    vm.loadingCtgryInProgrs = loadingCtgryInProgrs;
     vm.categorySelected = categorySelected;
     vm.openStory = openStory;
     vm.changeCategory = changeCategory;
