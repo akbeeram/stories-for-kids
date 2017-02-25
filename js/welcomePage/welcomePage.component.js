@@ -7,8 +7,8 @@
         controller: welcomeCtrl
     });
     
-    welcomeCtrl.$inject = ['$scope','$state','categoryService','authService','localStorageService'];
-    function welcomeCtrl($scope,$state,categoryService,authService,localStorageService){
+    welcomeCtrl.$inject = ['$scope','$state','categoryService','authService','localStorageService','APP_CONSTANTS'];
+    function welcomeCtrl($scope,$state,categoryService,authService,localStorageService,APP_CONSTANTS){
         var vm = this;
         var isAuthenticatedUser = false;
         var userInfo = localStorageService.getUserAuthInfo();
@@ -35,6 +35,7 @@
             }
         }
 
+        vm.constants = APP_CONSTANTS.WELCOME_PAGE;
         vm.getCategoryList = getCategoryList;
         vm.onTileClick = onTileClick;
         vm.isAuthenticatedUser = isAuthenticatedUser;

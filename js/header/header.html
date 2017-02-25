@@ -3,23 +3,20 @@
         <div class="row">
             <!-- <div class="header-title col-lg-1 col-md-1 col-sm-1 hidden-xs"></div> -->
             <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!--<i class="fa fa-book header-brand-image" aria-hidden="true"></i>
-                <div class="header-brand-name">Stories for <span class="title-kids">Kids</span>
-                    <div class="header-tagline">Moral, Motivational & Inspirational Stories</div>
-                </div>-->
+                <i class="fa fa-book header-brand-image" aria-hidden="true"></i>
+                <div class="header-brand-name">{{$ctrl.constants.TITLE_PART1}}<span class="title-kids">{{$ctrl.constants.TITLE_PART2}}</span>
+                    <div class="header-tagline">{{$ctrl.constants.TAGLINE}}</div>
+                </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
             <div class="headerSearch col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center;position:relative;">
                 <!--<span class="headerSearchAnchor"><div>
                     <i class="fa fa-search fa-2x" aria-hidden="true"></i>
-                </div>
-                Search a Story</span>
+                </div>{{$ctrl.MAIN_HEADER.SEARCH.LABEL}}</span>
                 <div class="header-search-results" ng-show="$ctrl.showSearchBox">
                     <div class="arrow-up"></div>
                     <input type="text" ng-model="$ctrl.storySearch" placeholder="Search for a story, person or a place" class="header-search-input"/>
-                    <div>
-                        Type something to see results
-                    </div>
+                    <div>{{$ctrl.constants.SEARCH.TYPE_SOMETHING}}</div>
                 </div>-->
             </div>
             <div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">
@@ -27,8 +24,7 @@
                 <span ng-click="$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthenticatedUser">
                     <span href="#" class="headerLoginAnchor"><div>
                         <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
-                    </div>
-                    Login / Sing Up</span>
+                    </div>{{$ctrl.constants.LOGIN.LABEL}}</span>
                 </span>
                 <span>
                     <div class="user-info-circle circle-click" ng-show="$ctrl.isAuthenticatedUser">
@@ -53,7 +49,9 @@
                                         <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
                                         <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
                                         <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>-->
-                                        <div class="click-identifier" ng-click="$ctrl.logoutUser()"><i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>&nbsp;&nbsp;Logout</div>
+                                        <div class="click-identifier" ng-click="$ctrl.logoutUser()">
+                                            <i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>
+                                            &nbsp;&nbsp;{{$ctrl.constants.LOGOUT.LABEL}}</div>
                                     </td>
                                 </tr>
                             </table>

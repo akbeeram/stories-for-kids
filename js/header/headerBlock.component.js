@@ -5,8 +5,8 @@ angular.module('storiesApp')
         controller: headerCtrl
 });
 
-headerCtrl.$inject = ['$scope','$state','authService','localStorageService'];
-function headerCtrl($scope,$state, authService, localStorageService){
+headerCtrl.$inject = ['$scope','$state','authService','localStorageService','APP_CONSTANTS'];
+function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANTS){
     var vm = this;
     var isAuthenticatedUser = false;
     var displayShortName = '';
@@ -101,6 +101,7 @@ function headerCtrl($scope,$state, authService, localStorageService){
             }
         }
     });
+    vm.constants = APP_CONSTANTS.MAIN_HEADER;
     vm.isAuthenticatedUser = isAuthenticatedUser;
     vm.openLoginLightBox = openLoginLightBox;
     vm.logoutUser = logoutUser;

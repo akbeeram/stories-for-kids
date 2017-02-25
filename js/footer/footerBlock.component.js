@@ -5,8 +5,8 @@ angular.module('storiesApp')
         controller: footerCtrl
 });
 
-footerCtrl.$inject = ['$state','$timeout'];
-function footerCtrl($state, $timeout){
+footerCtrl.$inject = ['$state','$timeout','APP_CONSTANTS'];
+function footerCtrl($state, $timeout,APP_CONSTANTS){
     var vm = this;
     vm.isSubmittin=false;
     vm.submitted = false;
@@ -26,4 +26,5 @@ function footerCtrl($state, $timeout){
         'Lion is king of the jungle,All hail the king',
         'The three foolish brahmins who didnt know'
     ];
+    vm.constants = APP_CONSTANTS.MAIN_FOOTER;
 }
