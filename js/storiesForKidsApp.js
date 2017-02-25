@@ -70,5 +70,14 @@
                 return false;
             }
         }
-    });
+    })
+        .run(function ($rootScope, $location, $window) {
+            // initialise google analytics
+            $window.ga('create', 'UA-92543826-1', 'auto');
+
+            // track pageview on state change
+            $rootScope.$on('$stateChangeSuccess', function (event) {
+                $window.ga('send', 'pageview', $location.path());
+            });
+        });
 }(angular));

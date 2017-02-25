@@ -1,0 +1,70 @@
+[24-Feb-2017 16:48:00 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:48:00 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:49:01 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:49:01 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:49:32 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:49:32 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:49:34 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:49:34 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:50:06 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:50:06 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:54:59 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:54:59 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 16:54:59 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 16:55:49 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:55:49 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 16:55:49 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 16:57:00 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:57:00 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 16:57:00 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 16:57:10 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/login.php on line 16
+[24-Feb-2017 16:57:10 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/login.php on line 22
+[24-Feb-2017 16:57:10 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/authenticate.php on line 16
+[24-Feb-2017 16:57:10 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/authenticate.php on line 22
+[24-Feb-2017 16:57:11 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/stories.php on line 14
+[24-Feb-2017 16:57:11 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/stories.php on line 20
+[24-Feb-2017 16:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/storiesf/public_html/api/v1/stories.php:24) in /home/storiesf/public_html/api/v1/stories.php on line 28
+[24-Feb-2017 16:57:11 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/stories.php on line 29
+[24-Feb-2017 16:57:11 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:57:11 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 16:57:11 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 16:57:11 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 18
+[24-Feb-2017 16:57:11 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 23
+[24-Feb-2017 16:57:11 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 26
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/authenticate.php on line 16
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/authenticate.php on line 22
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/stories.php on line 14
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/stories.php on line 20
+[24-Feb-2017 16:58:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/storiesf/public_html/api/v1/stories.php:24) in /home/storiesf/public_html/api/v1/stories.php on line 28
+[24-Feb-2017 16:58:43 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/stories.php on line 29
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 16:58:43 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 18
+[24-Feb-2017 16:58:43 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 23
+[24-Feb-2017 16:58:43 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 26
+[24-Feb-2017 16:58:46 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/authenticate.php on line 16
+[24-Feb-2017 16:58:46 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/authenticate.php on line 22
+[24-Feb-2017 16:58:46 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:58:46 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 16:58:46 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 16:59:34 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/authenticate.php on line 16
+[24-Feb-2017 16:59:34 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/authenticate.php on line 22
+[24-Feb-2017 16:59:35 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 16:59:35 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 16:59:35 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 17:01:50 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/authenticate.php on line 16
+[24-Feb-2017 17:01:50 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/authenticate.php on line 22
+[24-Feb-2017 17:01:50 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 17:01:50 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 17:01:50 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 17:02:21 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/authenticate.php on line 16
+[24-Feb-2017 17:02:21 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/authenticate.php on line 22
+[24-Feb-2017 17:02:28 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 17:02:28 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 17:02:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 44
+[24-Feb-2017 17:05:12 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/authenticate.php on line 16
+[24-Feb-2017 17:05:12 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/authenticate.php on line 22
+[24-Feb-2017 17:05:16 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/storiesf/public_html/api/v1/categories.php on line 34
+[24-Feb-2017 17:05:16 UTC] PHP Deprecated:  Function mysql_selectdb() is deprecated in /home/storiesf/public_html/api/v1/categories.php on line 39
+[24-Feb-2017 17:05:16 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/storiesf/public_html/api/v1/categories.php on line 45

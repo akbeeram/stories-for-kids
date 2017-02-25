@@ -26,7 +26,7 @@
                         <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
                     </div>{{$ctrl.constants.LOGIN.LABEL}}</span>
                 </span>
-                <span>
+                <span style="position:relative;">
                     <div class="user-info-circle circle-click" ng-show="$ctrl.isAuthenticatedUser">
                         <div class=" circle-click">{{$ctrl.displayShortName | uppercase}}</div>
                     </div>
@@ -49,7 +49,7 @@
                                         <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
                                         <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
                                         <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>-->
-                                        <div class="click-identifier" ng-click="$ctrl.logoutUser()">
+                                        <div class="user-info-logout click-identifier" ng-click="$ctrl.logoutUser()">
                                             <i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>
                                             &nbsp;&nbsp;{{$ctrl.constants.LOGOUT.LABEL}}</div>
                                     </td>

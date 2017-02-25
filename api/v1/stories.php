@@ -16,10 +16,12 @@ function getStoriesList($request){
         die("Unable to connect to MySQL");    
     }else{
         $cat_id = $request->category;
-        $table='STORIES';
+        $table='stories';
         mysql_selectdb(DB_DBNAME);
         $getStoriesSql='SELECT * FROM '.$table.' WHERE STORY_CATEGORY_ID="'.$cat_id.'" ORDER BY "STORY_SECTION"';
         $getStoriesSqlResult=mysql_query($getStoriesSql);
+        //echo $getStoriesSqlResult;
+    echo mysql_error();
         $count=0;
         $response=array(); 
         $list = array();

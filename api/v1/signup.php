@@ -21,6 +21,7 @@ $table='USERSDATA';
     if(!$conn){
         die("Unable to connect to MySQL"); 
     }else{
+        mysql_selectdb(DB_DBNAME);
         $email = $request->email;
         $getUserSql='SELECT * FROM '.$table.' WHERE EMAIL="'.$email.'"';
         $getUserSqlResult=mysql_query($getUserSql);
@@ -39,6 +40,7 @@ $table='USERSDATA';
     if(!$conn){
         die("Unable to connect to MySQL");
     }else{
+        mysql_selectdb(DB_DBNAME);
         $email = $request->email;
         $tempPwd = randomString();
 
@@ -68,6 +70,7 @@ $table='USERSDATA';
     if(!$conn){
         die("Unable to connect to MySQL");
     }else{
+        mysql_selectdb(DB_DBNAME);
         $email = $request->email;
         $getUserSql='SELECT * FROM '.$table.' WHERE EMAIL="'.$email.'"';
         //echo $getUserSql;

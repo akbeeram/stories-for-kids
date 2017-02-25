@@ -18,7 +18,7 @@ if(!$conn){
     die("Unable to connect to MySQL");    
 
 }else{
-    $table='COMMENTS_SUBMITTED';
+    $table='comments_submitted';
     mysql_selectdb(DB_DBNAME);
     $getCommentsSubmittedSql = 'SELECT MAX(COMMENTS_SUBMITTED_ID) FROM '.$table;
     $getCommentsSubmittedSqlResult=mysql_query($getCommentsSubmittedSql);

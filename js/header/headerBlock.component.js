@@ -50,8 +50,12 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
         if(userInfo){
             authService.logoutUser(userInfo).then(function(data){
                 if(data.logoutSuccess){
-                    $state.go('welcome');
                     localStorageService.logoutUser();
+                    if($state.current.name == 'welcome'){
+                        $state.reload();
+                    }else{
+                        $state.go('welcome');
+                    }
                 }else{
                     //error with logout
                     //show user the error message

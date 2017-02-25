@@ -46,7 +46,6 @@
 }
 .story-list-name{
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
 }
 .dash-story-desc {
@@ -86,4 +85,12 @@
     display:inline-block;
     color:crimson;
     background:white;
+}
+.inset-text {
+    /* Shadows are visible under slightly transparent text color */
+    color: rgba(10,60,150, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    font-size: 1.5em;
+    display: block;
+    padding-top: 2em;
 }
