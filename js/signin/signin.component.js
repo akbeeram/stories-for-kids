@@ -28,7 +28,7 @@ function signinCtrl($scope,$state,authService, localStorageService){
                     localStorageService.setUserAuthInfo(data);
                     vm.setSubmitButtonDesign(false,false,true,false);
                     //console.log($state);
-                    $state.go('app.dash');
+                    $state.reload();
                 }else if(data.loginError){
                     vm.loginError = data.loginError;
                     vm.setSubmitButtonDesign(false,false,false,true);

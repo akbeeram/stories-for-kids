@@ -23,16 +23,16 @@
         //when user clicks on a tile in welcome page
         var onTileClick = function(item){
             //if user is valid, load dash page with the same tile he selects
-            if(vm.isAuthenticatedUser){
+            //if(vm.isAuthenticatedUser){
                 var story = {
                     story_cat_id:item.categoryId
                 }
                 //in dash, we load the current dategory from localstorage
                 localStorageService.setCurrentStory(story);
                 $state.go('app.dash');
-            }else{
-                vm.showLoginForm = true;   
-            }
+            //}else{
+                //vm.showLoginForm = true;   
+            //}
         }
 
         vm.constants = APP_CONSTANTS.WELCOME_PAGE;

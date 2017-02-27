@@ -8,7 +8,8 @@ function dashMainCtrl($scope, $state, storyService, categoryService, localStorag
     var vm = this;
     var routerState = $state;
     var categorySelected;
-    var isUserAdmin,loadingCtgryInProgrs = false;
+    var isUserAdmin = false;
+    var loadingCtgryInProgrs = true;
 
     //if user is navigating from reader page back to dashboard
     //re-select the story

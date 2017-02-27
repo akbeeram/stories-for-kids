@@ -16,7 +16,7 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
     if(userInfo){
         isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
-        if(isAuthenticatedUser){
+        //if(isAuthenticatedUser){
             if(userInfo.username.indexOf(' ') >= 0){
                 var temp = userInfo.username.split(' ');
                 displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
@@ -26,19 +26,20 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
             vm.displayShortName = displayShortName;
             vm.email = userInfo.email || '';
             vm.name = userInfo.username || '';
-        }else{
+        //}else{
         //temporary fix for authentication for other routes
-        if($state.current.name !== 'welcome'){
-            $state.go('login');
-        }
-    }
+        //if($state.current.name !== 'welcome'){
+            //$state.go('login');
+        //}
+    //}
     }else{
         //temporary fix for authentication for other routes
         //the next line is to avoid authentication to routes that dont need authentication
         //in futue refine this logicby adding a all routes to constants that dont need login
-        if($state.current.name !== 'welcome' && $state.current.name.indexOf('boring')<0 && $state.current.name !== 'contact-us'){
-            $state.go('login');
-        }
+        //if($state.current.name !== 'welcome' && //$state.current.name.indexOf('boring')<0 && $state.current.name !== //'contact-us'){
+            //$state.go('login');
+        //$state.go('welcome');
+        //}
     }
     openLoginLightBox = function(){
         vm.showLoginForm = true;

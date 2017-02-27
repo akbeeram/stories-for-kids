@@ -51,7 +51,7 @@ $table='usersdata';
         if(mysql_affected_rows($conn)!=1){
             echo json_encode(array('sentResetEmail'=>false));
         }else{
-            $msg = "Your temporary paswword is : '".$tempPwd."'.";
+            $msg = "Your temporary password is : '".$tempPwd."'.";
 
             $headers  = 'MIME-Version: 1.0' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
