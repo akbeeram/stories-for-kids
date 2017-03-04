@@ -70,7 +70,7 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
     var everywhere = angular.element(window.document);
     var isSearchAreaClicked,isSearchIconClicked,isUserInfoAreaClicked,isUserInfoClicked;
     everywhere.bind('click', function(event) {
-        console.log(document.body.scrollTop);
+        //console.log(document.body.scrollTop);
         //for search area
         isSearchAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('header-search-input') >= 0;
         isSearchIconClicked = event.target.className == 'headerSearchAnchor' || event.target.className.indexOf('fa-search') >= 0;
@@ -109,9 +109,9 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
     });
     var obj = angular.element(document.getElementById('goToTop'));
     angular.element($window).bind("scroll", function() {
-        console.log(obj);
+        //console.log(obj);
     });
-    console.log(obj);
+    //console.log(obj);
     vm.constants = APP_CONSTANTS.MAIN_HEADER;
     vm.isAuthenticatedUser = isAuthenticatedUser;
     vm.openLoginLightBox = openLoginLightBox;
