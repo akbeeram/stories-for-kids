@@ -1,4 +1,4 @@
-<div class="reader-pane row">
+<div class="reader-pane row" ng-class="{'nightMode':asdf,'dayMode':!asdf}">
     <div class="reader-controls col-lg-9 col-md-9 col-sm-10 col-xs-12">
         <div class="reader-story-title">
             Title : {{$ctrl.config.story_name}}
@@ -19,7 +19,7 @@
             <span>Read Later&nbsp;<i class="fa fa-bookmark-o" aria-hidden="true" style="color:blue;"></i></span>
 -->
         </div>
-        <div ng-class="{'nightMode':asdf,'dayMode':!asdf}">
+        <div>
             <div class="loadingDiv" ng-show="$ctrl.showLoadingDiv">
                 <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br><br>
                 <span class="">Loading your story...</span>

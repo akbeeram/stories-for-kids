@@ -21,7 +21,7 @@
     transform: scale(1.01);
 }
 .welcome-message{
-    font-size:2.3em;
+    font-size:2.1em;
     text-align: center;
     font-family: Slabo;
     margin: 1.5em 0 0.5em 0;
@@ -62,4 +62,28 @@
 .tile-story-fig img{
     height: 100%;
     width: 100%;
+}
+.welcome-loading{
+    font-family: Slabo;
+    font-size: 1em;
+    margin-top:3em;
+}
+
+@media screen and (max-width: 768px){
+    .welcome-message {
+        font-size: 1.6em;
+    }
+}
+/* for tabs*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .welcome-message {
+        font-size: 1.8em;
+    }
+}
+
+/* for large screens*/
+@media screen and (min-width: 1200px){
+    .welcome-message {
+        font-size:2.3em;
+    }
 }

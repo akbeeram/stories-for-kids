@@ -20,3 +20,29 @@ div.story p {
 .loadingDiv .fa-pulse{
     margin-top: 2em;
 }
+
+.row{
+    margin-right:-30px;
+}
+
+
+
+/* for mobile devices*/
+@media screen and (max-width: 768px){
+    .story {
+        padding: 1.2em 0em 1em 0em;
+    }
+}
+/* for tabs*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .story {
+        padding: 1.2em 1em 1em 1em;
+    }
+}
+
+/* for large screens*/
+@media screen and (min-width: 1200px){
+    .story {
+
+    }
+}

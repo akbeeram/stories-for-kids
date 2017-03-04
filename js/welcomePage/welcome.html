@@ -15,6 +15,10 @@
     <div class="container">
         <div class="row" style="text-align:center;">
             <span login-light-box ng-show="$ctrl.showLoginForm" show-login-form="$ctrl.showLoginForm"></span>
+            <div ng-show="!$ctrl.storyCategory" class="col-md-12 col-sm-12 col-xs-12 welcome-loading">
+                <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i><br><br>
+                <span class="">Loading ...</span>
+            </div>
             <div ng-repeat ="item in $ctrl.storyCategory" class="col-md-4 col-sm-6 col-xs-12">
                 <single-tile story-details="item" ng-click="$ctrl.onTileClick(item)"></single-tile>
             </div>

@@ -3,7 +3,7 @@
     display:block;
     width:100%;
     font-family: 'Courgette';
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .reader-story-title {
     display: inline-block;
@@ -45,4 +45,27 @@
 .reader-go-back:hover {
     color: crimson;
     cursor: pointer;
+}
+
+/* for mobile devices*/
+@media screen and (max-width: 768px){
+    .reader-pane {
+        padding: 2em 0em 1em 1em;
+        font-size: 1em;
+    }
+}
+/* for tabs*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .reader-pane {
+        padding: 2em 0 1em 1em;
+        font-size: 1.1em;
+    }
+}
+
+/* for large screens*/
+@media screen and (min-width: 1200px){
+    .reader-pane {
+        padding: 2em;
+        font-size: 1.4em;
+    }
 }
