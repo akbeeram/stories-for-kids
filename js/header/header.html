@@ -2,9 +2,10 @@
     <div>
         <div class="row">
             <!-- <div class="header-title col-lg-1 col-md-1 col-sm-1 hidden-xs"></div> -->
-            <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12" title="Stories for Kids | Click here to go to home page" ng-click="$ctrl.goToHome()">
-                <i class="fa fa-book header-brand-image" aria-hidden="true"></i>
-                <div class="header-brand-name">{{$ctrl.constants.TITLE_PART1}}<span class="title-kids">{{$ctrl.constants.TITLE_PART2}}</span>
+            <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <i class="fa fa-book header-brand-image" aria-hidden="true" title="Stories for Kids | Click here to go to home page" ng-click="$ctrl.goToHome()"></i>
+                <div class="header-brand-name" title="Stories for Kids | Click here to go to home page" ng-click="$ctrl.goToHome()">
+                    {{$ctrl.constants.TITLE_PART1}}<span class="title-kids">{{$ctrl.constants.TITLE_PART2}}</span>
                     <div class="header-tagline">{{$ctrl.constants.TAGLINE}}</div>
                 </div>
             </div>
