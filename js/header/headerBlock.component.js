@@ -5,8 +5,8 @@ angular.module('storiesApp')
         controller: headerCtrl
 });
 
-headerCtrl.$inject = ['$scope','$state','authService','localStorageService','APP_CONSTANTS','$window'];
-function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANTS,$window){
+headerCtrl.$inject = ['$scope','$state','authService','localStorageService','APP_CONSTANTS','$document','$window'];
+function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANTS,$document,$window){
     var vm = this;
     var isAuthenticatedUser = false;
     var displayShortName = '';
@@ -66,6 +66,17 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
             $state.go('welcome');
         }
     }
+    //change password
+    changePwd = function(){
+        vm.formToShow = true;
+        vm.openLoginLightBox();
+    }
+    goToHome = function(){
+        $state.go('welcome');
+    }
+    handleScroll = function () {
+        console.log(window.scrollY);
+    }
     //registering clicks to hide dropdowns
     var everywhere = angular.element(window.document);
     var isSearchAreaClicked,isSearchIconClicked,isUserInfoAreaClicked,isUserInfoClicked;
@@ -107,13 +118,35 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
             }
         }
     });
-    var obj = angular.element(document.getElementById('goToTop'));
-    angular.element($window).bind("scroll", function() {
-        //console.log(obj);
-    });
-    //console.log(obj);
+    // $scope.lastScrollTop = 0;
+    // $scope.direction = "";
+    // angular.element($window).bind("scroll", function() {
+    //     $scope.st = window.pageYOffset;
+    //     if ($scope.st > $scope.lastScrollTop) {
+    //         $scope.direction = "down";
+    //     } else {
+    //         $scope.direction = "up";
+    //     }
+    //
+    //     $scope.lastScrollTop = $scope.st;
+    //     $scope.$apply();
+    //     console.log($scope.direction);
+    // });
+    // $scope.$watch(function () {
+    //     console.log($window.scrollY);
+    //     return $window.scrollY;
+    // }, function (scrollY) {
+    //     console.log(scrollY);
+    //     /* logic */
+    // });
+    // $document.on('scroll',function () {
+    //     console.log($window.scrollY);
+    // });
     vm.constants = APP_CONSTANTS.MAIN_HEADER;
     vm.isAuthenticatedUser = isAuthenticatedUser;
     vm.openLoginLightBox = openLoginLightBox;
     vm.logoutUser = logoutUser;
+    vm.changePwd = changePwd;
+    vm.goToHome = goToHome;
+    vm.handleScroll = handleScroll;
 }

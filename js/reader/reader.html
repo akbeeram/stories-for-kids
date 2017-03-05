@@ -1,16 +1,17 @@
 <div class="reader-pane row" ng-class="{'nightMode':asdf,'dayMode':!asdf}">
     <div class="reader-controls col-lg-9 col-md-9 col-sm-10 col-xs-12">
-        <div class="reader-story-title">
+        <div class="reader-story-title" title="You are reading {{$ctrl.config.story_name}}">
             Title : {{$ctrl.config.story_name}}
         </div>
         <div class="reader-story-controls">
-            <span class="reader-go-back" ng-click="$ctrl.goBackToDash()"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
+            <span class="reader-go-back" ng-click="$ctrl.goBackToDash()" title="Go back to List of stories in this category">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
             <span class="night-mode-control">
                 Night Mode :
-                <div ng-class="{'mode-on':asdf,'mode-off':!asdf}" ng-click="asdf=false">   
+                <div ng-class="{'mode-on':asdf,'mode-off':!asdf}" ng-click="asdf=false" title="Turn off night mode if your eyes are comfortable with a white background">
                     <i class="fa fa-toggle-on" aria-hidden="true" ></i>
                 </div>
-                <div ng-class="{'mode-on':!asdf,'mode-off':asdf}" ng-click="asdf=true">
+                <div ng-class="{'mode-on':!asdf,'mode-off':asdf}" ng-click="asdf=true" title="Turn on night mode to read without straining your eyes">
                    <i class="fa fa-toggle-off" aria-hidden="true" ></i>
                 </div>
             </span>
@@ -26,7 +27,8 @@
             </div>
           <story-component config="$ctrl.config"></story-component>
         </div>
-        <span class="reader-go-back" ng-click="$ctrl.goBackToDash()"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
+        <span class="reader-go-back" ng-click="$ctrl.goBackToDash()" title="Go back to List of stories in this category">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-2 hidden-xs">
         <!--<right-panel></right-panel>-->

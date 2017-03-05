@@ -11,6 +11,7 @@
 .story-box:hover{
     box-shadow: 0px 0px 25px #000000;
     z-index: 2;
+    cursor: pointer;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.01);
     -ms-transition: all 200ms ease-in;
@@ -54,6 +55,7 @@
     font-size:1em;
     text-align: justify;
     margin-bottom: 1em;
+    line-height: 1.3em;
 }
 .tile-story-fig {
     display: block;

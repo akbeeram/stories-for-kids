@@ -51,13 +51,31 @@ $table='usersdata';
         if(mysql_affected_rows($conn)!=1){
             echo json_encode(array('sentResetEmail'=>false));
         }else{
-            $msg = "Your temporary password is : '".$tempPwd."'.";
+            //HTML email
+            $msg = '<html><head><title>Your Password hase been Reset</title></head>';
+            $msg .= '<body style="font-family:Verdana">';
+            //$msg .= "Your temporary password is : '".$tempPwd."'.";
+            $msg .= '<div style="background-color:#1B242D;padding:25px;width:100%;color:white;">';
+            $msg .= '<div style="font-weight:bold;font-size:1.5em;">Stories for <span style="color:crimson;font-style:italic;">Kids</span></div>';
+            $msg .= '<div style="font-size:0.7em;">Moral, Motivational and Inspirational Stories</div></div>';
+            $msg .= '<h3 style="color:#1B242D;">Your Password has been reset</h3>';
+            $msg .= '<p>Hi There !!</p>';
+            $msg .= '<p>Use the temporary password to login into <a href="storiesforkids.in" style="font-weight:bold;text-decoration:none;color:crimson;">';
+            $msg .= 'Stories for Kids</a> and reset your password once you login.</p>';
+            $msg .= '<p>Your temporary password is : '.$tempPwd.'</p>';
+            $msg .= '<p><br><br><br>Thanks,<br>';
+            $msg .= '<span style="font-weight:bold;">Stories for Kids</span><br>';
+            $msg .= '<span style="font-size:0.8em;">support@storiesforkids.in</span></p>';
+            $msg .= '</body></html>';
 
+            // To send HTML mail, the Content-type header must be set
             $headers  = 'MIME-Version: 1.0' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
             // Additional headers
             $headers .= 'From: Storiesforkids <support@storiesforkids.in>' . "\r\n";
             $headers .= 'Reply-To: Storiesforkids <support@storiesforkids.in>' . "\r\n";
+
+            //send mail
             mail($email,"Password Reset for storiesforkids.in",$msg,$headers);
             echo json_encode(array('sentResetEmail'=>true));
         }

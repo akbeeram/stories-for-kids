@@ -71,12 +71,13 @@
             }
         }
     })
-        .run(function ($rootScope, $location, $window) {
+        .run(function ($rootScope, $location, $window, $anchorScroll) {
             // initialise google analytics
             $window.ga('create', 'UA-92543826-1', 'auto');
 
             // track pageview on state change
             $rootScope.$on('$stateChangeSuccess', function (event) {
+                $anchorScroll();
                 $window.ga('send', 'pageview', $location.path());
             });
         });

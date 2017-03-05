@@ -24,7 +24,7 @@ function forgotPwdCtrl($state,$http,authService){
     validateIfEmailExists = function () {
         authService.userExists(vm.userLoginInput).then(function (data) {
             if(data && data.userExists){
-
+                vm.forgotPwdMailSent = "A temporary password has been sent to your email.";
             }else{
                 vm.forgotPwdError = 'Email not found in our records.'
             }

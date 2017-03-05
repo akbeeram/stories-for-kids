@@ -2,7 +2,7 @@
     <div>
         <div class="row">
             <!-- <div class="header-title col-lg-1 col-md-1 col-sm-1 hidden-xs"></div> -->
-            <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="header-title col-lg-6 col-md-6 col-sm-6 col-xs-12" title="Stories for Kids | Click here to go to home page" ng-click="$ctrl.goToHome()">
                 <i class="fa fa-book header-brand-image" aria-hidden="true"></i>
                 <div class="header-brand-name">{{$ctrl.constants.TITLE_PART1}}<span class="title-kids">{{$ctrl.constants.TITLE_PART2}}</span>
                     <div class="header-tagline">{{$ctrl.constants.TAGLINE}}</div>
@@ -39,8 +39,8 @@
                                         <i class="fa fa-user-circle fa-2x click-identifier" aria-hidden="true"></i>
                                     </td>
                                     <td class="click-identifier" style="display: table-cell;vertical-align: middle;">
-                                        <span style="font-size: 1.5em;">{{::$ctrl.name}}</span><br>
-                                        <span style="font-size: 0.8em;">{{::$ctrl.email}}</span>
+                                        <span class="click-identifier" style="font-size: 1.5em;">{{::$ctrl.name}}</span><br>
+                                        <span class="click-identifier" style="font-size: 0.8em;">{{::$ctrl.email}}</span>
                                     </td>
                                 </tr>
                                 <tr class="click-identifier">
@@ -48,10 +48,15 @@
                                         <!--<div><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;Profile</div>
                                         <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
                                         <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
-                                        <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>-->
+                                        <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>
+                                        <div class="user-info-logout click-identifier" ng-click="$ctrl.showSlider=!$ctrl.showSlider">
+                                            <i class="fa fa-key click-identifier" aria-hidden="true"></i>
+                                                &nbsp;&nbsp;Change Password
+                                        </div>-->
                                         <div class="user-info-logout click-identifier" ng-click="$ctrl.logoutUser()">
                                             <i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>
-                                            &nbsp;&nbsp;{{$ctrl.constants.LOGOUT.LABEL}}</div>
+                                            &nbsp;&nbsp;{{$ctrl.constants.LOGOUT.LABEL}}
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
@@ -60,7 +65,16 @@
                 </span>
             </div>
         </div>
-        <login-light-box ng-show="$ctrl.showLoginForm" show-login-form="$ctrl.showLoginForm"></login-light-box>
+        {{$ctrl.formToShow}}
+        <login-light-box ng-show="$ctrl.showLoginForm" show-login-form="$ctrl.showLoginForm" form-to-show="$ctrl.formToShow"></login-light-box>
     </div>
 </div>
-<div id="goToTop" style="position:absolute;right:0;bottom:5em;color:green;">---Go To Top---</div>
+<div ng-class="{'sfk-slider':!$ctrl.showSlider,'sfk-slider-open':$ctrl.showSlider}" id="sfk-slider">
+    <div ng-click="$ctrl.showSlider=!$ctrl.showSlider">Close</div>
+    sdfasdfsdffas
+    asdf
+    asdf
+    sad
+    f as
+    d
+</div>

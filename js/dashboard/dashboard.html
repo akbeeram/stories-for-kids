@@ -1,7 +1,8 @@
 <div class="row">
     <div>
-        <div class="menu">
-            <ul>
+        <div class="menu row">
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+            <ul class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                 <li ui-sref="welcome"><i class="fa fa-angle-double-left" style="font-weight:bold;"></i></li>
                 <li ng-class="{'submenu-active':$ctrl.routerState.current.name == 'app.dash'}">Stories</li>
                 <!--<li>Morals</li>
@@ -13,6 +14,7 @@
                 <li>Store</li>-->
                 <li ui-sref="app.take-control.submit-a-story" ng-if="$ctrl.isUserAdmin">Admin</li>
             </ul>
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
         </div>
     </div>
 </div>
@@ -42,11 +44,12 @@
                 </div>
             </div>
             
-            <div>
+            <div class="row">
+                <!--<div ng-repeat="(k,v) in $ctrl.dash.storyData.story_list" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">-->
                 <div ng-repeat="(k,v) in $ctrl.dash.storyData.story_list">
                     <div class="story-part-title" ng-if="k.length>0">Part {{$index+1}}</div>
                     <div ng-repeat="(a,b) in v">
-                        <div ng-click="$ctrl.openStory(b)" class="story-line-item">
+                        <div ng-click="$ctrl.openStory(b)" class="story-line-item" title="Click to start reading {{b.story_name}}">
                             <div class="story-list-name">
                                 {{$index + 1}}.&nbsp;&nbsp;{{b.story_name}}
                             </div>
