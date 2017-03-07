@@ -74,6 +74,7 @@
 @media screen and (max-width: 768px){
     .welcome-message {
         font-size: 1.6em;
+        padding: 0 1.2em;
     }
 }
 /* for tabs*/

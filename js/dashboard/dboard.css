@@ -21,6 +21,18 @@
     /*background: white;
     box-shadow: 1px 1px 3px gray;*/
 }
+@media screen and (max-width: 768px){
+    .dash-container {
+        padding: 1em 1em 0 1em;
+    }
+    .story-list{
+        padding:0 1em;
+    }
+    .dash-story-desc {
+        padding-top: 1em;
+    }
+}
+
 .category-select {
     border: yellowgreen;
     padding: 0.4em 1em;
@@ -71,7 +83,7 @@
     font-family: 'Slabo';
 }
 .menu ul{
-    padding-left: 1em;
+    padding-left: 2em;
     margin:0;
 }
 .menu ul li {
