@@ -4,12 +4,13 @@
               <img src="images/common/loading_icon.gif" ng-src="{{$ctrl.storyDetails.categoryImgLoc}}" />
         </div>
         <div class="tile-story-title">
-            {{$ctrl.storyDetails.categoryName}}
+            {{$ctrl.storyDetails.categoryName}}<br><br>
+            <span class="noOfStoriesSmall">Stories : {{$ctrl.storyDetails.noOfStories}}</span>
         </div>
         <div class="tile-story-desc">
             {{$ctrl.storyDetails.categoryDesc}}
         </div>
-        <div style="text-align:right;">
+        <div class="noOfStories">
         No. of Stories : {{$ctrl.storyDetails.noOfStories}}
         </div>
     </div>

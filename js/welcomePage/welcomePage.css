@@ -70,11 +70,45 @@
     font-size: 1em;
     margin-top:3em;
 }
+.noOfStories {
+    text-align: right;
+}
 
 @media screen and (max-width: 768px){
     .welcome-message {
         font-size: 1.6em;
         padding: 0 1.2em;
+    }
+    .tile-story-fig {
+        text-align: left;
+        min-width: 0;
+        width: 30%;
+        margin: 0;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 0;
+    }
+    .tile-story-title {
+        display: inline-block;
+        font-size: 1.2em;
+        margin: 0.5em 0 0.5em 0.5em;
+    }
+    .tile-story-desc {
+        display: none;
+    }
+    .story-box {
+        width:90%;
+        text-align: left;
+        padding:0.5em;
+    }
+    .noOfStories {
+        display: none;
+    }
+    .noOfStoriesSmall {
+        font-size: 0.8em;
+        background: yellowgreen;
+        display: inline-block;
+        padding: 0.5em;
     }
 }
 /* for tabs*/

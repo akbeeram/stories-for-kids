@@ -23,7 +23,6 @@
 .header-title {
     font-size: 2em;
     box-sizing: border-box;
-    padding-top: 0.2em;
     font-family: 'Courgette';
 }
 .header-tagline{
@@ -140,12 +139,61 @@
     transition-duration: 0.3s;
 }
 
+.mobile-side-menu {
+    position: fixed;
+    right: -32em;
+    top:0;
+    z-index:500;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 1em;
+    transition: right 0.3s ease-in;
+}
+.mobile-side-menu  ul li div{
+    display: block;
+    font-size: 0.8em;
+    padding: 0.5em 0.2em;
+}
+.mobile-side-menu-open {
+    position: fixed;
+    right: 0em;
+    top:0;
+    z-index:500;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 1em;
+    transition: right 0.3s ease-in;
+}
+.mobile-side-menu-open ul li div{
+    display: block;
+    width:100%;
+    font-size: 0.8em;
+    padding: 0.5em 0.2em;
+}
+.mobile-side-menu-open ul li:hover{
+    background: yellowgreen;
+    cursor: pointer;
+}
 @media screen and (max-width: 768px){
+    .header {
+        padding: 1em 0.5em;
+    }
     .header-title {
         font-size: 1.2em;
+        padding: 0 0 0 0.5em;
+    }
+    .header-brand-image {
+        font-size: 1.6em;
+        cursor: pointer;
     }
     .header-tagline{
         font-size: 0.7em;
+    }
+    .menu-bars {
+        font-size: 1.5em;
+        padding: 0;
     }
 }
 /* for tabs*/

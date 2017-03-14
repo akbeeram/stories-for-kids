@@ -19,17 +19,19 @@
                 <li ng-repeat="news in $ctrl.recentlyAdded" style="color:darkgray;line-height:1.2em;">{{news|limitTo:30}}</li>
             </ul>-->
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-12 boringStuff" style="color:darkgray;line-height:1.2em;">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boringStuff" style="color:darkgray;line-height:1.2em;">
             <!-- need to dynamically render these as divs -->
-            <a ui-sref="{{$ctrl.constants.BORING_LINKS.PRIVACY_POLICY.STATE_NAME}}">{{$ctrl.constants.BORING_LINKS.PRIVACY_POLICY.LABEL}}</a><br>
-            <a ui-sref="boring-stuff.terms-of-use">Terms of Use</a><br>
-            <a ui-sref="boring-stuff.disclaimer">Disclaimer</a><br>
-            <a ui-sref="boring-stuff.site-map">Site Map</a><br>
-            <a ui-sref="contact-us">Contact Us</a>
+            <ul class="boring-menu">
+                <li><a ui-sref="{{$ctrl.constants.BORING_LINKS.PRIVACY_POLICY.STATE_NAME}}">{{$ctrl.constants.BORING_LINKS.PRIVACY_POLICY.LABEL}}</a></li>
+                <li><a ui-sref="boring-stuff.terms-of-use">Terms of Use</a></li>
+                <li><a ui-sref="boring-stuff.disclaimer">Disclaimer</a></li>
+                <li><a ui-sref="boring-stuff.site-map">Site Map</a></li>
+                <li><a ui-sref="contact-us">Contact Us</a></li>
+            </ul>
         </div>
     </div>
     <div class="row">
-        <div class="footer-license">
+        <div class="footer-license hidden-sm hidden-xs">
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="images/common/creative-commons-80x15.png" /></a>&nbsp;This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
         </div>
     </div>

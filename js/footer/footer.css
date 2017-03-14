@@ -67,8 +67,22 @@
 
 
 @media screen and (max-width: 768px){
-    .boringStuff{
-        text-align: left;
-        padding-right: 3em;
+    .boring-menu{
+        text-align: center;
     }
+    .boring-menu li{
+        display: inline-block;
+    }
+    .boring-menu li+li:before{
+        content: ' | ';
+    }
+}
+/* for tabs*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+    
+}
+
+/* for large screens*/
+@media screen and (min-width: 1200px){
+
 }
