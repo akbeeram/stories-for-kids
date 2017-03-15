@@ -52,7 +52,8 @@
                 templateUrl:'js/common/main.html',
                 controller: function($scope,isUserAlreadyLoggedIn){
                     //not running
-                }
+                },
+                onEnter: scrollBackToTop
             });
 
         function isUserValid(authService, localStorageService){
@@ -69,6 +70,11 @@
                 //if no localstorage data found ??
                 return false;
             }
+        }
+        function scrollBackToTop($rootScope) {
+            $rootScope.$on('$viewContentLoaded',function(){
+                jQuery('html, body').animate({ scrollTop: 0 }, 200);
+            });
         }
     })
         .run(function ($rootScope, $location, $window, $anchorScroll) {

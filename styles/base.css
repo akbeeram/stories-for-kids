@@ -14,6 +14,14 @@ html, body{
     overflow-x: hidden;
     height:100%;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
 .body-container{
     position: relative;
     margin: 0 auto;
