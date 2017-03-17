@@ -8,7 +8,7 @@
             <span class="noOfStoriesSmall">Stories : {{$ctrl.storyDetails.noOfStories}}</span>
         </div>
         <div class="tile-story-desc">
-            {{$ctrl.storyDetails.categoryDesc}}
+            {{$ctrl.storyDetails.categoryDesc | limitTo : 240}}
         </div>
         <div class="noOfStories">
         No. of Stories : {{$ctrl.storyDetails.noOfStories}}
