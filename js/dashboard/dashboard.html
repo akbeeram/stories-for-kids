@@ -36,10 +36,10 @@
             <div class="row">
 <!--                <div ng-show="$ctrl.loadingCtgryInProgrs" style="position:absolute;width:100%;height:100%;display:block;z-index:10;background:black;opacity:0.8;">
                 </div>-->
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 dash-story-fig">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 dash-story-fig">
                     <img ng-src="{{$ctrl.dash.categoryData.categoryImgLoc}}" />
                 </div>
-                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 dash-story-desc">
+                <div class="col-lg-9 col-md-9 col-sm-8 dash-story-desc">
                     {{$ctrl.dash.categoryData.categoryDesc}}
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <div ng-repeat="(a,b) in v">
                         <div ng-click="$ctrl.openStory(b)" class="story-line-item" title="Click to start reading {{b.story_name}}">
                             <div class="story-list-name">
-                                {{$index + 1}}.&nbsp;&nbsp;{{b.story_name}}
+                                <span>{{$index + 1}}.</span>&nbsp;&nbsp;<span>{{b.story_name}}</span>
                             </div>
                         </div>
                     </div>

@@ -4,14 +4,13 @@
               <img src="images/common/loading_icon.gif" ng-src="{{$ctrl.storyDetails.categoryImgLoc}}" />
         </div>
         <div class="tile-story-title">
-            {{$ctrl.storyDetails.categoryName}}<br><br>
-            <span class="noOfStoriesSmall">Stories : {{$ctrl.storyDetails.noOfStories}}</span>
+            {{$ctrl.storyDetails.categoryName}}
         </div>
         <div class="tile-story-desc">
             {{$ctrl.storyDetails.categoryDesc | limitTo : 240}}
         </div>
         <div class="noOfStories">
-        No. of Stories : {{$ctrl.storyDetails.noOfStories}}
+            <span>No. of Stories : {{$ctrl.storyDetails.noOfStories}}</span>
         </div>
     </div>
 </div>
