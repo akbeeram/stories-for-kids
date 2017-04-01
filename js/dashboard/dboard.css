@@ -21,21 +21,6 @@
     /*background: white;
     box-shadow: 1px 1px 3px gray;*/
 }
-@media screen and (max-width: 768px){
-    .dash-container {
-        padding: 1em 1em 0 1em;
-    }
-    .story-list{
-        padding:0 1em;
-        margin-top: 1em;
-    }
-    .dash-story-desc {
-        padding-top: 1em;
-    }
-    .category-select {
-        margin-top: 1em;
-    }
-}
 
 .category-select {
     border: yellowgreen;
@@ -109,4 +94,23 @@
     font-size: 1.5em;
     display: block;
     padding-top: 2em;
+}
+
+@media screen and (max-width: 768px){
+    .dash-container {
+        padding: 0em 0 0 1em;
+    }
+    .story-list{
+        padding:0 1em;
+        margin-top: 1em;
+    }
+    .dash-story-desc {
+        font-size: 1em;
+    }
+    .category-select {
+        margin-top: 1em;
+    }
+    .story-line-item{
+        font-size: 0.8em;
+    }
 }
