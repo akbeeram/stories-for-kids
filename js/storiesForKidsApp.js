@@ -86,5 +86,7 @@
                 $anchorScroll();
                 $window.ga('send', 'pageview', $location.path());
             });
+            //console.log($window.pageYOffset);
+            //window.addEventListener('scroll',function(){alert('sadf')});
         });
 }(angular));
