@@ -9,7 +9,8 @@
         'boringStuff',
         'adminModule',
         'dashboardModule',
-        'localStorageModule'
+        'localStorageModule',
+        'ngSanitize'
     ])
     .config(function($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise('/welcome');
@@ -79,13 +80,13 @@
     })
         .run(function ($rootScope, $location, $window, $anchorScroll) {
             // initialise google analytics
-            $window.ga('create', 'UA-92543826-1', 'auto');
+            //$window.ga('create', 'UA-92543826-1', 'auto');
 
             // track pageview on state change
-            $rootScope.$on('$stateChangeSuccess', function (event) {
-                $anchorScroll();
-                $window.ga('send', 'pageview', $location.path());
-            });
+            // $rootScope.$on('$stateChangeSuccess', function (event) {
+            //     $anchorScroll();
+            //     $window.ga('send', 'pageview', $location.path());
+            // });
             //console.log($window.pageYOffset);
             //window.addEventListener('scroll',function(){alert('sadf')});
         });

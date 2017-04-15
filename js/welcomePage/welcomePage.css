@@ -27,6 +27,11 @@
     font-family: Slabo;
     margin: 1.5em 0 0.5em 0;
 }
+.welcome-message:after{
+    content:'';
+    background: crimson;
+    height:3px;
+}
 .single-tile-welcome{
     font-family: Slabo;
     text-align: center;

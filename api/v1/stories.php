@@ -10,6 +10,41 @@ $function = $request->call;
 if(function_exists($function)){
     call_user_func($function,$request);
 }
+function getStory($request){
+    $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
+    if(!$conn){
+        die("Unable to connect to MySQL");    
+    }else{
+        mysql_selectdb(DB_DBNAME);
+        $storyId = $request->storyId;
+        $table='stories';
+        $getStorySql="SELECT STORY FROM ".$table." WHERE STORY_ID='".$storyId."'";
+        //echo $getStorySql;
+        $getStorySqlResult=mysql_query($getStorySql);
+        //echo $getStorySqlResult;
+        while ($row=mysql_fetch_assoc($getStorySqlResult)){
+                echo json_encode(array('story'=>htmlspecialchars_decode($row['STORY'])));
+            }
+        echo mysql_error();
+    }
+    mysql_close($conn);
+}
+function updateStory($request){
+    $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
+    if(!$conn){
+        die("Unable to connect to MySQL");    
+    }else{
+        mysql_selectdb(DB_DBNAME);
+        $story = $request->story;
+        $table='stories';
+        $createStorySql="UPDATE ".$table." SET STORY='".htmlspecialchars($story)."' WHERE STORY_ID='ST0001'";
+        //echo $createStorySql;
+        $createStorySqlResult=mysql_query($createStorySql);
+        //echo $createStorySqlResult;
+        //echo mysql_error();
+    }
+    mysql_close($conn);
+}
 function getStoriesList($request){
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){

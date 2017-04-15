@@ -20,7 +20,7 @@ function readerPaneCtrl($scope, $state, localStorageService, storyService){
         vm.showLoadingDiv = false;
     });
     
-    vm.showLoadingDiv = true;
+    vm.showLoadingDiv = false;
     vm.goBackToDash = goBackToDash;
     vm.config = currStory;
 }

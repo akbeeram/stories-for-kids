@@ -30,6 +30,13 @@
             toolbar2: 'link image code | visualchars save',
             save_onsavecallback: function () {
                 console.log(tinyMCE.get('writeStoryHere').getContent());
+                var reqObj={
+                    story:tinyMCE.get('writeStoryHere').getContent()
+                };
+                storyService.updateStory(reqObj)
+                    .then(function(data){
+                        console.log('success');
+                    });
             },
             content_css: 'js/story/story.css',
             setup: function (editor) {
