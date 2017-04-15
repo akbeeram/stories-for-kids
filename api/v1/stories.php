@@ -23,7 +23,7 @@ function getStory($request){
         $getStorySqlResult=mysql_query($getStorySql);
         //echo $getStorySqlResult;
         while ($row=mysql_fetch_assoc($getStorySqlResult)){
-                echo json_encode(array('story'=>htmlspecialchars_decode($row['STORY'])));
+                echo json_encode(array('story'=>htmlspecialchars_decode(stripslashes($row['STORY']))));
             }
         echo mysql_error();
     }
@@ -37,11 +37,11 @@ function updateStory($request){
         mysql_selectdb(DB_DBNAME);
         $story = $request->story;
         $table='stories';
-        $createStorySql="UPDATE ".$table." SET STORY='".htmlspecialchars($story)."' WHERE STORY_ID='ST0001'";
-        //echo $createStorySql;
+        $createStorySql='UPDATE '.$table.' SET STORY="'.addslashes(htmlspecialchars($story)).'" WHERE STORY_ID="ST0001"';
+        echo $createStorySql;
         $createStorySqlResult=mysql_query($createStorySql);
         //echo $createStorySqlResult;
-        //echo mysql_error();
+        echo mysql_error();
     }
     mysql_close($conn);
 }
