@@ -23,11 +23,11 @@
 }
 
 .category-select {
-    border: yellowgreen;
+    border: #2ECC71;
     padding: 0.4em 1em;
 }
 .category-select option {
-    border: yellowgreen;
+    border: #2ECC71;
     padding: 0.4em 1em;
 }
 .story-line-item {
@@ -36,12 +36,12 @@
     transition: all 0.2s ease-in;
 }
 .story-line-item:hover {
-    background: yellowgreen;
+    background: #2ECC71;
     color: black;
     cursor: pointer;
 }
 .story-part-title {
-    border-bottom: 1px dotted yellowgreen;
+    border-bottom: 1px dotted #2ECC71;
     padding: 0.5em 0;
     margin: 0.5em 0;
 }
@@ -66,7 +66,7 @@
 /*Menu Bar styling*/
 .menu{
     text-align:left;
-    background:yellowgreen;
+    background:#2ECC71;
     color:#1b242d;
     font-weight: bold;
     font-family: 'Slabo';
@@ -84,7 +84,7 @@
 }
 .menu ul li:hover {
     display:inline-block;
-    color:crimson;
+    color:#2ECC71;
     background:white;
 }
 .inset-text {

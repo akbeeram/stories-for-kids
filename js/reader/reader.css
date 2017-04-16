@@ -6,10 +6,15 @@
 }
 .reader-story-title {
     display: inline-block;
-    width:100%;
+    /*width:100%;*/
     margin-bottom: 1em;
     font-size: 1.2em;
-}
+}/*
+.reader-story-title:after {
+    content: '';
+    height: 3px;
+    background: crimson;
+}*/
 .reader-story-controls {
     width: 100%;
     text-align: right;

@@ -35,13 +35,20 @@ function updateStory($request){
         die("Unable to connect to MySQL");    
     }else{
         mysql_selectdb(DB_DBNAME);
+        $storyName = $request->storyName;
+        $storyId = $request->storyId;
         $story = $request->story;
         $table='stories';
-        $createStorySql='UPDATE '.$table.' SET STORY="'.addslashes(htmlspecialchars($story)).'" WHERE STORY_ID="ST0001"';
-        echo $createStorySql;
+        $createStorySql='UPDATE '.$table.' SET STORY="'.addslashes(htmlspecialchars($story)).'",STORY_NAME="'.$storyName.'" WHERE STORY_ID="'.$storyId.'"';
+        //echo $createStorySql;
         $createStorySqlResult=mysql_query($createStorySql);
+        if(mysql_affected_rows($conn)!=1){
+            echo json_encode(array('storyUpdated'=>false));
+        }else{
+            echo json_encode(array('storyUpdated'=>true));
+        }
         //echo $createStorySqlResult;
-        echo mysql_error();
+        //echo mysql_error();
     }
     mysql_close($conn);
 }
@@ -62,26 +69,8 @@ function getStoriesList($request){
         $list = array();
         header('Content-type: application/json');
         while ($row=mysql_fetch_assoc($getStoriesSqlResult)){
-            if(isset($row['STORY_SECTION'])){
-                $key = $row['STORY_SECTION'];
-                //if key exists in the array
-                if(array_key_exists($key,$list)){
-                    array_push($list[$key],setStoryToJson($row));
-                }else{  //if key is not present in array, add the key
-                    $list[$key] = array();
-                    array_push($list[$key],setStoryToJson($row));
-                }
-            }else{
-                $response[$count]=setStoryToJson($row);
-                $count++;
-            }
-        }
-        $response['story_list'] = $list;
-        if($count == 0){
-            $response['hasCategories'] = true;
-        }else{
-            $response['hasCategories'] = false;
-            
+            $response[$count]=setStoryToJson($row);
+            $count++;
         }
         echo json_encode($response);
     }

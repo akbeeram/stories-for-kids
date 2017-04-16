@@ -30,6 +30,8 @@ angular.module('StoryService',[])
 				headers: {'Content-Type': 'application/json'},
 				data: {
 					call: 'updateStory',
+                    storyId:reqObj.storyId,
+                    storyName:reqObj.storyName,
 					story: reqObj.story
 				}
 			})
