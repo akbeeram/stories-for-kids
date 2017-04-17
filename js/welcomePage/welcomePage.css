@@ -11,6 +11,7 @@
 .story-box:hover{
     box-shadow: 0px 0px 25px #000000;
     z-index: 2;
+    cursor: pointer;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.01);
     -ms-transition: all 200ms ease-in;
@@ -21,7 +22,7 @@
     transform: scale(1.01);
 }
 .welcome-message{
-    font-size:2.3em;
+    font-size:2.1em;
     text-align: center;
     font-family: Slabo;
     margin: 1.5em 0 0.5em 0;
@@ -54,6 +55,7 @@
     font-size:1em;
     text-align: justify;
     margin-bottom: 1em;
+    line-height: 1.3em;
 }
 .tile-story-fig {
     display: block;
@@ -62,4 +64,68 @@
 .tile-story-fig img{
     height: 100%;
     width: 100%;
+}
+.welcome-loading{
+    font-family: Slabo;
+    font-size: 1em;
+    margin-top:3em;
+}
+.noOfStories {
+    text-align: right;
+}
+
+@media screen and (max-width: 768px){
+    .welcome-message {
+        font-size: 1.4em;
+        padding: 0 1.5em 0 1.2em
+    }
+    .single-tile-welcome{
+        font-family: Slabo;
+        text-align: center;
+        cursor: pointer;
+    }
+    .tile-story-fig {
+        text-align: left;
+        min-width: 0;
+        width: 30%;
+        margin-right: 1em;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 0;
+        float:left;
+    }
+    .tile-story-title {
+        font-size: 1.2em;
+        margin-left: 35%;
+        text-align: center;
+        font-family: 'Courgette';
+    }
+    .tile-story-desc {
+        font-size: 0.9em;
+    }
+    .story-box {
+        width:95%;
+        text-align: left;
+        padding:0.5em;
+    }
+    .noOfStories {
+        text-align: right;
+        font-size: 0.9em;
+    }
+    .noOfStories span{
+        border-bottom: 1px dotted crimson;
+    }
+}
+/* for tabs*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .welcome-message {
+        font-size: 1.8em;
+    }
+}
+
+/* for large screens*/
+@media screen and (min-width: 1200px){
+    .welcome-message {
+        font-size:2.3em;
+    }
 }

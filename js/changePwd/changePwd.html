@@ -1,0 +1,37 @@
+<!--login form starts-->
+<form name="changePwdForm" style="font-size:1.2em;text-align:left;" novalidate>
+    <div style="height:1.2em;display:block;">
+        <div ng-show="changePwdForm.trickyWord2.$dirty && changePwdForm.trickyWord2.$error.required" class="input-invalid-signup">
+            Please Enter Password</div>
+        <div ng-show="changePwdForm.trickyWord2.$dirty && changePwdForm.trickyWord2.$error.required" class="input-invalid-signup">
+            Re-enter Password</div>
+        <div ng-show="(changePwdForm.trickyWord2.$dirty && changePwdForm.trickyWord2.$error.minlength) || (changePwdForm.trickyWord1.$dirty && changePwdForm.trickyWord1.$error.minlength)" class="input-invalid-signup">
+            Password must be minimum 6 characters</div>
+        <div ng-show="$ctrl.loginError" class="input-invalid-signup">
+            {{$ctrl.loginError}}
+        </div>
+    </div>
+    <div class="form-group">
+        Enter Password :
+        <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-fa-key fa-fw" aria-hidden="true"></i></span>
+            <input class="form-control" name="trickyWord1" type="password" placeholder="Password" ng-model="$ctrl.userLoginInput.trickyWord" required ng-minlength="6" />
+        </div>
+    </div>
+    <div class="form-group">
+        Re-enter Password :
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+            <input class="form-control" name="trickyWord2" type="password" placeholder="Password" ng-model="$ctrl.userLoginInput.trickyWord" required ng-minlength="6" />
+        </div>
+    </div>
+    <br><br>
+    <button class="login-button" ng-click="$ctrl.changePswd()" ng-disabled="!changePwdForm.$valid"
+            ng-style="{'cursor':!changePwdForm.$valid ? 'not-allowed':'pointer'}">Change Password&nbsp;
+        <i class="fa fa-sign-in" aria-hidden="true" ng-show="$ctrl.showSignIn"></i>
+        <i class="fa fa-spin fa-spinner fa-pulse fa-fw" aria-hidden="true" ng-show="$ctrl.showSigningIn"></i>
+        <i class="fa fa-check leftMar1" aria-hidden="true" ng-show="$ctrl.showSignedIn"></i>
+        <i class="fa fa-times leftMar1" aria-hidden="true" ng-show="$ctrl.showSignInErr" style="color:red;"></i>
+    </button>
+</form>
+<!--login form ends-->

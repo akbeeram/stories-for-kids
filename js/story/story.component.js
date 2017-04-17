@@ -38,6 +38,9 @@ function storyComponentCtrl($scope, $state, $timeout){
                     templateUrl = "js/stories/grimm-fairy-tales/"+vm.config.story_html_name+".html";
                     break;
                 case 'CG008':
+                    templateUrl = "js/stories/jataka-tales/"+vm.config.story_html_name+".html";
+                    break;
+                case 'CG009':
                     templateUrl = "js/stories/arabian-nights/"+vm.config.story_html_name+".html";
                     break;
             }

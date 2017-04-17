@@ -35,3 +35,13 @@
 .privacy-policy a:hover, .terms-of-use a:hover, .disclaimer a:hover {
     color: crimson;
 }
+
+@media screen and (max-width: 768px) {
+    .disclaimer,
+    .terms-of-use,
+    .privacy-policy,
+    .site-map {
+        padding: 2em 3em 0 2em;
+    }
+}
+

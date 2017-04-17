@@ -52,7 +52,8 @@
                 templateUrl:'js/common/main.html',
                 controller: function($scope,isUserAlreadyLoggedIn){
                     //not running
-                }
+                },
+                onEnter: scrollBackToTop
             });
 
         function isUserValid(authService, localStorageService){
@@ -70,14 +71,22 @@
                 return false;
             }
         }
+        function scrollBackToTop($rootScope) {
+            $rootScope.$on('$viewContentLoaded',function(){
+                jQuery('html, body').animate({ scrollTop: 0 }, 200);
+            });
+        }
     })
-        .run(function ($rootScope, $location, $window) {
+        .run(function ($rootScope, $location, $window, $anchorScroll) {
             // initialise google analytics
             $window.ga('create', 'UA-92543826-1', 'auto');
 
             // track pageview on state change
             $rootScope.$on('$stateChangeSuccess', function (event) {
+                $anchorScroll();
                 $window.ga('send', 'pageview', $location.path());
             });
+            //console.log($window.pageYOffset);
+            //window.addEventListener('scroll',function(){alert('sadf')});
         });
 }(angular));

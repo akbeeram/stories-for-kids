@@ -14,6 +14,14 @@ html, body{
     overflow-x: hidden;
     height:100%;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
 .body-container{
     position: relative;
     margin: 0 auto;
@@ -64,4 +72,8 @@ html, body{
 .input-invalid-signup{
     color: crimson;
     padding-bottom: 0.5em;
+}
+.mail-sent{
+    color: green;
+    font-size: 0.7em;
 }

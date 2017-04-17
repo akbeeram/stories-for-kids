@@ -1,6 +1,18 @@
 <!-- as header is loaded for all routes, temp fix added for all routes' authentication-->
 <header-block></header-block>
 <div class="row">
+    <div>
+        <div class="menu row">
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+            <ul class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <li ui-sref="welcome"><i class="fa fa-home"></i></li>
+                <li ui-sref="app.dash">Stories</li>
+            </ul>
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
     <div ui-view class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
 </div>
 <footer-block></footer-block>

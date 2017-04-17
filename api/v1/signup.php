@@ -35,7 +35,7 @@ $table='USERSDATA';
 }
 
 function sendResetMail($request){
-$table='USERSDATA';
+$table='usersdata';
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){
         die("Unable to connect to MySQL");
@@ -44,19 +44,38 @@ $table='USERSDATA';
         $email = $request->email;
         $tempPwd = randomString();
 
-        $getUserSql='INSERT INTO  '.$table.' (PASSWORD) VALUES("'.md5($tempPwd).'") WHERE EMAIL="'.$email.'"';
+        $getUserSql='UPDATE '.$table.' SET PASSWORD="'.md5($tempPwd).'"  WHERE EMAIL="'.$email.'"';
         $getUserSqlResult=mysql_query($getUserSql);
-
+        //echo $getUserSql;
+        //echo json_encode(array('sentResetEmail'=>$getUserSqlResult));
         if(mysql_affected_rows($conn)!=1){
             echo json_encode(array('sentResetEmail'=>false));
         }else{
-            $msg = "Your temporary paswword is : '".$tempPwd."'.";
+            //HTML email
+            $msg = '<html><head><title>Your Password hase been Reset</title></head>';
+            $msg .= '<body style="font-family:Verdana">';
+            //$msg .= "Your temporary password is : '".$tempPwd."'.";
+            $msg .= '<div style="background-color:#1B242D;padding:25px;width:100%;color:white;">';
+            $msg .= '<div style="font-weight:bold;font-size:1.5em;">Stories for <span style="color:crimson;font-style:italic;">Kids</span></div>';
+            $msg .= '<div style="font-size:0.7em;">Moral, Motivational and Inspirational Stories</div></div>';
+            $msg .= '<h3 style="color:#1B242D;">Your Password has been reset</h3>';
+            $msg .= '<p>Hi There !!</p>';
+            $msg .= '<p>Use the temporary password to login into <a href="storiesforkids.in" style="font-weight:bold;text-decoration:none;color:crimson;">';
+            $msg .= 'Stories for Kids</a> and reset your password once you login.</p>';
+            $msg .= '<p>Your temporary password is : '.$tempPwd.'</p>';
+            $msg .= '<p><br><br><br>Thanks,<br>';
+            $msg .= '<span style="font-weight:bold;">Stories for Kids</span><br>';
+            $msg .= '<span style="font-size:0.8em;">support@storiesforkids.in</span></p>';
+            $msg .= '</body></html>';
 
+            // To send HTML mail, the Content-type header must be set
             $headers  = 'MIME-Version: 1.0' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
             // Additional headers
             $headers .= 'From: Storiesforkids <support@storiesforkids.in>' . "\r\n";
             $headers .= 'Reply-To: Storiesforkids <support@storiesforkids.in>' . "\r\n";
+
+            //send mail
             mail($email,"Password Reset for storiesforkids.in",$msg,$headers);
             echo json_encode(array('sentResetEmail'=>true));
         }
@@ -65,7 +84,7 @@ $table='USERSDATA';
 }
 
 function isUserUnique($request){
-$table='USERSDATA';
+$table='usersdata';
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){
         die("Unable to connect to MySQL");
@@ -75,7 +94,7 @@ $table='USERSDATA';
         $getUserSql='SELECT * FROM '.$table.' WHERE EMAIL="'.$email.'"';
         //echo $getUserSql;
         $getUserSqlResult=mysql_query($getUserSql);
-        //echo mysql_num_rows($getUserSqlResult);
+        //echo json_encode(array('sentResetEmail'=>$getUserSqlResult));
         if($getUserSqlResult != false && mysql_num_rows($getUserSqlResult)>0){
             echo json_encode(array('isUserUnique'=>false));
         }else{
@@ -86,7 +105,7 @@ $table='USERSDATA';
 }
 
 function createUser($request){
-    $table='USERSDATA';
+    $table='usersdata';
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){
         die("Unable to connect to MySQL"); 
@@ -99,6 +118,7 @@ function createUser($request){
         $createUserSql="INSERT INTO ".$table." (EMAIL,USERNAME,PASSWORD,ACCLOCKED,SESSION_ID) VALUES ('".$email."','".mysql_real_escape_string($username)."','".md5(mysql_real_escape_string($password))."','N','".randomString()."')";
         //echo $createUserSql;
         $createUserSqlResult=mysql_query($createUserSql);
+            //echo json_encode(array('data'=>$createUserSql)); 
         header('Content-type: application/json');
         if(mysql_affected_rows($conn)!=1){
             echo json_encode(array('registerStatus'=>false));    

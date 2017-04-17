@@ -5,8 +5,8 @@ angular.module('storiesApp')
         controller: headerCtrl
 });
 
-headerCtrl.$inject = ['$scope','$state','authService','localStorageService'];
-function headerCtrl($scope,$state, authService, localStorageService){
+headerCtrl.$inject = ['$scope','$state','authService','localStorageService','APP_CONSTANTS','$document','$window'];
+function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANTS,$document,$window){
     var vm = this;
     var isAuthenticatedUser = false;
     var displayShortName = '';
@@ -16,7 +16,7 @@ function headerCtrl($scope,$state, authService, localStorageService){
     if(userInfo){
         isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
-        if(isAuthenticatedUser){
+        //if(isAuthenticatedUser){
             if(userInfo.username.indexOf(' ') >= 0){
                 var temp = userInfo.username.split(' ');
                 displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
@@ -26,19 +26,20 @@ function headerCtrl($scope,$state, authService, localStorageService){
             vm.displayShortName = displayShortName;
             vm.email = userInfo.email || '';
             vm.name = userInfo.username || '';
-        }else{
+        //}else{
         //temporary fix for authentication for other routes
-        if($state.current.name !== 'welcome'){
-            $state.go('login');
-        }
-    }
+        //if($state.current.name !== 'welcome'){
+            //$state.go('login');
+        //}
+    //}
     }else{
         //temporary fix for authentication for other routes
         //the next line is to avoid authentication to routes that dont need authentication
         //in futue refine this logicby adding a all routes to constants that dont need login
-        if($state.current.name !== 'welcome' && $state.current.name.indexOf('boring')<0 && $state.current.name !== 'contact-us'){
-            $state.go('login');
-        }
+        //if($state.current.name !== 'welcome' && //$state.current.name.indexOf('boring')<0 && $state.current.name !== //'contact-us'){
+            //$state.go('login');
+        //$state.go('welcome');
+        //}
     }
     openLoginLightBox = function(){
         vm.showLoginForm = true;
@@ -65,10 +66,22 @@ function headerCtrl($scope,$state, authService, localStorageService){
             $state.go('welcome');
         }
     }
+    //change password
+    changePwd = function(){
+        vm.formToShow = true;
+        vm.openLoginLightBox();
+    }
+    goToHome = function(){
+        $state.go('welcome');
+    }
+    handleScroll = function () {
+        console.log(window.scrollY);
+    }
     //registering clicks to hide dropdowns
     var everywhere = angular.element(window.document);
     var isSearchAreaClicked,isSearchIconClicked,isUserInfoAreaClicked,isUserInfoClicked;
     everywhere.bind('click', function(event) {
+        //console.log(document.body.scrollTop);
         //for search area
         isSearchAreaClicked = event.target.className == 'header-search-results' || event.target.className.indexOf('header-search-input') >= 0;
         isSearchIconClicked = event.target.className == 'headerSearchAnchor' || event.target.className.indexOf('fa-search') >= 0;
@@ -105,7 +118,35 @@ function headerCtrl($scope,$state, authService, localStorageService){
             }
         }
     });
+    // $scope.lastScrollTop = 0;
+    // $scope.direction = "";
+    // angular.element($window).bind("scroll", function() {
+    //     $scope.st = window.pageYOffset;
+    //     if ($scope.st > $scope.lastScrollTop) {
+    //         $scope.direction = "down";
+    //     } else {
+    //         $scope.direction = "up";
+    //     }
+    //
+    //     $scope.lastScrollTop = $scope.st;
+    //     $scope.$apply();
+    //     console.log($scope.direction);
+    // });
+    // $scope.$watch(function () {
+    //     console.log($window.scrollY);
+    //     return $window.scrollY;
+    // }, function (scrollY) {
+    //     console.log(scrollY);
+    //     /* logic */
+    // });
+    // $document.on('scroll',function () {
+    //     console.log($window.scrollY);
+    // });
+    vm.constants = APP_CONSTANTS.MAIN_HEADER;
     vm.isAuthenticatedUser = isAuthenticatedUser;
     vm.openLoginLightBox = openLoginLightBox;
     vm.logoutUser = logoutUser;
+    vm.changePwd = changePwd;
+    vm.goToHome = goToHome;
+    vm.handleScroll = handleScroll;
 }

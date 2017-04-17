@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html ng-app="storiesApp" lang="en">
     <head>
+        <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' /> 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Welcome to Stories for kids | Moral, Motivational and Inspirational Stories for Kids. Here you can find a large collection of children stories. A reference site for students, parents and teachers." />
+        <meta name="keywords" content="Stories for kids, stories,kids,moral stories,Motivational stories, Inspirational Stories, referenece for parents, reference for teachers, panchatantra stories, akbar-birbal stories,fairy tales, aesop fables, sindbad the sailor, tenali raman stories, grimm fairy tales" />
+        <meta name="author" content="Stories for Kids">
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="5 days">
+        <meta name="google-site-verification" content="MWCMFLNdBuAi-qo13ufXOg-8N492ETu08Xo2Dq6BW5A" />
+        <title>Stories for kids | Moral, Motivational and Inspirational Stories for Kids</title>
+        <!-- Stories for kids, Moral, Motivational -->
+
         <!--libs-->
         <script src="libs/angular/angular.min.js"></script>
         <script src="libs/angular/angular-ui-router.min.js"></script>
         <script src="libs/tinyMCE/tinymce.min.js"></script>
+        <script src="libs/jQuery/jQuery-3.1.1.min.js"></script>
         <!--scripts-->
         <script src="js/services/authService.js"></script>
         <script src="js/services/categoryService.js"></script>
@@ -30,6 +41,8 @@
         <script src="js/dashboard/dashboard.config.js"></script>
         <script src="js/services/localStorageService.js"></script>
         <script src="js/forgotPwd/forgotPwd.component.js"></script>
+        <script src="js/changePwd/changePwd.component.js"></script>
+        <script src="js/common/constants.js"></script>
         <!--styles-->
         <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.min.css">
@@ -55,6 +68,7 @@
                         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
         </script>
+        <title>Stories for Kids</title>
     </head>
     <body>
         <div ui-view class="body-container"></div>
