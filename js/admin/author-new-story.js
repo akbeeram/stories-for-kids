@@ -12,7 +12,28 @@
     function authorNewStoryCtrl($scope, $state, storyService, categoryService){
         var vm = this;
 
+        vm.$onInit = function () {
 
+        };
+        vm.$onDestroy = function () {
+        };
+        var createStory = function () {
+            vm.setSubmitButtonDesign(false,true,false,false);
+            var reqObj = {
+                categoryId: vm.categorySelected,
+                storyName: vm.storyName
+            }
+            storyService.createStory(reqObj).then(function (data){
+                if(data.storyCreated){
+                    vm.storyCreated = true;
+                    vm.storyId = data.storyId;
+                    vm.setSubmitButtonDesign(false,false,true,false);
+                }
+            },function (err) {
+                console.log(err);
+                vm.setSubmitButtonDesign(false,false,false,true);
+            });
+        };
         var getCategoryList = function (){
             categoryService.getCategories().then(function(catListdata){
                 vm.categoryList=catListdata;
@@ -23,68 +44,30 @@
                 vm.storyList=stories_data;
             });
         };
-        var loadStory = function () {
-            var reqObj = {
-                storyId:vm.selectedStory
-            };
-            storyService.getStory(reqObj)
-                .then(function(data){
-                    vm.story = data.story;
-                    tinyMCE.get('writeStoryHere')
-                        .setContent(data.story);
-                    vm.updatePreview();
-                });
-        };
         //update the preview
         var updatePreview = function(){
             document.getElementById("previewStoryHere").innerHTML = tinyMCE.get('writeStoryHere').getContent();
+        };
+        var saveDetails = function(){
+
+        };
+
+        var setSubmitButtonDesign = function(a,b,c,d){
+            vm.showSignIn = a;
+            vm.showSigningIn = b;
+            vm.showSignedIn = c;
+            vm.showSignInErr = d;
         }
-        vm.updatePreview = updatePreview;
+        vm.setSubmitButtonDesign = setSubmitButtonDesign;
 
-
-        getCategoryList();
-
-        vm.loadStory = loadStory;
+        vm.getCategoryList = getCategoryList;
         vm.changeCategory = changeCategory;
+        vm.saveDetails = saveDetails;
+        vm.updatePreview = updatePreview;
+        vm.createStory = createStory;
 
-        vm.$onInit = function () {
-            //tiny mce author block
-            tinymce.init({
-                height:300,
-                selector:'#writeStoryHere',
-                plugins: [
-                    "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-                    "searchreplace wordcount visualblocks visualchars code fullscreen",
-                    "insertdatetime media nonbreaking save table contextmenu directionality",
-                    "emoticons template paste textcolor colorpicker wordcount"
-                ],
-                toolbar1: 'undo redo | insert | styleselect | bold italic underline forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
-                toolbar2: 'link image code | visualchars save',
-                save_onsavecallback: function () {
-                    var reqObj={
-                        story:tinyMCE.get('writeStoryHere').getContent()
-                    };
-                    storyService.updateStory(reqObj)
-                        .then(function(data){
-                            console.log('success');
-                        });
-                },
-                content_css: 'js/story/story.css',
-                setup: function (editor) {
-                    editor.on('init',function(e){
-                        tinyMCE.get('writeStoryHere')
-                            .setContent('<div class="story"><p>'+  tinyMCE.get('writeStoryHere').getContent() + '</p></div>');
-                        vm.updatePreview();
-                    });
-                    editor.on('keyup blur', function (e) {
-                        vm.updatePreview();
-                    });
-                }
-            });
-        };
-        vm.$onDestroy = function () {
-            tinymce.remove();
-        };
+        vm.getCategoryList();
+        vm.setSubmitButtonDesign(true,false,false,false);
     }
 }(angular));
 

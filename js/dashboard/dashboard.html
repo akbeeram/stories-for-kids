@@ -12,7 +12,8 @@
                 <li>Buildings</li>
                 <li>Arts/Crafts</li>
                 <li>Store</li>-->
-                <li ui-sref="app.take-control.author-dash" ng-if="$ctrl.isUserAdmin">Admin</li>
+                <li ui-sref="app.take-control.author-dash" ng-if="$ctrl.isUserAdmin">Author</li>
+                <li ui-sref="app.take-control.admin-dash" ng-if="$ctrl.isUserAdmin">Admin</li>
             </ul>
             <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
         </div>

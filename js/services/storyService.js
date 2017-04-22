@@ -43,7 +43,6 @@ angular.module('StoryService',[])
                 return deferred.promise;
             });
 		},
-
         getStory:function(reqObj){
             var deferred=$q.defer();
             return $http({
@@ -62,6 +61,27 @@ angular.module('StoryService',[])
                 deferred.reject(response);
                 return deferred.promise;
             });
+        },
+        createStory:function(reqObj){
+            var deferred=$q.defer();
+            return $http({
+                url:'api/v1/stories.php',
+                method:'POST',
+                headers: {'Content-Type': 'application/json'},
+                data: {
+                    call: 'createStory',
+                    categoryId: reqObj.categoryId,
+                    storyName: reqObj.storyName
+
+                }
+            })
+                .then(function(response){
+                    deferred.resolve(response.data);
+                    return deferred.promise;
+                },function(response){
+                    deferred.reject(response);
+                    return deferred.promise;
+                });
         }
     };
 });

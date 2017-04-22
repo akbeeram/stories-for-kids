@@ -3,6 +3,10 @@
 
     angular.module('storiesApp')
         .component('authorEditStory',{
+            bindings:{
+                category:'=?',
+                story:'=?'
+            },
             templateUrl : 'js/admin/author-edit-story.html',
             controller: authorEditStoryCtrl,
             controllerAs: 'authorEditStoryCtrl'
@@ -11,34 +15,37 @@
     authorEditStoryCtrl.$inject = ['$scope','$state','storyService','categoryService'];
     function authorEditStoryCtrl($scope, $state, storyService, categoryService){
         var vm = this;
-        vm.showEditor = true;
-
+        var routerState = $state;
+        vm.showEditor = false;
+        vm.showEditSuccessMsg = false;
+        vm.showEditFailureMsg = false;
+        /*
+        This function is to populate the categories in the first select dropdown
+         */
         var getCategoryList = function (){
             categoryService.getCategories().then(function(catListdata){
                 vm.categoryList=catListdata;
             });
         };
         var hideUpdatedMsg = function () {
-            if(vm.storyUpdated){
-                //reset success message
-                vm.storyUpdated = false;
-            }
-            if(vm.storyUpdatedErr && !vm.storyUpdated){
-                //reset error message
-                vm.storyUpdatedErr = false;
-            }
+            vm.showEditSuccessMsg = vm.showEditSuccessMsg ? false : false;
+            vm.showEditFailureMsg = vm.showEditFailureMsg ? false : false;
         };
-        var changeCategory = function(){
-            hideUpdatedMsg();
+        var changeCategory = function(story){
+            vm.hideUpdatedMsg();
             vm.selectedStory = null;
-            // vm.storyUpdated = false;
             storyService.getStoriesList(vm.categorySelected).then(function(stories_data){
                 vm.storyList=stories_data;
+                if(story){
+                    //to preselect
+                    vm.selectedStory = story;
+                    vm.loadStory();
+                }
             });
         };
         var loadStory = function () {
-            hideUpdatedMsg();
-            // vm.storyUpdated = false;
+            vm.hideUpdatedMsg();
+            vm.initEditor();
             var len = vm.storyList.length;
             for(var i=0;i<len;i++){
                 if(vm.storyList[i].story_id == vm.selectedStory){
@@ -46,7 +53,6 @@
                     break;
                 }
             }
-
             var reqObj = {
                 storyId:vm.selectedStory
             };
@@ -62,12 +68,12 @@
         //update the preview
         var updatePreview = function(){
             document.getElementById("previewStoryHere").innerHTML = tinyMCE.get('writeStoryHere').getContent();
-        }
-
-        vm.$onInit = function () {
-            //tiny mce author block
+        };
+        var initEditor = function () {
+            vm.showEditor = true;
+                //tiny mce author block
             tinymce.init({
-                height:300,
+                height:350,
                 selector:'#writeStoryHere',
                 plugins: [
                     "advlist autolink lists link image charmap print preview hr anchor pagebreak",
@@ -86,14 +92,11 @@
                         };
                         storyService.updateStory(reqObj)
                             .then(function(data){
-                                // vm.categorySelected = null;
-                                // vm.selectedStory = null;
-                                vm.storyUpdated = data.storyUpdated;
-                                vm.storyUpdatedErr = vm.storyUpdated ? false : true;
-                                // vm.showEditor = false;
+                                vm.showEditSuccessMsg = data.storyUpdated ? true : false;
+                                vm.showEditFailureMsg = !data.storyUpdated ? true : false;
                             },function () {
-                                vm.storyUpdatedErr = true;
-                                vm.storyUpdated = false;
+                                vm.showEditSuccessMsg = false;
+                                vm.showEditFailureMsg = true;
                             });
                     }
                 },
@@ -106,22 +109,32 @@
                     });
                     editor.on('keyup blur paste', function (e) {
                         vm.updatePreview();
+                        //once success modal is implemented below line is not needed here
+                        // vm.hideUpdatedMsg();
                     });
                 }
             });
+        };
+        vm.$onInit = function () {
+            if(vm.category){
+                vm.categorySelected = vm.category;
+                vm.changeCategory(vm.story);
+                // vm.selectedStory = vm.story;
+            }
         };
         vm.$onDestroy = function () {
             tinymce.remove();
         };
 
+        vm.routerState = routerState;
         vm.updatePreview = updatePreview;
-
-
-        getCategoryList();
-
+        vm.initEditor = initEditor;
+        vm.getCategoryList = getCategoryList;
+        vm.hideUpdatedMsg = hideUpdatedMsg;
         vm.loadStory = loadStory;
         vm.changeCategory = changeCategory;
 
+        vm.getCategoryList();
     }
 }(angular));
 

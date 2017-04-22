@@ -10,6 +10,46 @@ $function = $request->call;
 if(function_exists($function)){
     call_user_func($function,$request);
 }
+
+function createStory($request){
+    $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
+    if(!$conn){
+        die("Unable to connect to MySQL"); 
+    }else{
+        $table='stories';
+        $catId = $request->categoryId;
+        $storyName = $request->storyName;
+
+        mysql_selectdb(DB_DBNAME);
+        $getLatestStoryIdSql="SELECT STORY_ID FROM ".$table." ORDER BY STORY_ID DESC LIMIT 1";
+        //echo $getLatestStoryIdSql;
+        $getLatestStoryIdSqlResult = mysql_query($getLatestStoryIdSql);
+        while ($row=mysql_fetch_assoc($getLatestStoryIdSqlResult)){
+            $nextId = nextStoryID($row['STORY_ID']);
+            $createStorySql="INSERT INTO ".$table." (STORY_ID,STORY_NAME,STORY_SECTION,STORY_CATEGORY_ID,STORY_HTML_NAME,STORY) VALUES ('".$nextId."','".$storyName."','','".$catId."','','')";
+            //echo $createStorySql;
+            $createStorySqlResult = mysql_query($createStorySql);
+            //echo $createStorySqlResult;
+        header('Content-type: application/json');
+            if(mysql_affected_rows($conn)!=1){
+                echo json_encode(array('storyCreated'=>false));    
+            }else{
+                echo json_encode(array('storyCreated'=>true,'storyId'=>$nextId));
+            }
+        }
+    }
+    mysql_close($conn);
+}
+function nextStoryID($storyId){
+    $b= intVal(substr($storyId,2));
+    $b++;
+    $c=(string)$b;
+    for($x=0;$x<3 && strlen($c)<4;$x++){
+      $c = '0'.$c;
+    }
+    return 'ST'.$c;
+}
+
 function getStory($request){
     $conn = mysql_connect(DB_HOST,DB_USERNAME,DB_PASSWORD);
     if(!$conn){

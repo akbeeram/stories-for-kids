@@ -1,41 +1,45 @@
 
 <div class="row">
-    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12" style="padding:0 2em;">
-        Category :
-        <select class="category-select" ng-change="authorCtrl.changeCategory()" ng-model="authorCtrl.categorySelected">
-            <option ng-repeat="ctgry in authorCtrl.categoryList" value="{{ctgry.categoryId}}">
-                {{ctgry.categoryName}}
-            </option>
-        </select>
-            <span ng-if="authorCtrl.categorySelected">
-                Story :
-                <select class="category-select" ng-change="authorCtrl.loadStory()" ng-model="authorCtrl.selectedStory">
-                    <option ng-repeat="story in authorCtrl.storyList" value="{{story.story_id}}">
-                        {{story.story_name}}
-                    </option>
-                </select>
-            </span>
-        <textarea id="writeStoryHere">Hey there</textarea>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div style="background: white;margin-left: 1em;margin-right: 1em;">
+            <div class="bar-transform" ng-class="{'new-story-form': !authorNewStoryCtrl.storyCreated,'new-story-form-hidden': authorNewStoryCtrl.storyCreated}">
+                <div style="padding: 1em;border-left: 1px solid lightgray;border-bottom: 1px solid lightgray;border-right: 1px solid lightgray;">
+                    <form name="newStoryForm">
+                        <div style="margin-bottom: 1em;">Choose an Existing Category :</div>
+                        <select style="margin-bottom: 1em;" required class="category-select" ng-change="authorNewStoryCtrl.changeCategory()" ng-model="authorNewStoryCtrl.categorySelected">
+                            <option ng-repeat="ctgry in authorNewStoryCtrl.categoryList" value="{{ctgry.categoryId}}">
+                                {{ctgry.categoryName}}
+                            </option>
+                        </select>
+                        <div>
+                            <div style="margin-bottom: 1em;">What would be the Story Name : </div>
+                            <input type="text" ng-disabled="!authorNewStoryCtrl.categorySelected" required ng-model="authorNewStoryCtrl.storyName" style="margin-bottom: 1em;width: 20em;padding: 0.3em 1em;"/>
+                            <div style="margin-bottom: 1em;">
+                                <button class="login-button" ng-click="authorNewStoryCtrl.createStory()" ng-disabled="!newStoryForm.$valid" ng-style="{'cursor':!newStoryForm.$valid ? 'not-allowed':'pointer'}">
+                                    Create Story&nbsp;
+                                    <i class="fa fa-sign-in" aria-hidden="true" ng-show="authorNewStoryCtrl.showSignIn"></i>
+                                    <i class="fa fa-spin fa-spinner fa-pulse fa-fw" aria-hidden="true" ng-show="authorNewStoryCtrl.showSigningIn"></i>
+                                    <i class="fa fa-check leftMar1" aria-hidden="true" ng-show="authorNewStoryCtrl.showSignedIn"></i>
+                                    <i class="fa fa-times leftMar1" aria-hidden="true" ng-show="authorNewStoryCtrl.showSignInErr" style="color:red;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <author-edit-story ng-if="authorNewStoryCtrl.storyCreated" category="authorNewStoryCtrl.categorySelected" story="authorNewStoryCtrl.storyId"/>
     </div>
-    <div class="col-lg-2 col-sm-2 col-md-1 hidden-xs">
-        <div class="hidden-md hidden-xs">
-            <ul style="list-style-type: disc;">
-                <li>Always open '<>' and add &lt;div class="story"&gt;....&lt;/div&gt;.</li>
-                <li>Split the content into paragraphs.</li>
-                <li>Add paragraphs under &lt;p&gt; tags only.</li>
-                <li>When an image is added, add style="float:left;" or style="float:right;" to align the image</li>
-                <li>For any other styles refer to story.css file.</li>
-            </ul>
+</div>
+<div class="row">
+    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12" style="padding:0 2em;">
+        <div ng-show="authorNewStoryCtrl.showEditSuccessMsg" style="margin-top: 0.5em;margin-bottom: 0.5em;font-size: 2em;color: #2ECC71;">
+            Well done ! Story has been updated !!
+        </div>
+        <div ng-show="authorNewStoryCtrl.showEditFailureMsg"
+             style="margin-top: 0.5em;margin-bottom: 0.5em;color: crimson;font-size: 2em;">
+            Sorry ! There was an error. Try again after some time.
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12 author-preview-header"  style="padding:0 2em;">
-        Preview :
-    </div>
-    <div class="col-lg-3 col-sm-1 col-md-1 hidden-xs"></div>
-</div>
-<div class="row">
-    <div id="previewStoryHere" class="col-lg-10 col-sm-10 col-md-11 col-xs-12"></div>
     <div class="col-lg-3 col-sm-1 col-md-1 hidden-xs"></div>
 </div>

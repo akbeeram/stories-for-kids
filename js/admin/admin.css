@@ -37,3 +37,22 @@
     border-bottom: 1px dashed gray;
     margin-top: 1.5em;
 }
+.new-story-label{
+    padding:1.5em 0 0.5em 0;
+    display: block;
+}
+.new-story-form{
+    max-height: 50em;
+}
+.new-story-form-hidden{
+    max-height: 0em;
+    overflow: hidden;   /*to hide the display bar when slide in*/
+}
+.bar-transform{
+    -webkit-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    transition: max-height 0.8s;
+}
+.btn-new-story{
+
+}

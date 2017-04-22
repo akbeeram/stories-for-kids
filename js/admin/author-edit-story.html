@@ -1,46 +1,59 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <div style="padding:0 1em;">
+            <div style="padding:1em;background:white;border-left: 1px solid lightgray;border-bottom: 1px solid lightgray;border-right: 1px solid lightgray;">
+                Category :
+                <select class="category-select"
+                        ng-change="authorEditStoryCtrl.changeCategory()"
+                        ng-model="authorEditStoryCtrl.categorySelected"
+                        ng-disabled="authorEditStoryCtrl.routerState.current.name == 'app.take-control.author-dash.author-new-story'">
+                    <option ng-repeat="ctgry in authorEditStoryCtrl.categoryList" value="{{ctgry.categoryId}}">
+                        {{ctgry.categoryName}}
+                    </option>
+                </select>
+            <span ng-if="authorEditStoryCtrl.categorySelected" style="margin-left: 2em;">
+                Story :
+                <select class="category-select"
+                        ng-change="authorEditStoryCtrl.loadStory()"
+                        ng-model="authorEditStoryCtrl.selectedStory"
+                        ng-disabled="authorEditStoryCtrl.routerState.current.name == 'app.take-control.author-dash.author-new-story'">
+                    <option ng-repeat="story in authorEditStoryCtrl.storyList" value="{{story.story_id}}">
+                        {{story.story_name}}
+                    </option>
+                </select>
+            </span>
+            <span ng-if="authorEditStoryCtrl.selectedStory" style="margin-left: 2em;">
+                <input type="text" ng-model="authorEditStoryCtrl.storyName" style="width: 20em;padding: 0.3em 1em;"/>
+            </span>
 
-<div class="row">
-    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12" style="padding:1em 2em;">
-        Category :
-        <select class="category-select" ng-change="authorEditStoryCtrl.changeCategory()" ng-model="authorEditStoryCtrl.categorySelected">
-            <option ng-repeat="ctgry in authorEditStoryCtrl.categoryList" value="{{ctgry.categoryId}}">
-                {{ctgry.categoryName}}
-            </option>
-        </select>
-        <span ng-if="authorEditStoryCtrl.categorySelected" style="margin-left: 2em;">
-            Story :
-            <select class="category-select" ng-change="authorEditStoryCtrl.loadStory()" ng-model="authorEditStoryCtrl.selectedStory">
-                <option ng-repeat="story in authorEditStoryCtrl.storyList" value="{{story.story_id}}">
-                    {{story.story_name}}
-                </option>
-            </select>
-        </span>
-        <span ng-if="authorEditStoryCtrl.selectedStory" style="margin-left: 2em;">
-            <input type="text" ng-model="authorEditStoryCtrl.storyName" style="width: 20em;padding: 0.3em 1em;"/>
-        </span>
+                <div ng-show="authorEditStoryCtrl.showEditSuccessMsg" style="margin-top: 0.5em;font-size: 2em;color: #2ECC71;">
+                    Well done ! Story has been updated !!
+                </div>
+                <div ng-show="authorEditStoryCtrl.showEditFailureMsg"
+                     style="margin-top: 0.5em;color: crimson;font-size: 2em;">
+                    Sorry ! There was an error. Try again after some time.
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12" style="padding:0 2em;">
-        <div ng-if="authorEditStoryCtrl.storyUpdated" style="margin-top: 0.5em;margin-bottom: 0.5em;font-size: 2em;color: #2ECC71;">
-            Well done ! Story has been updated !!
+    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12">
+        <div style="padding: 0 1em;" ng-show="authorEditStoryCtrl.showEditor">
+            <div style="padding: 1em 0;">
+                <textarea id="writeStoryHere">Hey there ! Select a category and the story to start editing.</textarea>
+            </div>
+            <div style="padding: 1em;background:white;border: 1px solid lightgray;">
+                <div class="author-preview-header" style="padding:0 1em;">
+                    Preview :
+                </div>
+                <div id="previewStoryHere"></div>
+            </div>
         </div>
-        <div ng-if="authorEditStoryCtrl.storyUpdatedErr && !authorEditStoryCtrl.storyUpdated"
-             style="margin-top: 0.5em;margin-bottom: 0.5em;color: crimson;font-size: 2em;">
-            Sorry ! There was an error. Try again after some time.
-        </div>
-    </div>
-    <div class="col-lg-3 col-sm-1 col-md-1 hidden-xs"></div>
-</div>
-<div class="row">
-    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12" style="padding:0 2em;">
-        <span ng-show="authorEditStoryCtrl.showEditor">
-            <textarea id="writeStoryHere">Hey there ! Select a category and the story to start editing.</textarea>
-        </span>
     </div>
     <div class="col-lg-2 col-sm-2 col-md-1 hidden-xs">
-        <div class="hidden-md hidden-xs">
-            <ul style="list-style-type: disc;">
+        <div style="padding-top: 1em;">
+            <ul style="list-style-type: square;">
                 <li>Always open '<>' and add &lt;div class="story"&gt;....&lt;/div&gt;.</li>
                 <li>Split the content into paragraphs.</li>
                 <li>Add paragraphs under &lt;p&gt; tags only.</li>
@@ -49,14 +62,4 @@
             </ul>
         </div>
     </div>
-</div>
-<div class="row" ng-show="authorEditStoryCtrl.showEditor">
-    <div class="col-lg-10 col-sm-10 col-md-11 col-xs-12 author-preview-header"  style="padding:0 2em;">
-        Preview :
-    </div>
-    <div class="col-lg-3 col-sm-1 col-md-1 hidden-xs"></div>
-</div>
-<div class="row" ng-show="authorEditStoryCtrl.showEditor">
-    <div id="previewStoryHere" class="col-lg-10 col-sm-10 col-md-11 col-xs-12"></div>
-    <div class="col-lg-3 col-sm-1 col-md-1 hidden-xs"></div>
 </div>

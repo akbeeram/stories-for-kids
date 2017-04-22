@@ -9,6 +9,8 @@
     /*width:100%;*/
     margin-bottom: 1em;
     font-size: 1.2em;
+    border-bottom: 5px solid #2ECC71;
+    padding-bottom: 0.5em;
 }/*
 .reader-story-title:after {
     content: '';
@@ -47,7 +49,7 @@
     transition: all 0.15s ease-in;
 }
 .reader-go-back:hover {
-    color: crimson;
+    color: #2ECC71;
     cursor: pointer;
 }
 
