@@ -49,7 +49,7 @@
                 <!--<div ng-repeat="(k,v) in $ctrl.dash.storyData.story_list" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">-->
 
                     <div ng-repeat="story in $ctrl.dash.storyData">
-                        <div ng-click="$ctrl.openStory(story)" class="story-line-item" title="Click to start reading {{story.story_name}}">
+                        <div ng-click="$ctrl.openStory(story)" class="story-line-item col-lg-6 col-md-6 col-sm-6 col-xs-12" title="Click to start reading {{story.story_name}}">
                             <div class="story-list-name">
                                 <span>{{$index + 1}}.</span>&nbsp;&nbsp;<span>{{story.story_name}}</span>
                             </div>
@@ -59,6 +59,5 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+    <div class="col-lg-4 col-md-3 col-sm-3 hidden-xs"></div>
 </div>

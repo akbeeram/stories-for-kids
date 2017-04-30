@@ -2,7 +2,7 @@
     <div class="reader-pane col-lg-9 col-md-9 col-sm-10 col-xs-12" ng-class="{'nightMode':asdf,'dayMode':!asdf}">
         <div class="reader-controls">
             <div class="reader-story-title" title="You are reading {{$ctrl.config.story_name}}">
-                Title : {{$ctrl.config.story_name}}
+                {{::$ctrl.config.story_name}}
             </div>
             <div class="reader-story-controls">
                 <span class="reader-go-back" ng-click="$ctrl.goBackToDash()" title="Go back to List of stories in this category">
