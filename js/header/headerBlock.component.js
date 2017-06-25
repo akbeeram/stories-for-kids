@@ -16,7 +16,7 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
     if(userInfo){
         isAuthenticatedUser = userInfo.isAuthenticatedUser ? true : false;
         //set short name abbreviation
-        //if(isAuthenticatedUser){
+        if(isAuthenticatedUser){
             if(userInfo.username.indexOf(' ') >= 0){
                 var temp = userInfo.username.split(' ');
                 displayShortName = temp[0].charAt(0) + temp[1].charAt(0);
@@ -30,7 +30,7 @@ function headerCtrl($scope,$state, authService, localStorageService,APP_CONSTANT
         //temporary fix for authentication for other routes
         //if($state.current.name !== 'welcome'){
             //$state.go('login');
-        //}
+        }
     //}
     }else{
         //temporary fix for authentication for other routes

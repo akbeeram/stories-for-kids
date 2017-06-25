@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="reader-pane col-lg-9 col-md-9 col-sm-10 col-xs-12" ng-class="{'nightMode':asdf,'dayMode':!asdf}">
+<div class="row" ng-class="{'nightMode':$ctrl.nightMode,'dayMode':!$ctrl.nightMode}">
+    <div class="reader-pane col-lg-9 col-md-9 col-sm-10 col-xs-12">
         <div class="reader-controls">
             <div class="reader-story-title" title="You are reading {{$ctrl.config.story_name}}">
                 {{::$ctrl.config.story_name}}
@@ -9,10 +9,10 @@
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</span>
                 <span class="night-mode-control">
                     Night Mode :
-                    <div ng-class="{'mode-on':asdf,'mode-off':!asdf}" ng-click="asdf=false" title="Turn off night mode if your eyes are comfortable with a white background">
+                    <div ng-class="{'mode-on':$ctrl.nightMode,'mode-off':!$ctrl.nightMode}" ng-click="$ctrl.nightMode=false" title="Turn off night mode if your eyes are comfortable with a white background">
                         <i class="fa fa-toggle-on" aria-hidden="true" ></i>
                     </div>
-                    <div ng-class="{'mode-on':!asdf,'mode-off':asdf}" ng-click="asdf=true" title="Turn on night mode to read without straining your eyes">
+                    <div ng-class="{'mode-on':!$ctrl.nightMode,'mode-off':$ctrl.nightMode}" ng-click="$ctrl.nightMode=true" title="Turn on night mode to read without straining your eyes">
                        <i class="fa fa-toggle-off" aria-hidden="true" ></i>
                     </div>
                 </span>
@@ -22,10 +22,6 @@
     -->
             </div>
             <div>
-                <div class="loadingDiv" ng-show="$ctrl.showLoadingDiv">
-                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br><br>
-                    <span class="">Loading your story...</span>
-                </div>
               <story-component config="$ctrl.config"></story-component>
             </div>
             <span class="reader-go-back" ng-click="$ctrl.goBackToDash()" title="Go back to List of stories in this category">

@@ -12,7 +12,7 @@
         'localStorageModule',
         'ngSanitize'
     ])
-    .config(function($stateProvider, $urlRouterProvider){
+    .config(function($stateProvider, $urlRouterProvider, $locationProvider){
         $urlRouterProvider.otherwise('/welcome');
         $stateProvider
             .state('welcome',{
@@ -53,9 +53,11 @@
                 templateUrl:'js/common/main.html',
                 controller: function($scope,isUserAlreadyLoggedIn){
                     //not running
+                    console.log(isUserAlreadyLoggedIn);
                 },
                 onEnter: scrollBackToTop
             });
+        $locationProvider.html5Mode(true);
 
         function isUserValid(authService, localStorageService){
             var sfkUserInfo = localStorageService.getUserAuthInfo();

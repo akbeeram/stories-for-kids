@@ -34,9 +34,9 @@
   transition:background-color 0.15s ease-in;
 }
 .nightMode{
-  background-color:#1B242D;
+  background:#1B242D;
   color:ghostwhite;
-  transition:background-color 0.2s ease-in;
+  transition:background 0.2s ease-in;
 }
 .mode-on{
   display:inline-block;

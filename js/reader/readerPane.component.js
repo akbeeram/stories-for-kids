@@ -9,7 +9,7 @@ readerPaneCtrl.$inject = ['$scope','$state','localStorageService','storyService'
 function readerPaneCtrl($scope, $state, localStorageService, storyService){
     var vm = this;
     var currStory = localStorageService.getCurrentStory();
-
+    vm.ngihtMode = false;
     goBackToDash = function(){
         $state.go('app.dash');
     }

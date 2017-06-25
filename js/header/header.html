@@ -20,16 +20,16 @@
                         <li ng-click="$ctrl.showMobileMenu = !$ctrl.showMobileMenu"><a ui-sref="app.dash"><div><i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;Stories</div></a></li>
                         <li><a ui-sref="contact-us"><div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact</div></a></li>
                         <li><a ui-sref="boring-stuff.privacy"><div><i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;&nbsp;Privacy & Terms</div></a></li>
-                        <li>
-                            <div ng-click="$ctrl.showMobileMenu = !$ctrl.showMobileMenu;$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthenticatedUser">
-                                <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp;Login
-                            </div>
-                        </li>
-                        <li>
-                            <div ng-click="$ctrl.showMobileMenu = !$ctrl.showMobileMenu;$ctrl.logoutUser()" ng-show="$ctrl.isAuthenticatedUser">
-                                <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout
-                            </div>
-                        </li>
+                        <!--<li>-->
+                            <!--<div ng-click="$ctrl.showMobileMenu = !$ctrl.showMobileMenu;$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthenticatedUser">-->
+                                <!--<i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp;Login-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<div ng-click="$ctrl.showMobileMenu = !$ctrl.showMobileMenu;$ctrl.logoutUser()" ng-show="$ctrl.isAuthenticatedUser">-->
+                                <!--<i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout-->
+                            <!--</div>-->
+                        <!--</li>-->
                     </ul>
                 </div>
             </div>
@@ -44,51 +44,51 @@
                     <div>{{$ctrl.constants.SEARCH.TYPE_SOMETHING}}</div>
                 </div>-->
             </div>
-            <div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">
-                <!-- If user is not authenticated, display login-->
-                <span ng-click="$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthenticatedUser">
-                    <span class="headerLoginAnchor"><div>
-                        <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
-                    </div>{{$ctrl.constants.LOGIN.LABEL}}</span>
-                </span>
-                <span style="position:relative;">
-                    <div class="user-info-circle circle-click" ng-show="$ctrl.isAuthenticatedUser">
-                        <div class="circle-click">{{$ctrl.displayShortName | uppercase}}</div>
-                    </div>
-                    <div class="header-search-results click-identifier" ng-show="$ctrl.showUserInfoBox">
-                        <div class="arrow-up click-identifier"></div>
-                        <div style="color: #5e5e5e;text-align: left;text-shadow: none;" class=" click-identifier">
-                            <table width="100%" class=" click-identifier">
-                                <tr class="click-identifier">
-                                    <td class="click-identifier" width="25%" align="center" style="display: table-cell;vertical-align: middle;">
-                                        <i class="fa fa-user-circle fa-2x click-identifier" aria-hidden="true"></i>
-                                    </td>
-                                    <td class="click-identifier" style="display: table-cell;vertical-align: middle;">
-                                        <span class="click-identifier" style="font-size: 1.5em;">{{::$ctrl.name}}</span><br>
-                                        <span class="click-identifier" style="font-size: 0.8em;">{{::$ctrl.email}}</span>
-                                    </td>
-                                </tr>
-                                <tr class="click-identifier">
-                                    <td class="click-identifier" colspan="2" style="padding: 2em 2em 0 2em;line-height: 1.6em;">
-                                        <!--<div><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;Profile</div>
-                                        <div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>
-                                        <div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>
-                                        <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>
-                                        <div class="user-info-logout click-identifier" ng-click="$ctrl.showSlider=!$ctrl.showSlider">
-                                            <i class="fa fa-key click-identifier" aria-hidden="true"></i>
-                                                &nbsp;&nbsp;Change Password
-                                        </div>-->
-                                        <div class="user-info-logout click-identifier" ng-click="$ctrl.logoutUser()">
-                                            <i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>
-                                            &nbsp;&nbsp;{{$ctrl.constants.LOGOUT.LABEL}}
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </span>
-            </div>
+            <!--<div class="headerLogin col-lg-2 col-md-2 col-sm-2 col-xs-0 hidden-xs" style="text-align:center">-->
+                <!--&lt;!&ndash; If user is not authenticated, display login&ndash;&gt;-->
+                <!--<span ng-click="$ctrl.openLoginLightBox()" ng-show="!$ctrl.isAuthenticatedUser">-->
+                    <!--<span class="headerLoginAnchor"><div>-->
+                        <!--<i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>-->
+                    <!--</div>{{$ctrl.constants.LOGIN.LABEL}}</span>-->
+                <!--</span>-->
+                <!--<span style="position:relative;">-->
+                    <!--<div class="user-info-circle circle-click" ng-show="$ctrl.isAuthenticatedUser">-->
+                        <!--<div class="circle-click">{{$ctrl.displayShortName | uppercase}}</div>-->
+                    <!--</div>-->
+                    <!--<div class="header-search-results click-identifier" ng-show="$ctrl.showUserInfoBox">-->
+                        <!--<div class="arrow-up click-identifier"></div>-->
+                        <!--<div style="color: #5e5e5e;text-align: left;text-shadow: none;" class=" click-identifier">-->
+                            <!--<table width="100%" class=" click-identifier">-->
+                                <!--<tr class="click-identifier">-->
+                                    <!--<td class="click-identifier" width="25%" align="center" style="display: table-cell;vertical-align: middle;">-->
+                                        <!--<i class="fa fa-user-circle fa-2x click-identifier" aria-hidden="true"></i>-->
+                                    <!--</td>-->
+                                    <!--<td class="click-identifier" style="display: table-cell;vertical-align: middle;">-->
+                                        <!--<span class="click-identifier" style="font-size: 1.5em;">{{::$ctrl.name}}</span><br>-->
+                                        <!--<span class="click-identifier" style="font-size: 0.8em;">{{::$ctrl.email}}</span>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr class="click-identifier">-->
+                                    <!--<td class="click-identifier" colspan="2" style="padding: 2em 2em 0 2em;line-height: 1.6em;">-->
+                                        <!--&lt;!&ndash;<div><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;Profile</div>-->
+                                        <!--<div><i class="fa fa-bell" aria-hidden="true"></i>&nbsp;&nbsp;Notifications</div>-->
+                                        <!--<div><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</div>-->
+                                        <!--<div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Contact Us</div>-->
+                                        <!--<div class="user-info-logout click-identifier" ng-click="$ctrl.showSlider=!$ctrl.showSlider">-->
+                                            <!--<i class="fa fa-key click-identifier" aria-hidden="true"></i>-->
+                                                <!--&nbsp;&nbsp;Change Password-->
+                                        <!--</div>&ndash;&gt;-->
+                                        <!--<div class="user-info-logout click-identifier" ng-click="$ctrl.logoutUser()">-->
+                                            <!--<i class="fa fa-sign-out click-identifier" aria-hidden="true"></i>-->
+                                            <!--&nbsp;&nbsp;{{$ctrl.constants.LOGOUT.LABEL}}-->
+                                        <!--</div>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                            <!--</table>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</span>-->
+            <!--</div>-->
         </div>
         <login-light-box ng-show="$ctrl.showLoginForm" show-login-form="$ctrl.showLoginForm"></login-light-box>
     </div>

@@ -25,7 +25,9 @@
     
     <div class="col-lg-7 col-md-8 col-sm-8 col-xs-12" >
         <div class="dash-container">
-            Hi there ! Select your favorite story to start reading.<br><br>
+            <!--<span style="border-bottom: 5px solid #2ECC71;padding-bottom: 0.5em;">-->
+            Hi there ! Select your favorite story to start reading.
+            <!--</span><br><br>-->
             Select a Category :
             <select class="category-select" ng-change="$ctrl.changeCategory()" ng-model="$ctrl.categorySelected">
                 <option ng-repeat="ctgry in $ctrl.dash.categoryList" value="{{ctgry.categoryId}}">
@@ -44,19 +46,18 @@
                     {{$ctrl.dash.categoryData.categoryDesc}}
                 </div>
             </div>
-            
             <div class="row story-list">
                 <!--<div ng-repeat="(k,v) in $ctrl.dash.storyData.story_list" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">-->
 
-                    <div ng-repeat="story in $ctrl.dash.storyData">
-                        <div ng-click="$ctrl.openStory(story)" class="story-line-item col-lg-6 col-md-6 col-sm-6 col-xs-12" title="Click to start reading {{story.story_name}}">
-                            <div class="story-list-name">
-                                <span>{{$index + 1}}.</span>&nbsp;&nbsp;<span>{{story.story_name}}</span>
-                            </div>
+                <div ng-repeat="story in $ctrl.dash.storyData">
+                    <div ng-click="$ctrl.openStory(story)" class="story-line-item col-lg-6 col-md-6 col-sm-6 col-xs-12" title="Click to start reading {{story.story_name}}">
+                        <div class="story-list-name">
+                            <span>{{$index + 1}}.</span>&nbsp;&nbsp;<span>{{story.story_name}}</span>
                         </div>
                     </div>
-                <span class="inset-text">We're adding more stories every day.</span>
+                </div>
             </div>
+            <div class="inset-text">We're adding more stories every day.</div>
         </div>
     </div>
     <div class="col-lg-4 col-md-3 col-sm-3 hidden-xs"></div>

@@ -1,1 +1,5 @@
-<span ng-bind-html="storyComponentCtrl.story"/>
+<div class="loadingDiv" ng-show="storyCtrl.showLoadingDiv">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br><br>
+    <span class="">Loading your story...</span>
+</div>
+<span ng-bind-html="storyCtrl.story"/>

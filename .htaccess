@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine On
+##Angulr SEO Routing Pretty URLs fix:START##
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /stories-for-kids/#/$1 [L]
+##Angulr SEO Routing Pretty URLs fix:END##

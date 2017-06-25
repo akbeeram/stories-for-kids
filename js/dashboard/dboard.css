@@ -48,6 +48,7 @@
 .story-list-name{
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 .dash-story-desc {
     font-family: 'Slabo';
@@ -96,6 +97,10 @@
     padding-top: 2em;
 }
 
+.story-list{
+    padding:0 1em;
+    margin-top: 1em;
+}
 @media screen and (max-width: 768px){
     .dash-container {
         padding: 0em 0 0 1em;
